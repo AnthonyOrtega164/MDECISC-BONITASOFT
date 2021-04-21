@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formSubirCSV",
   "name" : "formSubirCSV",
-  "lastUpdate" : 1618257242478,
+  "lastUpdate" : 1619038874357,
   "rows" : [
     [
       {
@@ -399,7 +399,7 @@
                         },
                         "text" : {
                           "type" : "constant",
-                          "value" : "<b>Solo se aceptan archivos CSV</b>"
+                          "value" : "<div class=\"alert alert-info\" translate><i class=\"glyphicon glyphicon-info-sign\" aria-hidden=\"true\"></i> <b>Solo se aceptan archivos CSV</b></div>"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -633,7 +633,7 @@
                         },
                         "text" : {
                           "type" : "constant",
-                          "value" : "<b>Solo se aceptan archivos CSV</b>"
+                          "value" : "<div class=\"alert alert-info\" translate><i class=\"glyphicon glyphicon-info-sign\" aria-hidden=\"true\"></i> <b>Solo se aceptan archivos CSV</b></div>"
                         },
                         "alignment" : {
                           "type" : "constant",

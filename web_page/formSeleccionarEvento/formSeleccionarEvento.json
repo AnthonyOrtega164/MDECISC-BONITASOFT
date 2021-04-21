@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formSeleccionarEvento",
   "name" : "formSeleccionarEvento",
-  "lastUpdate" : 1618950887659,
+  "lastUpdate" : 1619038087936,
   "rows" : [
     [
       {
@@ -3213,6 +3213,58 @@
                     }
                   ]
                 ]
+              }
+            ],
+            [
+              {
+                "type" : "component",
+                "dimension" : {
+                  "xs" : 12,
+                  "sm" : 12,
+                  "md" : 12,
+                  "lg" : 12
+                },
+                "propertyValues" : {
+                  "cssClasses" : {
+                    "type" : "constant",
+                    "value" : ""
+                  },
+                  "hidden" : {
+                    "type" : "expression",
+                    "value" : "!evento==null"
+                  },
+                  "labelHidden" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "label" : {
+                    "type" : "interpolation",
+                    "value" : "Default label"
+                  },
+                  "labelPosition" : {
+                    "type" : "constant",
+                    "value" : "top"
+                  },
+                  "labelWidth" : {
+                    "type" : "constant",
+                    "value" : 4
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : true
+                  },
+                  "text" : {
+                    "type" : "interpolation",
+                    "value" : "No existen eventos difundidos"
+                  },
+                  "alignment" : {
+                    "type" : "constant",
+                    "value" : "center"
+                  }
+                },
+                "reference" : "e80ac4f4-5ddc-4f7b-8cc0-cb1ed6c3b99b",
+                "hasValidationError" : false,
+                "id" : "pbText"
               }
             ],
             [

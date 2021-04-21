@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:parameter="http://www.bonitasoft.org/ns/studio/parameter" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_CDm48JabEeut8sL4LkPR1w" name="Generar documentación final" author="Anthony Ortega" bonitaVersion="7.12.1" bonitaModelVersion="7.12.0-004">
     <elements xmi:type="process:Pool" xmi:id="_CDm48ZabEeut8sL4LkPR1w" name="generarDocumentacion" displayName="Generar documentación final">
       <elements xmi:type="process:Lane" xmi:id="_CDm48pabEeut8sL4LkPR1w" name="Gestor" actor="_gGtgMJabEeut8sL4LkPR1w">
@@ -115,6 +115,16 @@
         <condition xmi:type="expression:Expression" xmi:id="_Jq7roqGcEeu8UM8dRGrBDQ" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_gGtgMJabEeut8sL4LkPR1w" name="Gestor" initiator="true"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_qVvkMKLJEeuSg82WTKe3kg" name="claveAlfresco" typeClassname="java.lang.String"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_rCCpgKLJEeuSg82WTKe3kg" name="claveServidor" typeClassname="java.lang.String"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_r1WVwKLJEeuSg82WTKe3kg" name="direccionServidor" typeClassname="java.lang.String"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_s4-V8KLJEeuSg82WTKe3kg" name="puertoServidor" typeClassname="java.lang.Integer"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_tsnZYKLJEeuSg82WTKe3kg" name="remitente" typeClassname="java.lang.String"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_u7x7MKLJEeuSg82WTKe3kg" name="sslBoolean" typeClassname="java.lang.Boolean"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_wCE04KLJEeuSg82WTKe3kg" name="urlAtom" typeClassname="java.lang.String"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_w6x-gKLJEeuSg82WTKe3kg" name="urlImagen" typeClassname="java.lang.String"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_x4bSgKLJEeuSg82WTKe3kg" name="usuarioServidor" typeClassname="java.lang.String"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_SxQwwKLKEeuSg82WTKe3kg" name="usuarioAlfresco" typeClassname="java.lang.String"/>
       <contract xmi:type="process:Contract" xmi:id="_CDm5DJabEeut8sL4LkPR1w"/>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_CDm5DZabEeut8sL4LkPR1w">
         <name xmi:type="expression:Expression" xmi:id="_CDm5DpabEeut8sL4LkPR1w" content="" returnTypeFixed="true"/>

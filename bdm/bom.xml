@@ -248,6 +248,7 @@
                 <field type="LOCALDATE" length="255" name="fechaFin" nullable="false" collection="false">
                     <description>Fecha de finalización de inscripciones</description>
                 </field>
+                <field type="TEXT" length="255" name="informe" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>

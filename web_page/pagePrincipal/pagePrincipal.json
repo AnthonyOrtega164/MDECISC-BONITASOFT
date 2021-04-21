@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "pagePrincipal",
   "name" : "pagePrincipal",
-  "lastUpdate" : 1618698616053,
+  "lastUpdate" : 1619043795145,
   "rows" : [
     [
       {
@@ -142,13 +142,46 @@
                         "type" : "constant",
                         "value" : false
                       },
-                      "disabled" : {
-                        "type" : "constant",
-                        "value" : false
-                      },
-                      "label" : {
+                      "text" : {
                         "type" : "interpolation",
                         "value" : "<span class=\"glyphicon glyphicon-plus\"></span> Solicitar difusión de anuncio"
+                      },
+                      "type" : {
+                        "type" : "constant",
+                        "value" : "process"
+                      },
+                      "targetUrl" : {
+                        "type" : "constant",
+                        "value" : "http://"
+                      },
+                      "pageToken" : {
+                        "type" : "constant",
+                        "value" : "8995555078192914012"
+                      },
+                      "processName" : {
+                        "type" : "constant",
+                        "value" : "difusionAnuncio"
+                      },
+                      "processVersion" : {
+                        "type" : "constant",
+                        "value" : "1.0"
+                      },
+                      "taskId" : {
+                        "type" : "constant"
+                      },
+                      "caseId" : {
+                        "type" : "constant"
+                      },
+                      "target" : {
+                        "type" : "constant",
+                        "value" : "_self"
+                      },
+                      "appToken" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "urlParams" : {
+                        "type" : "constant"
                       },
                       "alignment" : {
                         "type" : "constant",
@@ -157,63 +190,11 @@
                       "buttonStyle" : {
                         "type" : "constant",
                         "value" : "success"
-                      },
-                      "action" : {
-                        "type" : "constant",
-                        "value" : "Open modal"
-                      },
-                      "assign" : {
-                        "type" : "constant",
-                        "value" : false
-                      },
-                      "url" : {
-                        "type" : "interpolation",
-                        "value" : "{{difusionAnuncio}}"
-                      },
-                      "responseStatusCode" : {
-                        "type" : "variable",
-                        "value" : ""
-                      },
-                      "dataToSend" : {
-                        "type" : "constant"
-                      },
-                      "dataFromSuccess" : {
-                        "type" : "variable",
-                        "value" : ""
-                      },
-                      "closeOnSuccess" : {
-                        "type" : "constant",
-                        "value" : false
-                      },
-                      "dataFromError" : {
-                        "type" : "variable",
-                        "value" : ""
-                      },
-                      "targetUrlOnSuccess" : {
-                        "type" : "interpolation",
-                        "value" : ""
-                      },
-                      "collectionToModify" : {
-                        "type" : "variable"
-                      },
-                      "modalId" : {
-                        "type" : "expression",
-                        "value" : "difusionAnuncio"
-                      },
-                      "collectionPosition" : {
-                        "type" : "constant",
-                        "value" : "Last"
-                      },
-                      "valueToAdd" : {
-                        "type" : "constant"
-                      },
-                      "removeItem" : {
-                        "type" : "variable"
                       }
                     },
-                    "reference" : "36d9c631-c440-4b45-9d68-5cf1dba5735a",
+                    "reference" : "f8c76351-bf10-4157-8642-ab3ab80ed55f",
                     "hasValidationError" : false,
-                    "id" : "pbButton"
+                    "id" : "pbLink"
                   }
                 ]
               ]
@@ -282,6 +263,77 @@
                     "id" : "eventos",
                     "binding" : { }
                   }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "<span class=\"glyphicon glyphicon-plus\"></span> Solicitar difusión de evento"
+                      },
+                      "type" : {
+                        "type" : "constant",
+                        "value" : "process"
+                      },
+                      "targetUrl" : {
+                        "type" : "constant",
+                        "value" : "http://"
+                      },
+                      "pageToken" : {
+                        "type" : "constant"
+                      },
+                      "processName" : {
+                        "type" : "constant",
+                        "value" : "difusionEvento"
+                      },
+                      "processVersion" : {
+                        "type" : "constant",
+                        "value" : "1.0"
+                      },
+                      "taskId" : {
+                        "type" : "constant"
+                      },
+                      "caseId" : {
+                        "type" : "constant"
+                      },
+                      "target" : {
+                        "type" : "constant",
+                        "value" : "_self"
+                      },
+                      "appToken" : {
+                        "type" : "constant"
+                      },
+                      "urlParams" : {
+                        "type" : "constant"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "center"
+                      },
+                      "buttonStyle" : {
+                        "type" : "constant",
+                        "value" : "success"
+                      }
+                    },
+                    "reference" : "710d7c51-ea19-48a1-9267-baf3082bbb05",
+                    "hasValidationError" : false,
+                    "id" : "pbLink"
+                  }
                 ]
               ]
             }
@@ -349,6 +401,77 @@
                     "id" : "eventosMultiples",
                     "binding" : { }
                   }
+                ],
+                [
+                  {
+                    "type" : "component",
+                    "dimension" : {
+                      "xs" : 12,
+                      "sm" : 12,
+                      "md" : 12,
+                      "lg" : 12
+                    },
+                    "propertyValues" : {
+                      "cssClasses" : {
+                        "type" : "constant",
+                        "value" : ""
+                      },
+                      "hidden" : {
+                        "type" : "constant",
+                        "value" : false
+                      },
+                      "text" : {
+                        "type" : "interpolation",
+                        "value" : "<span class=\"glyphicon glyphicon-plus\"></span> Solicitar difusión de eventos multiples"
+                      },
+                      "type" : {
+                        "type" : "constant",
+                        "value" : "process"
+                      },
+                      "targetUrl" : {
+                        "type" : "constant",
+                        "value" : "http://"
+                      },
+                      "pageToken" : {
+                        "type" : "constant"
+                      },
+                      "processName" : {
+                        "type" : "constant",
+                        "value" : "difusionEventos"
+                      },
+                      "processVersion" : {
+                        "type" : "constant",
+                        "value" : "1.0"
+                      },
+                      "taskId" : {
+                        "type" : "constant"
+                      },
+                      "caseId" : {
+                        "type" : "constant"
+                      },
+                      "target" : {
+                        "type" : "constant",
+                        "value" : "_self"
+                      },
+                      "appToken" : {
+                        "type" : "constant"
+                      },
+                      "urlParams" : {
+                        "type" : "constant"
+                      },
+                      "alignment" : {
+                        "type" : "constant",
+                        "value" : "center"
+                      },
+                      "buttonStyle" : {
+                        "type" : "constant",
+                        "value" : "success"
+                      }
+                    },
+                    "reference" : "e80f3704-f113-442b-b2bf-e7ab29fa08ab",
+                    "hasValidationError" : false,
+                    "id" : "pbLink"
+                  }
                 ]
               ]
             }
@@ -402,15 +525,7 @@
     }
   ],
   "inactiveAssets" : [ ],
-  "variables" : {
-    "difusionAnuncio" : {
-      "type" : "url",
-      "value" : [
-        "../API/bpm/process?s=difusionAnuncio&p=0&c=1&o=version%20DESC&f=activationState=ENABLED"
-      ],
-      "exposed" : false
-    }
-  },
+  "variables" : { },
   "hasValidationError" : false,
   "uuid" : "5bd1271e-cf68-40ae-b5c9-e07a67a1a66e",
   "type" : "page",
