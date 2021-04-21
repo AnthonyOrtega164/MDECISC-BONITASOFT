@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.12.1">
+    <businessObjects>
+        <businessObject qualifiedName="com.company.model.Asignatura">
+            <fields>
+                <field type="STRING" length="255" name="idAsignatura" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nombre" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="creditos" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="prerrequisitos" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Estudiante">
+            <fields>
+                <field type="STRING" length="255" name="idEstudiante" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="usuario" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Matricula">
+            <fields>
+                <field type="STRING" length="255" name="idMatricula" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="tipoMatricula" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Estudiante" fetchType="LAZY" name="estudiante" nullable="false" collection="false"/>
+                <field type="INTEGER" length="255" name="cicloMatricular" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="paraleloMatricular" nullable="true" collection="false"/>
+                <field type="DOUBLE" length="255" name="pago" nullable="false" collection="false"/>
+                <field type="OFFSETDATETIME" length="255" name="fecha" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.PreMatricula" fetchType="LAZY" name="preMatricula" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Persona">
+            <fields>
+                <field type="STRING" length="255" name="nombre" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.PreMatricula">
+            <fields>
+                <field type="STRING" length="255" name="idPreMatricula" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Estudiante" fetchType="LAZY" name="estudiante" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.SeleccionarAsignaturas">
+            <fields>
+                <field type="INTEGER" length="255" name="curso_perdido" nullable="false" collection="false"/>
+                <field type="INTEGER" length="255" name="curso_matricular" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.mdecisc.model.Actividad">
+            <fields>
+                <field type="TEXT" length="255" name="nombre" nullable="false" collection="false"/>
+                <field type="TEXT" length="255" name="tipoActividad" nullable="false" collection="false"/>
+                <field type="TEXT" length="255" name="categoriaActividad" nullable="false" collection="false"/>
+                <field type="TEXT" length="255" name="organizador" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="ponente" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="lugar" nullable="false" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaActividad" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.mdecisc.model.Anuncio">
+            <fields>
+                <field type="LONG" length="255" name="id" nullable="true" collection="false">
+                    <description>Código de identificación del anuncio</description>
+                </field>
+                <field type="TEXT" length="255" name="nombre" nullable="false" collection="false">
+                    <description>Nombre del anuncio</description>
+                </field>
+                <field type="TEXT" length="255" name="descripcion" nullable="false" collection="false">
+                    <description>Descripción del anuncio</description>
+                </field>
+                <field type="TEXT" length="255" name="imagen" nullable="true" collection="false">
+                    <description>Imagen del anuncio</description>
+                </field>
+                <field type="LOCALDATETIME" length="255" name="fechaSolicitud" nullable="true" collection="false">
+                    <description>Fecha de solicitud</description>
+                </field>
+                <field type="BOOLEAN" length="255" name="validado" nullable="true" collection="false">
+                    <description>Identificador de anuncio difundido</description>
+                </field>
+                <field type="TEXT" length="255" name="motivoCancelacion" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.mdecisc.model.Decano">
+            <fields>
+                <field type="TEXT" length="255" name="nombre" nullable="false" collection="false">
+                    <description>Nombre del Decano</description>
+                </field>
+                <field type="TEXT" length="255" name="apellido" nullable="false" collection="false">
+                    <description>Apellido del Decano</description>
+                </field>
+                <field type="TEXT" length="255" name="correo" nullable="false" collection="false">
+                    <description>Correo del Decano</description>
+                </field>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.mdecisc.model.Docente">
+            <fields>
+                <field type="TEXT" length="255" name="docentes" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="nombre" nullable="false" collection="false">
+                    <description>Nombre del Docente</description>
+                </field>
+                <field type="TEXT" length="255" name="apellido" nullable="false" collection="false">
+                    <description>Apellido del Docente</description>
+                </field>
+                <field type="TEXT" length="255" name="correo" nullable="false" collection="false">
+                    <description>Correo del Docente</description>
+                </field>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.mdecisc.model.EducacionContinua">
+            <fields>
+                <field type="LONG" length="255" name="id" nullable="true" collection="false">
+                    <description>Código de identificación de Educación Continua</description>
+                </field>
+                <field type="TEXT" length="255" name="descripcion" nullable="false" collection="false"/>
+                <field type="TEXT" length="255" name="perfilEC" nullable="true" collection="false">
+                    <description>Archivo Perfil Educación Continua</description>
+                </field>
+                <field type="LOCALDATETIME" length="255" name="fechaSolicitud" nullable="true" collection="false">
+                    <description>Fecha de solicitud</description>
+                </field>
+                <field type="BOOLEAN" length="255" name="validado" nullable="true" collection="false">
+                    <description>Identificador de propuesta aceptada</description>
+                </field>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.mdecisc.model.Evento">
+            <fields>
+                <field type="LONG" length="255" name="id" nullable="true" collection="false">
+                    <description> Código de identificación de Evento</description>
+                </field>
+                <field type="TEXT" length="255" name="nombre" nullable="false" collection="false">
+                    <description>Nombre de Evento</description>
+                </field>
+                <field type="TEXT" length="255" name="descripcion" nullable="false" collection="false">
+                    <description>Descripción de Evento</description>
+                </field>
+                <field type="TEXT" length="255" name="organizadores" nullable="true" collection="true">
+                    <description>Lista de Organizadores</description>
+                </field>
+                <field type="TEXT" length="255" name="lugares" nullable="true" collection="true">
+                    <description>Lista de lugares</description>
+                </field>
+                <field type="TEXT" length="255" name="tipoEvento" nullable="false" collection="false">
+                    <description>Tipo de evento(Taller, Conferencia, etc)</description>
+                </field>
+                <field type="TEXT" length="255" name="categoriaEvento" nullable="false" collection="false">
+                    <description>Categoría del Evento(Social, Investigación, Base de Datos, Modelamiento de Sistemas, Telecomunicaciones, Seguridad Informática, Ingeniería del Software, Inteligencia Artificial, Derecho Informático, Arquitectura de Computadoras, Programación, Electrónica, Otros)</description>
+                </field>
+                <field type="TEXT" length="255" name="cupo" nullable="false" collection="false">
+                    <description>Cupo del evento(Limitado, Ilimitado)</description>
+                </field>
+                <relationField type="COMPOSITION" reference="com.mdecisc.model.Valor" fetchType="LAZY" name="valor" nullable="true" collection="true">
+                    <description>Rol y valor del evento</description>
+                </relationField>
+                <relationField type="COMPOSITION" reference="com.mdecisc.model.Ponente" fetchType="LAZY" name="ponentes" nullable="true" collection="true"/>
+                <field type="LOCALDATETIME" length="255" name="fechaInscripcionInicio" nullable="false" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaInscripcionFin" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaEventoInicio" nullable="false" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaEventoFin" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaSolicitud" nullable="true" collection="false">
+                    <description>Fecha de Solicitud</description>
+                </field>
+                <field type="TEXT" length="255" name="imagen" nullable="true" collection="false">
+                    <description>Imagen del evento</description>
+                </field>
+                <field type="TEXT" length="255" name="cronograma" nullable="true" collection="false">
+                    <description>Cronograma del evento</description>
+                </field>
+                <field type="TEXT" length="255" name="informe" nullable="true" collection="false">
+                    <description>Informe del evento</description>
+                </field>
+                <field type="BOOLEAN" length="255" name="validado" nullable="true" collection="false">
+                    <description>Identificador de evento difundido</description>
+                </field>
+                <field type="TEXT" length="255" name="evidencias" nullable="true" collection="true">
+                    <description>Evidencias del evento difundido</description>
+                </field>
+                <field type="TEXT" length="255" name="motivoCancelacion" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.mdecisc.model.Eventos">
+            <fields>
+                <field type="LONG" length="255" name="id" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="nombre" nullable="false" collection="false"/>
+                <field type="TEXT" length="255" name="descripcion" nullable="false" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaInscripcionInicio" nullable="false" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaInscripcionFin" nullable="false" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaEventoInicio" nullable="false" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaEventoFin" nullable="false" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaSolicitud" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="cupo" nullable="false" collection="false"/>
+                <relationField type="COMPOSITION" reference="com.mdecisc.model.PonenteEventos" fetchType="LAZY" name="ponentes" nullable="true" collection="true"/>
+                <relationField type="COMPOSITION" reference="com.mdecisc.model.ValorEventos" fetchType="LAZY" name="valor" nullable="true" collection="true"/>
+                <relationField type="COMPOSITION" reference="com.mdecisc.model.Actividad" fetchType="LAZY" name="actividades" nullable="true" collection="true">
+                    <description> </description>
+                </relationField>
+                <field type="TEXT" length="255" name="imagen" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="cronograma" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="informe" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="validado" nullable="true" collection="false"/>
+                <field type="TEXT" length="255" name="evidencias" nullable="true" collection="true"/>
+                <field type="TEXT" length="255" name="motivoCancelacion" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.mdecisc.model.FechaPeriodo">
+            <fields>
+                <field type="LOCALDATE" length="255" name="fechaInicio" nullable="false" collection="false">
+                    <description>Fecha de inicio de inscripciones</description>
+                </field>
+                <field type="LOCALDATE" length="255" name="fechaFin" nullable="false" collection="false">
+                    <description>Fecha de finalización de inscripciones</description>
+                </field>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.mdecisc.model.Gestor">
+            <fields>
+                <field type="TEXT" length="255" name="nombre" nullable="false" collection="false"/>
+                <field type="TEXT" length="255" name="apellido" nullable="false" collection="false"/>
+                <field type="TEXT" length="255" name="correo" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.mdecisc.model.Ponente">
+            <fields>
+                <field type="TEXT" length="255" name="apellido" nullable="false" collection="false"/>
+                <field type="TEXT" length="255" name="nombre" nullable="false" collection="false"/>
+                <field type="TEXT" length="255" name="correo" nullable="false" collection="false"/>
+                <field type="TEXT" length="255" name="resumen" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.mdecisc.model.PonenteEventos">
+            <fields>
+                <field type="TEXT" length="255" name="nombre" nullable="false" collection="false"/>
+                <field type="TEXT" length="255" name="apellido" nullable="false" collection="false"/>
+                <field type="TEXT" length="255" name="correo" nullable="false" collection="false"/>
+                <field type="TEXT" length="255" name="resumen" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.mdecisc.model.Valor">
+            <fields>
+                <field type="TEXT" length="255" name="rol" nullable="false" collection="false"/>
+                <field type="DOUBLE" length="255" name="valor" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.mdecisc.model.ValorEventos">
+            <fields>
+                <field type="TEXT" length="255" name="rol" nullable="false" collection="false"/>
+                <field type="DOUBLE" length="255" name="valor" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.unl.model.ObjetoCertOtros">
+            <fields>
+                <field type="STRING" length="255" name="cabecera" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="cuerpo" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.unl.model.ObjetoCertificado">
+            <description>Objeto de negocio para almacenar todos los certificados disponibles.</description>
+            <fields>
+                <field type="INTEGER" length="255" name="idCert" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="nombre" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="descripcion" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="contenido" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="tieneRequisito" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="firmaSecretaria" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="firmaGestor" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="firmaDecano" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries>
+                <query name="findById" content="SELECT o &#10;FROM ObjetoCertificado o &#10;WHERE o.persistenceId = :id" returnType="com.unl.model.ObjetoCertificado">
+                    <queryParameters>
+                        <queryParameter name="id" className="java.lang.Long"/>
+                    </queryParameters>
+                </query>
+            </queries>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.unl.model.ObjetoEvento">
+            <description>Objeto de negocio para almacenar eventos académicos, los cuales son utilizados por los certificados de eventos.</description>
+            <fields>
+                <field type="STRING" length="255" name="nombre" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="tematica" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="lugar" nullable="false" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaDeInicio" nullable="false" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaDeFinalizacion" nullable="false" collection="false"/>
+                <field type="INTEGER" length="255" name="horas" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries>
+                <query name="findById" content="SELECT o &#10;FROM ObjetoEvento o &#10;WHERE o.persistenceId = :id" returnType="com.unl.model.ObjetoEvento">
+                    <queryParameters>
+                        <queryParameter name="id" className="java.lang.Long"/>
+                    </queryParameters>
+                </query>
+            </queries>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.unl.model.ObjetoPracticas">
+            <description>Objeto para almacenar los datos de practicas pre-profesionales.</description>
+            <fields>
+                <field type="STRING" length="255" name="nombreDeEmpresaMantenimiento" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaDeInicioMantenimiento" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaDeFinMantenimiento" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nombreDeEmpresaRedes" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaDeInicioRedes" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaDeFinRedes" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nombreDeEmpresaSW" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaDeInicioSW" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaDeFinSW" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.unl.model.ObjetoProrrogaPago">
+            <description>Objeto para almacenar datos sobre las segunda prorroga para pagos.</description>
+            <fields>
+                <field type="LOCALDATE" length="255" name="fechaInicioDeEstudios" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaFinDeEstudios" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaInicioPrimeraProrroga" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaFinPrimeraProrroga" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaInicioSegundaProrroga" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaFinSegundaProrroga" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.unl.model.ObjetoSolicitud">
+            <description>Objeto de negocio para almacenar las solicitudes de certificado.</description>
+            <fields>
+                <field type="LONG" length="255" name="idSolicitanteBonitaBPM" nullable="false" collection="false">
+                    <description>Este atributo representa el userId del estudiante que solicita el certificado</description>
+                </field>
+                <field type="LONG" length="255" name="idRevisorBonitaBPM" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="estado" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="comentariosDelRevisor" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="fechaDeCreacion" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.unl.model.ObjetoCertificado" fetchType="LAZY" name="certificadoSeleccionado" nullable="false" collection="false"/>
+                <field type="BOOLEAN" length="255" name="solicitudAceptada" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="idNuevaInstanciaDeProcesoDeSolicitud" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>

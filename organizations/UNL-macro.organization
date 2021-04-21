@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="UNL-macro">
+  <customUserInfoDefinitions>
+    <customUserInfoDefinition>
+      <name>Cédula</name>
+      <description></description>
+    </customUserInfoDefinition>
+  </customUserInfoDefinitions>
+  <users>
+    <user userName="alexjhcm@gmail.com">
+      <firstName>April</firstName>
+      <lastName>Sanchez</lastName>
+      <title>Srta</title>
+      <jobTitle>Estudiante de la CIS</jobTitle>
+      <manager>elisa.orellana@unl.edu.ec</manager>
+      <personalData/>
+      <professionalData>
+        <email>alexjhcm@gmail.com</email>
+        <phoneNumber>484-302-5000</phoneNumber>
+        <faxNumber>484-302-0000</faxNumber>
+        <building>70</building>
+        <address>Renwick Drive</address>
+        <zipCode>19108</zipCode>
+        <city>Philadelphia</city>
+        <state>PA</state>
+        <country>United States</country>
+      </professionalData>
+      <metaDatas>
+        <metaData name="Skype ID"/>
+        <metaData name="Twitter"/>
+        <metaData name="Facebook"/>
+      </metaDatas>
+      <enabled>true</enabled>
+      <password encrypted="false">bpm1</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>Cédula</name>
+          <value>021698557</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="walter.bates@unl.ec">
+      <firstName>Walter</firstName>
+      <lastName>Bates</lastName>
+      <title>Sr</title>
+      <jobTitle>Estudiante de la CIS</jobTitle>
+      <manager>elisa.orellana@unl.edu.ec</manager>
+      <personalData/>
+      <professionalData>
+        <email>walter.bates@unl.ec</email>
+        <phoneNumber>484-302-5000</phoneNumber>
+        <faxNumber>484-302-0000</faxNumber>
+        <building>70</building>
+        <address>Renwick Drive</address>
+        <zipCode>19108</zipCode>
+        <city>Philadelphia</city>
+        <state>PA</state>
+        <country>United States</country>
+      </professionalData>
+      <metaDatas>
+        <metaData name="Skype ID"/>
+        <metaData name="Twitter"/>
+        <metaData name="Facebook"/>
+      </metaDatas>
+      <enabled>true</enabled>
+      <password encrypted="false">bpm1</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>Cédula</name>
+          <value>1106983310</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="pfordonez@unl.edu.ec">
+      <firstName>Pablo</firstName>
+      <lastName>Ordoñez</lastName>
+      <title>Ing</title>
+      <jobTitle>Gestor académico de la CIS</jobTitle>
+      <manager>michael.valarezo@unl.ec</manager>
+      <personalData/>
+      <professionalData>
+        <email>pfordonez@unl.edu.ec</email>
+      </professionalData>
+      <password encrypted="false">bpm1</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>Cédula</name>
+          <value>1105643314</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="michael.valarezo@unl.ec">
+      <firstName>Michael</firstName>
+      <lastName>Valarezo</lastName>
+      <title>Ing</title>
+      <jobTitle>Decano de la FEIRNNR</jobTitle>
+      <manager></manager>
+      <personalData/>
+      <professionalData>
+        <email>michael.valarezo@unl.ec</email>
+      </professionalData>
+      <password encrypted="false">bpm1</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>Cédula</name>
+          <value>1105643314</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="elisa.orellana@unl.edu.ec">
+      <firstName>Elisa</firstName>
+      <lastName>Orellana</lastName>
+      <title>Lic</title>
+      <jobTitle>Secretaria de la CIS</jobTitle>
+      <manager>pfordonez@unl.edu.ec</manager>
+      <personalData/>
+      <professionalData>
+        <email>elisa.orellana@unl.edu.ec</email>
+      </professionalData>
+      <password encrypted="false">bpm1</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>Cédula</name>
+          <value>1105643314</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="alex.chamba@unl.edu.ec">
+      <firstName>Alex</firstName>
+      <lastName>Chamba</lastName>
+      <title>Sr</title>
+      <jobTitle>Estudiante de la CIS</jobTitle>
+      <manager>elisa.orellana@unl.edu.ec</manager>
+      <personalData/>
+      <professionalData>
+        <email>alex.chamba@unl.edu.ec</email>
+      </professionalData>
+      <password encrypted="false">bpm1</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>Cédula</name>
+          <value>1105557891</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="raquel.lojano@unl.edu.ec">
+      <firstName>Raquel</firstName>
+      <lastName>Lojano</lastName>
+      <title>Srta</title>
+      <jobTitle>Estudiante de CIS</jobTitle>
+      <manager>elisa.orellana@unl.edu.ec</manager>
+      <personalData/>
+      <professionalData>
+        <email>raquel.lojano@unl.edu.ec</email>
+      </professionalData>
+      <password encrypted="false">bpm1</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>Cédula</name>
+          <value>1167789156</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="adortegam@unl.edu.ec">
+      <firstName>Anthony</firstName>
+      <lastName>Ortega</lastName>
+      <title>Sr</title>
+      <jobTitle>Estudiante de CIS</jobTitle>
+      <manager>elisa.orellana@unl.edu.ec</manager>
+      <personalData/>
+      <professionalData>
+        <email>adortegam@unl.edu.ec</email>
+      </professionalData>
+      <password encrypted="false">bpm1</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>Cédula</name>
+          <value>1106081837</value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+    <user userName="johnney.bermeo@unl.edu.ec">
+      <firstName>Johnney</firstName>
+      <lastName>Bermeo</lastName>
+      <jobTitle>Estudiante de CIS</jobTitle>
+      <manager>elisa.orellana@unl.edu.ec</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues>
+        <customUserInfoValue>
+          <name>Cédula</name>
+          <value></value>
+        </customUserInfoValue>
+      </customUserInfoValues>
+    </user>
+  </users>
+  <roles>
+    <role name="member">
+      <displayName>Member</displayName>
+      <description></description>
+    </role>
+    <role name="decano">
+      <displayName>decano</displayName>
+    </role>
+    <role name="gestor">
+      <displayName>gestor</displayName>
+    </role>
+    <role name="docente">
+      <displayName>docente</displayName>
+    </role>
+    <role name="comision">
+      <displayName>comision</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="unl">
+      <displayName>Unl</displayName>
+      <description>Este grupo representa a la organización UNL.</description>
+    </group>
+    <group name="estudiante" parentPath="/unl">
+      <displayName>Estudiantes</displayName>
+      <description>Este grupo representa a los estudiantes de la organización UNL.</description>
+    </group>
+    <group name="facultad" parentPath="/unl">
+      <displayName>FEIRNNR</displayName>
+      <description>Este grupo representa a la FEIRNNR de la UNL.</description>
+    </group>
+    <group name="decanato" parentPath="/unl/facultad">
+      <displayName>Decanato</displayName>
+      <description>Este grupo representa al departamento Decanato de la FEIRNNR de la UNL.</description>
+    </group>
+    <group name="cis" parentPath="/unl/facultad">
+      <displayName>CIS</displayName>
+      <description>Este grupo representa al grupo CIS.</description>
+    </group>
+    <group name="coordinacion" parentPath="/unl/facultad/cis">
+      <displayName>Coordinación de la carrera</displayName>
+      <description>Este subgrupo representa al departamento de Coordinación de la CIS de la UNL.</description>
+    </group>
+    <group name="secretaria" parentPath="/unl/facultad/cis">
+      <displayName>Secretaría de la carrera</displayName>
+      <description>Este subgrupo representa al departamento de Secretaría de la CIS de la UNL.</description>
+    </group>
+    <group name="Docentes" parentPath="/unl">
+      <displayName>Docentes</displayName>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>alexjhcm@gmail.com</userName>
+      <roleName>member</roleName>
+      <groupName>estudiante</groupName>
+      <groupParentPath>/unl</groupParentPath>
+    </membership>
+    <membership>
+      <userName>walter.bates@unl.ec</userName>
+      <roleName>member</roleName>
+      <groupName>estudiante</groupName>
+      <groupParentPath>/unl</groupParentPath>
+    </membership>
+    <membership>
+      <userName>pfordonez@unl.edu.ec</userName>
+      <roleName>member</roleName>
+      <groupName>coordinacion</groupName>
+      <groupParentPath>/unl/facultad/cis</groupParentPath>
+    </membership>
+    <membership>
+      <userName>michael.valarezo@unl.ec</userName>
+      <roleName>member</roleName>
+      <groupName>decanato</groupName>
+      <groupParentPath>/unl/facultad</groupParentPath>
+    </membership>
+    <membership>
+      <userName>elisa.orellana@unl.edu.ec</userName>
+      <roleName>member</roleName>
+      <groupName>secretaria</groupName>
+      <groupParentPath>/unl/facultad/cis</groupParentPath>
+    </membership>
+    <membership>
+      <userName>alex.chamba@unl.edu.ec</userName>
+      <roleName>member</roleName>
+      <groupName>estudiante</groupName>
+      <groupParentPath>/unl</groupParentPath>
+    </membership>
+    <membership>
+      <userName>raquel.lojano@unl.edu.ec</userName>
+      <roleName>member</roleName>
+      <groupName>estudiante</groupName>
+      <groupParentPath>/unl</groupParentPath>
+    </membership>
+    <membership>
+      <userName>adortegam@unl.edu.ec</userName>
+      <roleName>member</roleName>
+      <groupName>estudiante</groupName>
+      <groupParentPath>/unl</groupParentPath>
+    </membership>
+    <membership>
+      <userName>michael.valarezo@unl.ec</userName>
+      <roleName>decano</roleName>
+      <groupName>decanato</groupName>
+      <groupParentPath>/unl/facultad</groupParentPath>
+    </membership>
+    <membership>
+      <userName>pfordonez@unl.edu.ec</userName>
+      <roleName>gestor</roleName>
+      <groupName>coordinacion</groupName>
+      <groupParentPath>/unl/facultad/cis</groupParentPath>
+    </membership>
+    <membership>
+      <userName>johnney.bermeo@unl.edu.ec</userName>
+      <roleName>member</roleName>
+      <groupName>estudiante</groupName>
+      <groupParentPath>/unl</groupParentPath>
+    </membership>
+  </memberships>
+</organization:Organization>

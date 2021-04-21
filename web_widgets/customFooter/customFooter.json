@@ -1,0 +1,22 @@
+{
+  "modelVersion" : "2.0",
+  "id" : "customFooter",
+  "name" : "footer",
+  "lastUpdate" : 1617841635289,
+  "template" : "@customFooter.tpl.html",
+  "controller" : "@customFooter.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "Texto",
+      "name" : "text",
+      "type" : "text",
+      "defaultValue" : "Desarrollado completamente en BonitaSoft",
+      "bond" : "constant"
+    }
+  ],
+  "assets" : [ ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}
