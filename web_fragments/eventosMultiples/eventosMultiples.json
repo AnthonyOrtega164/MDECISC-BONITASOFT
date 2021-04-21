@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "eventosMultiples",
   "name" : "eventosMultiples",
-  "lastUpdate" : 1618893180699,
+  "lastUpdate" : 1618967021560,
   "rows" : [
     [
       {
@@ -467,8 +467,8 @@
                               "value" : ""
                             },
                             "hidden" : {
-                              "type" : "constant",
-                              "value" : false
+                              "type" : "expression",
+                              "value" : "!eventos_selected.imagen"
                             },
                             "repeatedCollection" : {
                               "type" : "variable",
@@ -2779,8 +2779,8 @@
                                     "value" : ""
                                   },
                                   "hidden" : {
-                                    "type" : "constant",
-                                    "value" : false
+                                    "type" : "expression",
+                                    "value" : "!eventos_selected.cronograma"
                                   },
                                   "repeatedCollection" : {
                                     "type" : "variable",
@@ -2901,8 +2901,8 @@
                                     "value" : ""
                                   },
                                   "hidden" : {
-                                    "type" : "constant",
-                                    "value" : false
+                                    "type" : "expression",
+                                    "value" : "!eventos_selected.evidencias"
                                   },
                                   "repeatedCollection" : {
                                     "type" : "variable",

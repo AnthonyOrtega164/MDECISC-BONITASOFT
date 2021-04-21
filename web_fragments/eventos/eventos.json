@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "eventos",
   "name" : "eventos",
-  "lastUpdate" : 1618879166405,
+  "lastUpdate" : 1618966973611,
   "rows" : [
     [
       {
@@ -389,8 +389,8 @@
                               "value" : ""
                             },
                             "hidden" : {
-                              "type" : "constant",
-                              "value" : false
+                              "type" : "expression",
+                              "value" : "!evento_selected.imagen"
                             },
                             "repeatedCollection" : {
                               "type" : "variable",
@@ -2494,8 +2494,8 @@
                               "value" : ""
                             },
                             "hidden" : {
-                              "type" : "constant",
-                              "value" : false
+                              "type" : "expression",
+                              "value" : "!evento_selected.cronograma"
                             },
                             "repeatedCollection" : {
                               "type" : "variable",
@@ -2849,7 +2849,7 @@
                                     "value" : "URL"
                                   },
                                   "url" : {
-                                    "type" : "constant",
+                                    "type" : "expression",
                                     "value" : "evento_selected.informe"
                                   },
                                   "document" : {

@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "anuncios",
   "name" : "anuncios",
-  "lastUpdate" : 1618693300971,
+  "lastUpdate" : 1618966907054,
   "rows" : [
     [
       {
@@ -424,8 +424,8 @@
                               "value" : ""
                             },
                             "hidden" : {
-                              "type" : "constant",
-                              "value" : false
+                              "type" : "expression",
+                              "value" : "!anuncio_selected.imagen"
                             },
                             "repeatedCollection" : {
                               "type" : "variable",
