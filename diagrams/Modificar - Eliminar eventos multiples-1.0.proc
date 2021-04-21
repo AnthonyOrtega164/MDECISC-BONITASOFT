@@ -24,8 +24,8 @@
             <operator xmi:type="expression:Operator" xmi:id="_Dk_ywaGdEeu8UM8dRGrBDQ" type="ASSIGNMENT"/>
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_Dk_ywqGdEeu8UM8dRGrBDQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_yw6GdEeu8UM8dRGrBDQ" name="idAnuncio" content="idAnuncio" type="TYPE_VARIABLE" returnType="java.lang.Long">
-              <referencedElements xmi:type="process:Data" xmi:id="_Dk_yxKGdEeu8UM8dRGrBDQ" name="idAnuncio" dataType="_Dk_0waGdEeu8UM8dRGrBDQ"/>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_yw6GdEeu8UM8dRGrBDQ" name="idEventos" content="idEventos" type="TYPE_VARIABLE" returnType="java.lang.Long">
+              <referencedElements xmi:type="process:Data" xmi:id="_Dk_yxKGdEeu8UM8dRGrBDQ" name="idEventos" dataType="_Dk_0waGdEeu8UM8dRGrBDQ"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_Dk_yxaGdEeu8UM8dRGrBDQ" name="newScript()" content="Long id = idInput.toLong();&#xD;&#xA;return id&#xD;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_Dk_yxqGdEeu8UM8dRGrBDQ" name="idInput">
@@ -50,7 +50,7 @@
             <condition xmi:type="expression:Expression" xmi:id="_Dk_y1KGdEeu8UM8dRGrBDQ" name="00:01:00" content="60000L" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
           </BoundaryIntermediateEvents>
           <formMapping xmi:type="process:FormMapping" xmi:id="_Dk_y1aGdEeu8UM8dRGrBDQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_Dk_y1qGdEeu8UM8dRGrBDQ" name="formSeleccionarAnuncio" content="556c2b5e-ad0e-426f-a45d-3e730f21adfe" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_01KK0KJEEeu0vJDt_-fTdA" name="formSeleccionarEventos" content="2918d59b-31e3-4263-9f33-5448f0b758a3" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_Dk_y16GdEeu8UM8dRGrBDQ">
             <inputs xmi:type="process:ContractInput" xmi:id="_Dk_y2KGdEeu8UM8dRGrBDQ" name="comentarioInput">
@@ -137,13 +137,13 @@
                     </referencedElements>
                   </referencedElements>
                   <referencedElements xmi:type="expression:Expression" xmi:id="_Dk_zDqGdEeu8UM8dRGrBDQ" name="anuncioModificar.nombre" content="anuncioModificar.nombre" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-                    <referencedElements xmi:type="expression:Expression" xmi:id="_Dk_zD6GdEeu8UM8dRGrBDQ" name="anuncioModificar" content="anuncioModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Anuncio">
-                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_zEKGdEeu8UM8dRGrBDQ" name="anuncioModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Anuncio"/>
+                    <referencedElements xmi:type="expression:Expression" xmi:id="_Dk_zD6GdEeu8UM8dRGrBDQ" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_zEKGdEeu8UM8dRGrBDQ" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
                     </referencedElements>
                   </referencedElements>
                   <referencedElements xmi:type="expression:Expression" xmi:id="_Dk_zEaGdEeu8UM8dRGrBDQ" name="anuncioModificar.descripcion" content="anuncioModificar.descripcion" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-                    <referencedElements xmi:type="expression:Expression" xmi:id="_Dk_zEqGdEeu8UM8dRGrBDQ" name="anuncioModificar" content="anuncioModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Anuncio">
-                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_zE6GdEeu8UM8dRGrBDQ" name="anuncioModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Anuncio"/>
+                    <referencedElements xmi:type="expression:Expression" xmi:id="_Dk_zEqGdEeu8UM8dRGrBDQ" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_zE6GdEeu8UM8dRGrBDQ" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
                     </referencedElements>
                   </referencedElements>
                   <referencedElements xmi:type="expression:Expression" xmi:id="_Dk_zFKGdEeu8UM8dRGrBDQ" name="fechaSolicitudText" content="fechaSolicitudText" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
@@ -169,8 +169,8 @@
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Dk_zIKGdEeu8UM8dRGrBDQ" key="attachments">
                 <expression xmi:type="expression:ListExpression" xmi:id="_Dk_zIaGdEeu8UM8dRGrBDQ">
-                  <expressions xmi:type="expression:Expression" xmi:id="_Dk_zIqGdEeu8UM8dRGrBDQ" name="imagenAnuncio" content="imagenAnuncio" type="TYPE_DOCUMENT" returnType="org.bonitasoft.engine.bpm.document.Document">
-                    <referencedElements xmi:type="process:Document" xmi:id="_Dk_zI6GdEeu8UM8dRGrBDQ" name="imagenAnuncio"/>
+                  <expressions xmi:type="expression:Expression" xmi:id="_Dk_zIqGdEeu8UM8dRGrBDQ" name="imagenEventos" content="imagenEventos" type="TYPE_DOCUMENT" returnType="org.bonitasoft.engine.bpm.document.Document">
+                    <referencedElements xmi:type="process:Document" xmi:id="_Dk_zI6GdEeu8UM8dRGrBDQ" name="imagenEventos"/>
                   </expressions>
                 </expression>
               </parameters>
@@ -200,7 +200,7 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_Dk_zNKGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_Dk_zNaGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_Dk_zNqGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
-          <connectors xmi:type="process:Connector" xmi:id="_Dk_zN6GdEeu8UM8dRGrBDQ" name="subirNuevaImagenAnuncio" definitionId="cmis-uploadnewversionofdocument" event="ON_FINISH" definitionVersion="2.0.1">
+          <connectors xmi:type="process:Connector" xmi:id="_Dk_zN6GdEeu8UM8dRGrBDQ" name="subirNuevaImagenEventos" definitionId="cmis-uploadnewversionofdocument" event="ON_FINISH" definitionVersion="2.0.1">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_Dk_zOKGdEeu8UM8dRGrBDQ" definitionId="cmis-uploadnewversionofdocument" version="2.0.1" modelVersion="7.12.0-004">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Dk_zOaGdEeu8UM8dRGrBDQ" key="username">
                 <expression xmi:type="expression:Expression" xmi:id="_Dk_zOqGdEeu8UM8dRGrBDQ" name="usuarioAlfresco" content="usuarioAlfresco" type="TYPE_PARAMETER" returnTypeFixed="true">
@@ -236,13 +236,13 @@
                 <expression xmi:type="expression:Expression" xmi:id="_Dk_zTaGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Dk_zTqGdEeu8UM8dRGrBDQ" key="document">
-                <expression xmi:type="expression:Expression" xmi:id="_Dk_zT6GdEeu8UM8dRGrBDQ" name="imagenAnuncio" content="imagenAnuncio" type="DOCUMENT_REF_TYPE" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:Document" xmi:id="_Dk_zUKGdEeu8UM8dRGrBDQ" name="imagenAnuncio"/>
+                <expression xmi:type="expression:Expression" xmi:id="_Dk_zT6GdEeu8UM8dRGrBDQ" name="imagenEventos" content="imagenEventos" type="DOCUMENT_REF_TYPE" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Document" xmi:id="_Dk_zUKGdEeu8UM8dRGrBDQ" name="imagenEventos"/>
                 </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Dk_zUaGdEeu8UM8dRGrBDQ" key="remote_document">
-                <expression xmi:type="expression:Expression" xmi:id="_Dk_zUqGdEeu8UM8dRGrBDQ" name="remote_document()" content="String[] partes = anuncioModificar.imagen.split(&quot;/&quot;);&#xD;&#xA;return &quot;/MDECISC_Documentos/Anuncios/&quot;+partes[partes.size()-1].toString()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_zU6GdEeu8UM8dRGrBDQ" name="anuncioModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Anuncio"/>
+                <expression xmi:type="expression:Expression" xmi:id="_Dk_zUqGdEeu8UM8dRGrBDQ" name="remote_document()" content="String[] partes = eventosModificar.imagen.split(&quot;/&quot;);&#xD;&#xA;return &quot;/MDECISC_Documentos/Eventos_Muliples/imagenes/&quot;+partes[partes.size()-1].toString()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_zIg0oKK5Eeu9iYO3TFqdCw" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
                 </expression>
               </parameters>
             </configuration>
@@ -256,89 +256,276 @@
               <operator xmi:type="expression:Operator" xmi:id="_Dk_zWaGdEeu8UM8dRGrBDQ" type="ASSIGNMENT"/>
             </outputs>
           </connectors>
-          <operations xmi:type="expression:Operation" xmi:id="_Dk_zWqGdEeu8UM8dRGrBDQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_zW6GdEeu8UM8dRGrBDQ" name="imagenAnuncio" content="imagenAnuncio" type="DOCUMENT_REF_TYPE">
-              <referencedElements xmi:type="process:Document" xmi:id="_Dk_zXKGdEeu8UM8dRGrBDQ" name="imagenAnuncio"/>
+          <connectors xmi:type="process:Connector" xmi:id="_PWkl0KK6Eeu9iYO3TFqdCw" name="subirNuevoCronogramaEventos" definitionId="cmis-uploadnewversionofdocument" event="ON_FINISH" definitionVersion="2.0.1">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_PWkl0aK6Eeu9iYO3TFqdCw" definitionId="cmis-uploadnewversionofdocument" version="2.0.1" modelVersion="7.12.0-004">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_PWkl0qK6Eeu9iYO3TFqdCw" key="username">
+                <expression xmi:type="expression:Expression" xmi:id="_PWkl06K6Eeu9iYO3TFqdCw" name="usuarioAlfresco" content="usuarioAlfresco" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_PWkl1KK6Eeu9iYO3TFqdCw" name="usuarioAlfresco" typeClassname="java.lang.String"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_PWkl1aK6Eeu9iYO3TFqdCw" key="password">
+                <expression xmi:type="expression:Expression" xmi:id="_PWkl1qK6Eeu9iYO3TFqdCw" name="claveAlfresco" content="claveAlfresco" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_PWkl16K6Eeu9iYO3TFqdCw" name="claveAlfresco" typeClassname="java.lang.String"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_PWkl2KK6Eeu9iYO3TFqdCw" key="url">
+                <expression xmi:type="expression:Expression" xmi:id="_PWkl2aK6Eeu9iYO3TFqdCw" name="urlAtom" content="urlAtom" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_PWkl2qK6Eeu9iYO3TFqdCw" name="urlAtom" typeClassname="java.lang.String"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_PWkl26K6Eeu9iYO3TFqdCw" key="repository">
+                <expression xmi:type="expression:Expression" xmi:id="_PWkl3KK6Eeu9iYO3TFqdCw" name="Main Repository" content="Main Repository" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_PWkl3aK6Eeu9iYO3TFqdCw" key="binding_type">
+                <expression xmi:type="expression:Expression" xmi:id="_PWkl3qK6Eeu9iYO3TFqdCw" name="atompub" content="atompub" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_PWkl36K6Eeu9iYO3TFqdCw" key="wsObjectServiceUrl">
+                <expression xmi:type="expression:Expression" xmi:id="_PWkl4KK6Eeu9iYO3TFqdCw" name="" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_PWkl4aK6Eeu9iYO3TFqdCw" key="wsObjectServiceEndpointUrl">
+                <expression xmi:type="expression:Expression" xmi:id="_PWkl4qK6Eeu9iYO3TFqdCw" name="" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_PWkl46K6Eeu9iYO3TFqdCw" key="wsRepositoryServiceUrl">
+                <expression xmi:type="expression:Expression" xmi:id="_PWkl5KK6Eeu9iYO3TFqdCw" name="" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_PWkl5aK6Eeu9iYO3TFqdCw" key="wsRepositoryServiceEndpointUrl">
+                <expression xmi:type="expression:Expression" xmi:id="_PWkl5qK6Eeu9iYO3TFqdCw" name="" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_PWkl56K6Eeu9iYO3TFqdCw" key="document">
+                <expression xmi:type="expression:Expression" xmi:id="_PWkl6KK6Eeu9iYO3TFqdCw" name="cronogramaEventos" content="cronogramaEventos" type="DOCUMENT_REF_TYPE" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Document" xmi:id="_PWkl6aK6Eeu9iYO3TFqdCw" name="cronogramaEventos"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_PWkl6qK6Eeu9iYO3TFqdCw" key="remote_document">
+                <expression xmi:type="expression:Expression" xmi:id="_PWkl66K6Eeu9iYO3TFqdCw" name="remote_document()" content="String[] partes = eventosModificar.cronograma.split(&quot;/&quot;);&#xD;&#xA;return &quot;/MDECISC_Documentos/Eventos_Muliples/cronogramas/&quot;+partes[partes.size()-1].toString()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_XKZHcKK6Eeu9iYO3TFqdCw" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+                </expression>
+              </parameters>
+            </configuration>
+            <outputs xmi:type="expression:Operation" xmi:id="_PWkl7KK6Eeu9iYO3TFqdCw">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_PWkl7aK6Eeu9iYO3TFqdCw"/>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_PWkl7qK6Eeu9iYO3TFqdCw" name="document_id" content="document_id" type="CONNECTOR_OUTPUT_TYPE">
+                <referencedElements xmi:type="definition:Output" xmi:id="_PWkl76K6Eeu9iYO3TFqdCw" name="document_id" type="java.lang.String"/>
+              </rightOperand>
+              <operator xmi:type="expression:Operator" xmi:id="_PWkl8KK6Eeu9iYO3TFqdCw" type="ASSIGNMENT"/>
+            </outputs>
+          </connectors>
+          <operations xmi:type="expression:Operation" xmi:id="_3P2mcaJWEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_3P2mcqJWEeu0vJDt_-fTdA" name="imagenEventos" content="imagenEventos" type="DOCUMENT_REF_TYPE">
+              <referencedElements xmi:type="process:Document" xmi:id="_3P2mc6JWEeu0vJDt_-fTdA" name="imagenEventos"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_Dk_zXaGdEeu8UM8dRGrBDQ" name="imagenAnuncioDocumentInput" content="imagenAnuncioDocumentInput" type="TYPE_CONTRACT_INPUT" returnType="org.bonitasoft.engine.bpm.contract.FileInputValue">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_Dk_zXqGdEeu8UM8dRGrBDQ" name="imagenAnuncioDocumentInput" type="FILE" createMode="false"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_3P3NgKJWEeu0vJDt_-fTdA" name="imagenEventosDocumentInput" content="imagenEventosDocumentInput" type="TYPE_CONTRACT_INPUT" returnType="org.bonitasoft.engine.bpm.contract.FileInputValue">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_3P3NgaJWEeu0vJDt_-fTdA" name="imagenEventosDocumentInput" type="FILE" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_Dk_zX6GdEeu8UM8dRGrBDQ" type="DOCUMENT_CREATE_UPDATE"/>
+            <operator xmi:type="expression:Operator" xmi:id="_3P3NgqJWEeu0vJDt_-fTdA" type="DOCUMENT_CREATE_UPDATE"/>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_Dk_zYKGdEeu8UM8dRGrBDQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_zYaGdEeu8UM8dRGrBDQ" name="anuncioModificar" content="anuncioModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Anuncio">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_zYqGdEeu8UM8dRGrBDQ" name="anuncioModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Anuncio"/>
+          <operations xmi:type="expression:Operation" xmi:id="_5DBNMaJWEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_5DBNMqJWEeu0vJDt_-fTdA" name="cronogramaEventos" content="cronogramaEventos" type="DOCUMENT_REF_TYPE">
+              <referencedElements xmi:type="process:Document" xmi:id="_5DBNM6JWEeu0vJDt_-fTdA" name="cronogramaEventos"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_Dk_zY6GdEeu8UM8dRGrBDQ" name="anuncioModificarInput.id" content="anuncioModificarInput?.id?.trim() ? anuncioModificarInput.id.toLong() : null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_Dk_zZKGdEeu8UM8dRGrBDQ" name="anuncioModificarInput" type="COMPLEX" createMode="false"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_5DBNNKJWEeu0vJDt_-fTdA" name="cronogramaEventosDocumentInput" content="cronogramaEventosDocumentInput" type="TYPE_CONTRACT_INPUT" returnType="org.bonitasoft.engine.bpm.contract.FileInputValue">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_5DBNNaJWEeu0vJDt_-fTdA" name="cronogramaEventosDocumentInput" type="FILE" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_Dk_zZaGdEeu8UM8dRGrBDQ" type="JAVA_METHOD" expression="setId">
+            <operator xmi:type="expression:Operator" xmi:id="_5DBNNqJWEeu0vJDt_-fTdA" type="DOCUMENT_CREATE_UPDATE"/>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_7g8BIKJWEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_7g8BIaJWEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8BIqJWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_7g8BI6JWEeu0vJDt_-fTdA" name="eventosModificarInput.id" content="eventosModificarInput?.id?.trim() ? eventosModificarInput.id.toLong() : null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_7g8BJKJWEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_7g8BJaJWEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setId">
               <inputTypes>java.lang.Long</inputTypes>
             </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_Dk_zZqGdEeu8UM8dRGrBDQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_zZ6GdEeu8UM8dRGrBDQ" name="anuncioModificar" content="anuncioModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Anuncio">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_zaKGdEeu8UM8dRGrBDQ" name="anuncioModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Anuncio"/>
+          <operations xmi:type="expression:Operation" xmi:id="_7g8BJqJWEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_7g8BJ6JWEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8BKKJWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_Dk_zaaGdEeu8UM8dRGrBDQ" name="anuncioModificarInput.nombre" content="anuncioModificarInput?.nombre" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_Dk_zaqGdEeu8UM8dRGrBDQ" name="anuncioModificarInput" type="COMPLEX" createMode="false"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_7g8BKaJWEeu0vJDt_-fTdA" name="eventosModificarInput.nombre" content="eventosModificarInput?.nombre" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_7g8BKqJWEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_Dk_za6GdEeu8UM8dRGrBDQ" type="JAVA_METHOD" expression="setNombre">
+            <operator xmi:type="expression:Operator" xmi:id="_7g8BK6JWEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setNombre">
               <inputTypes>java.lang.String</inputTypes>
             </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_Dk_zbKGdEeu8UM8dRGrBDQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_zbaGdEeu8UM8dRGrBDQ" name="anuncioModificar" content="anuncioModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Anuncio">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_zbqGdEeu8UM8dRGrBDQ" name="anuncioModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Anuncio"/>
+          <operations xmi:type="expression:Operation" xmi:id="_7g8BLKJWEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_7g8BLaJWEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8BLqJWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_Dk_zb6GdEeu8UM8dRGrBDQ" name="anuncioModificarInput.descripcion" content="anuncioModificarInput?.descripcion" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_Dk_zcKGdEeu8UM8dRGrBDQ" name="anuncioModificarInput" type="COMPLEX" createMode="false"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_7g8BL6JWEeu0vJDt_-fTdA" name="eventosModificarInput.descripcion" content="eventosModificarInput?.descripcion" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_7g8BMKJWEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_Dk_zcaGdEeu8UM8dRGrBDQ" type="JAVA_METHOD" expression="setDescripcion">
+            <operator xmi:type="expression:Operator" xmi:id="_7g8BMaJWEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setDescripcion">
               <inputTypes>java.lang.String</inputTypes>
             </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_Dk_zcqGdEeu8UM8dRGrBDQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_zc6GdEeu8UM8dRGrBDQ" name="anuncioModificar" content="anuncioModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Anuncio">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_zdKGdEeu8UM8dRGrBDQ" name="anuncioModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Anuncio"/>
+          <operations xmi:type="expression:Operation" xmi:id="_7g8BMqJWEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_7g8BM6JWEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8BNKJWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_Dk_zdaGdEeu8UM8dRGrBDQ" name="anuncioModificarInput.imagen" content="anuncioModificarInput?.imagen" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_Dk_zdqGdEeu8UM8dRGrBDQ" name="anuncioModificarInput" type="COMPLEX" createMode="false"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_7g8BNaJWEeu0vJDt_-fTdA" name="eventosModificarInput.fechaInscripcionInicio" content="eventosModificarInput?.fechaInscripcionInicio" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDateTime">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_7g8BNqJWEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_Dk_zd6GdEeu8UM8dRGrBDQ" type="JAVA_METHOD" expression="setImagen">
-              <inputTypes>java.lang.String</inputTypes>
-            </operator>
-          </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_Dk_zeKGdEeu8UM8dRGrBDQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_zeaGdEeu8UM8dRGrBDQ" name="anuncioModificar" content="anuncioModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Anuncio">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_zeqGdEeu8UM8dRGrBDQ" name="anuncioModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Anuncio"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_Dk_ze6GdEeu8UM8dRGrBDQ" name="anuncioModificarInput.fechaSolicitud" content="anuncioModificarInput?.fechaSolicitud" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDateTime">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_Dk_zfKGdEeu8UM8dRGrBDQ" name="anuncioModificarInput" type="COMPLEX" createMode="false"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_Dk_zfaGdEeu8UM8dRGrBDQ" type="JAVA_METHOD" expression="setFechaSolicitud">
+            <operator xmi:type="expression:Operator" xmi:id="_7g8BN6JWEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setFechaInscripcionInicio">
               <inputTypes>java.time.LocalDateTime</inputTypes>
             </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_Dk_zfqGdEeu8UM8dRGrBDQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_zf6GdEeu8UM8dRGrBDQ" name="anuncioModificar" content="anuncioModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Anuncio">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_zgKGdEeu8UM8dRGrBDQ" name="anuncioModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Anuncio"/>
+          <operations xmi:type="expression:Operation" xmi:id="_7g8BOKJWEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_7g8BOaJWEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8BOqJWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_Dk_zgaGdEeu8UM8dRGrBDQ" name="anuncioModificarInput.validado" content="anuncioModificarInput?.validado" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_Dk_zgqGdEeu8UM8dRGrBDQ" name="anuncioModificarInput" type="COMPLEX" createMode="false"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_7g8BO6JWEeu0vJDt_-fTdA" name="eventosModificarInput.fechaInscripcionFin" content="eventosModificarInput?.fechaInscripcionFin" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDateTime">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_7g8BPKJWEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_Dk_zg6GdEeu8UM8dRGrBDQ" type="JAVA_METHOD" expression="setValidado">
+            <operator xmi:type="expression:Operator" xmi:id="_7g8BPaJWEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setFechaInscripcionFin">
+              <inputTypes>java.time.LocalDateTime</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_7g8BPqJWEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_7g8BP6JWEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8BQKJWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_7g8BQaJWEeu0vJDt_-fTdA" name="eventosModificarInput.fechaEventoInicio" content="eventosModificarInput?.fechaEventoInicio" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDateTime">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_7g8BQqJWEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_7g8BQ6JWEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setFechaEventoInicio">
+              <inputTypes>java.time.LocalDateTime</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_7g8BRKJWEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_7g8BRaJWEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8BRqJWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_7g8BR6JWEeu0vJDt_-fTdA" name="eventosModificarInput.fechaEventoFin" content="eventosModificarInput?.fechaEventoFin" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDateTime">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_7g8BSKJWEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_7g8BSaJWEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setFechaEventoFin">
+              <inputTypes>java.time.LocalDateTime</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_7g8BSqJWEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_7g8BS6JWEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8BTKJWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_7g8BTaJWEeu0vJDt_-fTdA" name="eventosModificarInput.fechaSolicitud" content="eventosModificarInput?.fechaSolicitud" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDateTime">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_7g8BTqJWEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_7g8BT6JWEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setFechaSolicitud">
+              <inputTypes>java.time.LocalDateTime</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_7g8BUKJWEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_7g8BUaJWEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8BUqJWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_7g8BU6JWEeu0vJDt_-fTdA" name="eventosModificarInput.cupo" content="eventosModificarInput?.cupo" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_7g8BVKJWEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_7g8BVaJWEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setCupo">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_7g8BVqJWEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_7g8BV6JWEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8BWKJWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_7g8BWaJWEeu0vJDt_-fTdA" name="eventosModificarInput.ponentes" content="def ponenteEventosList = []&#xD;&#xA;//For each item collected in multiple input&#xD;&#xA;eventosModificarInput?.ponentes.each{&#xD;&#xA;&#x9;//Add PonenteEventos instance&#xD;&#xA;&#x9;ponenteEventosList.add({ currentPonenteEventosInput ->&#xD;&#xA;&#x9;&#x9;def ponenteEventosVar = eventosModificar.ponentes.find { it.persistenceId.toString() == currentPonenteEventosInput.persistenceId_string} ?: new com.mdecisc.model.PonenteEventos()&#xD;&#xA;&#x9;&#x9;ponenteEventosVar.nombre = currentPonenteEventosInput.nombre&#xD;&#xA;&#x9;&#x9;ponenteEventosVar.apellido = currentPonenteEventosInput.apellido&#xD;&#xA;&#x9;&#x9;ponenteEventosVar.correo = currentPonenteEventosInput.correo&#xD;&#xA;&#x9;&#x9;ponenteEventosVar.resumen = currentPonenteEventosInput.resumen&#xD;&#xA;&#x9;&#x9;return ponenteEventosVar&#xD;&#xA;&#x9;}(it))&#xD;&#xA;}&#xD;&#xA;return ponenteEventosList" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_7g8BWqJWEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8BW6JWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_7g8BXKJWEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setPonentes">
+              <inputTypes>java.util.List</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_7g8BXaJWEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_7g8BXqJWEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8BX6JWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_7g8BYKJWEeu0vJDt_-fTdA" name="eventosModificarInput.valor" content="def valorEventosList = []&#xD;&#xA;//For each item collected in multiple input&#xD;&#xA;eventosModificarInput?.valor.each{&#xD;&#xA;&#x9;//Add ValorEventos instance&#xD;&#xA;&#x9;valorEventosList.add({ currentValorEventosInput ->&#xD;&#xA;&#x9;&#x9;def valorEventosVar = eventosModificar.valor.find { it.persistenceId.toString() == currentValorEventosInput.persistenceId_string} ?: new com.mdecisc.model.ValorEventos()&#xD;&#xA;&#x9;&#x9;valorEventosVar.rol = currentValorEventosInput.rol&#xD;&#xA;&#x9;&#x9;valorEventosVar.valor = currentValorEventosInput.valor&#xD;&#xA;&#x9;&#x9;return valorEventosVar&#xD;&#xA;&#x9;}(it))&#xD;&#xA;}&#xD;&#xA;return valorEventosList" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_7g8BYaJWEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8BYqJWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_7g8BY6JWEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setValor">
+              <inputTypes>java.util.List</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_7g8BZKJWEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_7g8BZaJWEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8BZqJWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_7g8BZ6JWEeu0vJDt_-fTdA" name="eventosModificarInput.actividades" content="def actividadList = []&#xD;&#xA;//For each item collected in multiple input&#xD;&#xA;eventosModificarInput?.actividades.each{&#xD;&#xA;&#x9;//Add Actividad instance&#xD;&#xA;&#x9;actividadList.add({ currentActividadInput ->&#xD;&#xA;&#x9;&#x9;def actividadVar = eventosModificar.actividades.find { it.persistenceId.toString() == currentActividadInput.persistenceId_string} ?: new com.mdecisc.model.Actividad()&#xD;&#xA;&#x9;&#x9;actividadVar.nombre = currentActividadInput.nombre&#xD;&#xA;&#x9;&#x9;actividadVar.tipoActividad = currentActividadInput.tipoActividad&#xD;&#xA;&#x9;&#x9;actividadVar.categoriaActividad = currentActividadInput.categoriaActividad&#xD;&#xA;&#x9;&#x9;actividadVar.organizador = currentActividadInput.organizador&#xD;&#xA;&#x9;&#x9;actividadVar.ponente = currentActividadInput.ponente&#xD;&#xA;&#x9;&#x9;actividadVar.lugar = currentActividadInput.lugar&#xD;&#xA;&#x9;&#x9;actividadVar.fechaActividad = currentActividadInput.fechaActividad&#xD;&#xA;&#x9;&#x9;return actividadVar&#xD;&#xA;&#x9;}(it))&#xD;&#xA;}&#xD;&#xA;return actividadList" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_7g8BaKJWEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8BaaJWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_7g8BaqJWEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setActividades">
+              <inputTypes>java.util.List</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_7g8Ba6JWEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_7g8BbKJWEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8BbaJWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_7g8BbqJWEeu0vJDt_-fTdA" name="eventosModificarInput.imagen" content="eventosModificarInput?.imagen" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_7g8Bb6JWEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_7g8BcKJWEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setImagen">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_7g8BcaJWEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_7g8BcqJWEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8Bc6JWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_7g8BdKJWEeu0vJDt_-fTdA" name="eventosModificarInput.cronograma" content="eventosModificarInput?.cronograma" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_7g8BdaJWEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_7g8BdqJWEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setCronograma">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_7g8Bd6JWEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_7g8BeKJWEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8BeaJWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_7g8BeqJWEeu0vJDt_-fTdA" name="eventosModificarInput.informe" content="eventosModificarInput?.informe" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_7g8Be6JWEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_7g8BfKJWEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setInforme">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_7g8BfaJWEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_7g8BfqJWEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8Bf6JWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_7g8BgKJWEeu0vJDt_-fTdA" name="eventosModificarInput.validado" content="eventosModificarInput?.validado" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_7g8BgaJWEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_7g8BgqJWEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setValidado">
               <inputTypes>java.lang.Boolean</inputTypes>
             </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_Dk_zhKGdEeu8UM8dRGrBDQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_zhaGdEeu8UM8dRGrBDQ" name="anuncioModificar" content="anuncioModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Anuncio">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_zhqGdEeu8UM8dRGrBDQ" name="anuncioModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Anuncio"/>
+          <operations xmi:type="expression:Operation" xmi:id="_7g8Bg6JWEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_7g8BhKJWEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8BhaJWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_Dk_zh6GdEeu8UM8dRGrBDQ" name="anuncioModificarInput.motivoCancelacion" content="anuncioModificarInput?.motivoCancelacion" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_Dk_ziKGdEeu8UM8dRGrBDQ" name="anuncioModificarInput" type="COMPLEX" createMode="false"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_7g8BhqJWEeu0vJDt_-fTdA" name="eventosModificarInput.evidencias" content="eventosModificarInput?.evidencias" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_7g8Bh6JWEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_Dk_ziaGdEeu8UM8dRGrBDQ" type="JAVA_METHOD" expression="setMotivoCancelacion">
+            <operator xmi:type="expression:Operator" xmi:id="_7g8BiKJWEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setEvidencias">
+              <inputTypes>java.util.List</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_7g8BiaJWEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_7g8BiqJWEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_7g8Bi6JWEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_7g8BjKJWEeu0vJDt_-fTdA" name="eventosModificarInput.motivoCancelacion" content="eventosModificarInput?.motivoCancelacion" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_7g8BjaJWEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_7g8BjqJWEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setMotivoCancelacion">
               <inputTypes>java.lang.String</inputTypes>
             </operator>
           </operations>
@@ -348,27 +535,106 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_Dk_zjaGdEeu8UM8dRGrBDQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_Dk_zjqGdEeu8UM8dRGrBDQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_Dk_zj6GdEeu8UM8dRGrBDQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_Dk_zkKGdEeu8UM8dRGrBDQ" name="formModificarAnuncio" content="5a9eb7d3-64bf-4ef8-9569-61adc4f73cf2" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_D_OcEKJXEeu0vJDt_-fTdA" name="formModificarEventos" content="2c58b531-66eb-4ac5-a7b0-505bf99a7d33" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_Dk_zkaGdEeu8UM8dRGrBDQ">
-            <inputs xmi:type="process:ContractInput" xmi:id="_Dk_zkqGdEeu8UM8dRGrBDQ" name="imagenAnuncioDocumentInput" type="FILE" dataReference="imagenAnuncio" createMode="false"/>
-            <inputs xmi:type="process:ContractInput" xmi:id="_Dk_zk6GdEeu8UM8dRGrBDQ" name="anuncioModificarInput" type="COMPLEX" dataReference="anuncioModificar" createMode="false">
-              <inputs xmi:type="process:ContractInput" xmi:id="_Dk_zlKGdEeu8UM8dRGrBDQ" name="id" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_Dk_zlaGdEeu8UM8dRGrBDQ" name="nombre" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_Dk_zlqGdEeu8UM8dRGrBDQ" name="descripcion" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_Dk_zl6GdEeu8UM8dRGrBDQ" name="imagen" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_Dk_zmKGdEeu8UM8dRGrBDQ" name="fechaSolicitud" type="LOCALDATETIME" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_Dk_zmaGdEeu8UM8dRGrBDQ" name="validado" type="BOOLEAN" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_Dk_zmqGdEeu8UM8dRGrBDQ" name="motivoCancelacion" createMode="false"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_3P2mcKJWEeu0vJDt_-fTdA" name="imagenEventosDocumentInput" type="FILE" dataReference="imagenEventos" createMode="false"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_5DBNMKJWEeu0vJDt_-fTdA" name="cronogramaEventosDocumentInput" type="FILE" dataReference="cronogramaEventos" createMode="false"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_7g6zAKJWEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" dataReference="eventosModificar" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_7g6zAaJWEeu0vJDt_-fTdA" name="id" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_7g6zAqJWEeu0vJDt_-fTdA" name="nombre" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_7g6zA6JWEeu0vJDt_-fTdA" name="descripcion" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_7g6zBKJWEeu0vJDt_-fTdA" name="fechaInscripcionInicio" type="LOCALDATETIME" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_7g6zBaJWEeu0vJDt_-fTdA" name="fechaInscripcionFin" type="LOCALDATETIME" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_7g6zBqJWEeu0vJDt_-fTdA" name="fechaEventoInicio" type="LOCALDATETIME" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_7g6zB6JWEeu0vJDt_-fTdA" name="fechaEventoFin" type="LOCALDATETIME" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_7g6zCKJWEeu0vJDt_-fTdA" name="fechaSolicitud" type="LOCALDATETIME" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_7g6zCaJWEeu0vJDt_-fTdA" name="cupo" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_7g6zCqJWEeu0vJDt_-fTdA" name="ponentes" type="COMPLEX" multiple="true" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_7g6zC6JWEeu0vJDt_-fTdA" name="persistenceId_string" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_7g6zDKJWEeu0vJDt_-fTdA" name="nombre" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_7g6zDaJWEeu0vJDt_-fTdA" name="apellido" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_7g6zDqJWEeu0vJDt_-fTdA" name="correo" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_7g6zD6JWEeu0vJDt_-fTdA" name="resumen" createMode="false"/>
+              </inputs>
+              <inputs xmi:type="process:ContractInput" xmi:id="_7g6zEKJWEeu0vJDt_-fTdA" name="valor" type="COMPLEX" multiple="true" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_7g6zEaJWEeu0vJDt_-fTdA" name="persistenceId_string" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_7g6zEqJWEeu0vJDt_-fTdA" name="rol" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_7g6zE6JWEeu0vJDt_-fTdA" name="valor" type="DECIMAL" createMode="false"/>
+              </inputs>
+              <inputs xmi:type="process:ContractInput" xmi:id="_7g7aEKJWEeu0vJDt_-fTdA" name="actividades" type="COMPLEX" multiple="true" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_7g7aEaJWEeu0vJDt_-fTdA" name="persistenceId_string" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_7g7aEqJWEeu0vJDt_-fTdA" name="nombre" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_7g7aE6JWEeu0vJDt_-fTdA" name="tipoActividad" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_7g7aFKJWEeu0vJDt_-fTdA" name="categoriaActividad" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_7g7aFaJWEeu0vJDt_-fTdA" name="organizador" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_7g7aFqJWEeu0vJDt_-fTdA" name="ponente" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_7g7aF6JWEeu0vJDt_-fTdA" name="lugar" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_7g7aGKJWEeu0vJDt_-fTdA" name="fechaActividad" type="LOCALDATETIME" createMode="false"/>
+              </inputs>
+              <inputs xmi:type="process:ContractInput" xmi:id="_7g7aGaJWEeu0vJDt_-fTdA" name="imagen" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_7g7aGqJWEeu0vJDt_-fTdA" name="cronograma" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_7g7aG6JWEeu0vJDt_-fTdA" name="informe" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_7g7aHKJWEeu0vJDt_-fTdA" name="validado" type="BOOLEAN" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_7g7aHaJWEeu0vJDt_-fTdA" name="evidencias" multiple="true" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_7g7aHqJWEeu0vJDt_-fTdA" name="motivoCancelacion" createMode="false"/>
             </inputs>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_Dk_zm6GdEeu8UM8dRGrBDQ" expression="!anuncioModificarInput?.id || anuncioModificarInput?.id.isLong()" errorMessage="A Long value is expected for Anuncio.id" name="type_long_anuncioModificarInput_id">
-              <inputNames>anuncioModificarInput</inputNames>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_7g7aH6JWEeu0vJDt_-fTdA" expression="!eventosModificarInput?.id || eventosModificarInput?.id.isLong()" errorMessage="A Long value is expected for Eventos.id" name="type_long_eventosModificarInput_id">
+              <inputNames>eventosModificarInput</inputNames>
             </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_Dk_znKGdEeu8UM8dRGrBDQ" expression="anuncioModificarInput?.nombre != null" errorMessage="nombre is mandatory for Anuncio" name="mandatory_anuncioModificarInput_nombre">
-              <inputNames>anuncioModificarInput</inputNames>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_7g7aIKJWEeu0vJDt_-fTdA" expression="eventosModificarInput?.nombre != null" errorMessage="nombre is mandatory for Eventos" name="mandatory_eventosModificarInput_nombre">
+              <inputNames>eventosModificarInput</inputNames>
             </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_Dk_znaGdEeu8UM8dRGrBDQ" expression="anuncioModificarInput?.descripcion != null" errorMessage="descripcion is mandatory for Anuncio" name="mandatory_anuncioModificarInput_descripcion">
-              <inputNames>anuncioModificarInput</inputNames>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_7g7aIaJWEeu0vJDt_-fTdA" expression="eventosModificarInput?.descripcion != null" errorMessage="descripcion is mandatory for Eventos" name="mandatory_eventosModificarInput_descripcion">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_7g7aIqJWEeu0vJDt_-fTdA" expression="eventosModificarInput?.fechaInscripcionInicio != null" errorMessage="fechaInscripcionInicio is mandatory for Eventos" name="mandatory_eventosModificarInput_fechaInscripcionInicio">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_7g7aI6JWEeu0vJDt_-fTdA" expression="eventosModificarInput?.fechaInscripcionFin != null" errorMessage="fechaInscripcionFin is mandatory for Eventos" name="mandatory_eventosModificarInput_fechaInscripcionFin">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_7g7aJKJWEeu0vJDt_-fTdA" expression="eventosModificarInput?.fechaEventoInicio != null" errorMessage="fechaEventoInicio is mandatory for Eventos" name="mandatory_eventosModificarInput_fechaEventoInicio">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_7g7aJaJWEeu0vJDt_-fTdA" expression="eventosModificarInput?.fechaEventoFin != null" errorMessage="fechaEventoFin is mandatory for Eventos" name="mandatory_eventosModificarInput_fechaEventoFin">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_7g7aJqJWEeu0vJDt_-fTdA" expression="eventosModificarInput?.cupo != null" errorMessage="cupo is mandatory for Eventos" name="mandatory_eventosModificarInput_cupo">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_7g7aJ6JWEeu0vJDt_-fTdA" expression="eventosModificarInput?.ponentes?.nombre.flatten().every{it!=null}" errorMessage="nombre is mandatory for PonenteEventos" name="mandatory_eventosModificarInput_ponentes_nombre">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_7g7aKKJWEeu0vJDt_-fTdA" expression="eventosModificarInput?.ponentes?.apellido.flatten().every{it!=null}" errorMessage="apellido is mandatory for PonenteEventos" name="mandatory_eventosModificarInput_ponentes_apellido">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_7g7aKaJWEeu0vJDt_-fTdA" expression="eventosModificarInput?.ponentes?.correo.flatten().every{it!=null}" errorMessage="correo is mandatory for PonenteEventos" name="mandatory_eventosModificarInput_ponentes_correo">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_7g7aKqJWEeu0vJDt_-fTdA" expression="eventosModificarInput?.ponentes?.resumen.flatten().every{it!=null}" errorMessage="resumen is mandatory for PonenteEventos" name="mandatory_eventosModificarInput_ponentes_resumen">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_7g7aK6JWEeu0vJDt_-fTdA" expression="eventosModificarInput?.valor?.rol.flatten().every{it!=null}" errorMessage="rol is mandatory for ValorEventos" name="mandatory_eventosModificarInput_valor_rol">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_7g7aLKJWEeu0vJDt_-fTdA" expression="eventosModificarInput?.valor?.valor.flatten().every{it!=null}" errorMessage="valor is mandatory for ValorEventos" name="mandatory_eventosModificarInput_valor_valor">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_7g7aLaJWEeu0vJDt_-fTdA" expression="eventosModificarInput?.actividades?.nombre.flatten().every{it!=null}" errorMessage="nombre is mandatory for Actividad" name="mandatory_eventosModificarInput_actividades_nombre">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_7g7aLqJWEeu0vJDt_-fTdA" expression="eventosModificarInput?.actividades?.tipoActividad.flatten().every{it!=null}" errorMessage="tipoActividad is mandatory for Actividad" name="mandatory_eventosModificarInput_actividades_tipoActividad">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_7g7aL6JWEeu0vJDt_-fTdA" expression="eventosModificarInput?.actividades?.categoriaActividad.flatten().every{it!=null}" errorMessage="categoriaActividad is mandatory for Actividad" name="mandatory_eventosModificarInput_actividades_categoriaActividad">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_7g7aMKJWEeu0vJDt_-fTdA" expression="eventosModificarInput?.actividades?.lugar.flatten().every{it!=null}" errorMessage="lugar is mandatory for Actividad" name="mandatory_eventosModificarInput_actividades_lugar">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_7g7aMaJWEeu0vJDt_-fTdA" expression="eventosModificarInput?.actividades?.fechaActividad.flatten().every{it!=null}" errorMessage="fechaActividad is mandatory for Actividad" name="mandatory_eventosModificarInput_actividades_fechaActividad">
+              <inputNames>eventosModificarInput</inputNames>
             </constraints>
           </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_Dk_znqGdEeu8UM8dRGrBDQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -378,26 +644,35 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_Dk_zoaGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_Dk_zoqGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
           <operations xmi:type="expression:Operation" xmi:id="_Dk_zo6GdEeu8UM8dRGrBDQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_zpKGdEeu8UM8dRGrBDQ" name="anuncioModificar" content="anuncioModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Anuncio">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_zpaGdEeu8UM8dRGrBDQ" name="anuncioModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Anuncio"/>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_zpKGdEeu8UM8dRGrBDQ" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_zpaGdEeu8UM8dRGrBDQ" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_Dk_zpqGdEeu8UM8dRGrBDQ" name="Anuncio.findByPersistenceId" content="SELECT a&#xA;FROM Anuncio a&#xA;WHERE a.persistenceId= :persistenceId&#xA;" interpreter="GROOVY" type="TYPE_QUERY_BUSINESS_DATA" returnType="com.mdecisc.model.Anuncio">
-              <referencedElements xmi:type="expression:Expression" xmi:id="_Dk_zp6GdEeu8UM8dRGrBDQ" name="persistenceId" content="persistenceId" type="QUERY_PARAM_TYPE" returnType="java.lang.Long" returnTypeFixed="true">
-                <referencedElements xmi:type="expression:Expression" xmi:id="_Dk_zqKGdEeu8UM8dRGrBDQ" name="idAnuncio" content="idAnuncio" type="TYPE_VARIABLE" returnType="java.lang.Long" returnTypeFixed="true">
-                  <referencedElements xmi:type="process:Data" xmi:id="_Dk_zqaGdEeu8UM8dRGrBDQ" name="idAnuncio" dataType="_Dk_0waGdEeu8UM8dRGrBDQ"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Dk_zpqGdEeu8UM8dRGrBDQ" name="Eventos.findByPersistenceId" content="SELECT e&#xA;FROM Eventos e&#xA;WHERE e.persistenceId= :persistenceId&#xA;" interpreter="GROOVY" type="TYPE_QUERY_BUSINESS_DATA" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="expression:Expression" xmi:id="_dwJS4KJLEeu0vJDt_-fTdA" name="persistenceId" content="persistenceId" type="QUERY_PARAM_TYPE" returnType="java.lang.Long" returnTypeFixed="true">
+                <referencedElements xmi:type="expression:Expression" xmi:id="_dwJS4aJLEeu0vJDt_-fTdA" name="idEventos" content="idEventos" type="TYPE_VARIABLE" returnType="java.lang.Long" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Data" xmi:id="_dwJS4qJLEeu0vJDt_-fTdA" name="idEventos" dataType="_Dk_0waGdEeu8UM8dRGrBDQ"/>
                 </referencedElements>
               </referencedElements>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_Dk_zqqGdEeu8UM8dRGrBDQ" type="CREATE_BUSINESS_DATA"/>
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_Dk_zq6GdEeu8UM8dRGrBDQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_zrKGdEeu8UM8dRGrBDQ" name="imagenAnuncio" content="imagenAnuncio" type="DOCUMENT_REF_TYPE">
-              <referencedElements xmi:type="process:Document" xmi:id="_Dk_zraGdEeu8UM8dRGrBDQ" name="imagenAnuncio"/>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_zrKGdEeu8UM8dRGrBDQ" name="imagenEventos" content="imagenEventos" type="DOCUMENT_REF_TYPE">
+              <referencedElements xmi:type="process:Document" xmi:id="_Dk_zraGdEeu8UM8dRGrBDQ" name="imagenEventos"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_Dk_zrqGdEeu8UM8dRGrBDQ" name="newScript()" content="import org.bonitasoft.engine.bpm.document.DocumentValue&#xD;&#xA;&#xD;&#xA;return new DocumentValue(anuncioModificar.imagen)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="org.bonitasoft.engine.bpm.document.DocumentValue">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_zr6GdEeu8UM8dRGrBDQ" name="anuncioModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Anuncio"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_Dk_zrqGdEeu8UM8dRGrBDQ" name="newScript()" content="import org.bonitasoft.engine.bpm.document.DocumentValue&#xD;&#xA;&#xD;&#xA;return new DocumentValue(eventosModificar.imagen)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="org.bonitasoft.engine.bpm.document.DocumentValue">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_mE3iIKJLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_Dk_zsKGdEeu8UM8dRGrBDQ" type="DOCUMENT_CREATE_UPDATE"/>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_mkoAQKJLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_mkoAQaJLEeu0vJDt_-fTdA" name="cronogramaEventos" content="cronogramaEventos" type="DOCUMENT_REF_TYPE">
+              <referencedElements xmi:type="process:Document" xmi:id="_nFbnQKJLEeu0vJDt_-fTdA" name="cronogramaEventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_mkoAQqJLEeu0vJDt_-fTdA" name="newScript()" content="import org.bonitasoft.engine.bpm.document.DocumentValue&#xD;&#xA;&#xD;&#xA;return new DocumentValue(eventosModificar.cronograma)" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="org.bonitasoft.engine.bpm.document.DocumentValue">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_pDUQQKJLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_mkoAQ6JLEeu0vJDt_-fTdA" type="DOCUMENT_CREATE_UPDATE"/>
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_Dk_zsaGdEeu8UM8dRGrBDQ">
             <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_zsqGdEeu8UM8dRGrBDQ" name="usuarioComision" content="usuarioComision" type="TYPE_VARIABLE" returnType="java.util.Collection">
@@ -431,82 +706,228 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_Dk_zx6GdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_Dk_zyKGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_Dk_zyaGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
-          <operations xmi:type="expression:Operation" xmi:id="_Dk_zyqGdEeu8UM8dRGrBDQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_zy6GdEeu8UM8dRGrBDQ" name="anuncioModificar" content="anuncioModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Anuncio">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_zzKGdEeu8UM8dRGrBDQ" name="anuncioModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Anuncio"/>
+          <operations xmi:type="expression:Operation" xmi:id="_0PM58aJLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_0PM58qJLEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM586JLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_Dk_zzaGdEeu8UM8dRGrBDQ" name="anuncioModificarInput.id" content="anuncioModificarInput?.id?.trim() ? anuncioModificarInput.id.toLong() : null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_Dk_zzqGdEeu8UM8dRGrBDQ" name="anuncioModificarInput" type="COMPLEX" createMode="false"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_0PM59KJLEeu0vJDt_-fTdA" name="eventosModificarInput.id" content="eventosModificarInput?.id?.trim() ? eventosModificarInput.id.toLong() : null" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_0PM59aJLEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_Dk_zz6GdEeu8UM8dRGrBDQ" type="JAVA_METHOD" expression="setId">
+            <operator xmi:type="expression:Operator" xmi:id="_0PM59qJLEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setId">
               <inputTypes>java.lang.Long</inputTypes>
             </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_Dk_z0KGdEeu8UM8dRGrBDQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_z0aGdEeu8UM8dRGrBDQ" name="anuncioModificar" content="anuncioModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Anuncio">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_z0qGdEeu8UM8dRGrBDQ" name="anuncioModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Anuncio"/>
+          <operations xmi:type="expression:Operation" xmi:id="_0PM596JLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_0PM5-KJLEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM5-aJLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_Dk_z06GdEeu8UM8dRGrBDQ" name="anuncioModificarInput.nombre" content="anuncioModificarInput?.nombre" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_Dk_z1KGdEeu8UM8dRGrBDQ" name="anuncioModificarInput" type="COMPLEX" createMode="false"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_0PM5-qJLEeu0vJDt_-fTdA" name="eventosModificarInput.nombre" content="eventosModificarInput?.nombre" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_0PM5-6JLEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_Dk_z1aGdEeu8UM8dRGrBDQ" type="JAVA_METHOD" expression="setNombre">
+            <operator xmi:type="expression:Operator" xmi:id="_0PM5_KJLEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setNombre">
               <inputTypes>java.lang.String</inputTypes>
             </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_Dk_z1qGdEeu8UM8dRGrBDQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_z16GdEeu8UM8dRGrBDQ" name="anuncioModificar" content="anuncioModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Anuncio">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_z2KGdEeu8UM8dRGrBDQ" name="anuncioModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Anuncio"/>
+          <operations xmi:type="expression:Operation" xmi:id="_0PM5_aJLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_0PM5_qJLEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM5_6JLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_Dk_z2aGdEeu8UM8dRGrBDQ" name="anuncioModificarInput.descripcion" content="anuncioModificarInput?.descripcion" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_Dk_z2qGdEeu8UM8dRGrBDQ" name="anuncioModificarInput" type="COMPLEX" createMode="false"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_0PM6AKJLEeu0vJDt_-fTdA" name="eventosModificarInput.descripcion" content="eventosModificarInput?.descripcion" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_0PM6AaJLEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_Dk_z26GdEeu8UM8dRGrBDQ" type="JAVA_METHOD" expression="setDescripcion">
+            <operator xmi:type="expression:Operator" xmi:id="_0PM6AqJLEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setDescripcion">
               <inputTypes>java.lang.String</inputTypes>
             </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_Dk_z3KGdEeu8UM8dRGrBDQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_z3aGdEeu8UM8dRGrBDQ" name="anuncioModificar" content="anuncioModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Anuncio">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_z3qGdEeu8UM8dRGrBDQ" name="anuncioModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Anuncio"/>
+          <operations xmi:type="expression:Operation" xmi:id="_0PM6A6JLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_0PM6BKJLEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM6BaJLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_Dk_z36GdEeu8UM8dRGrBDQ" name="anuncioModificarInput.imagen" content="anuncioModificarInput?.imagen" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_Dk_z4KGdEeu8UM8dRGrBDQ" name="anuncioModificarInput" type="COMPLEX" createMode="false"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_0PM6BqJLEeu0vJDt_-fTdA" name="eventosModificarInput.fechaInscripcionInicio" content="eventosModificarInput?.fechaInscripcionInicio" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDateTime">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_0PM6B6JLEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_Dk_z4aGdEeu8UM8dRGrBDQ" type="JAVA_METHOD" expression="setImagen">
-              <inputTypes>java.lang.String</inputTypes>
-            </operator>
-          </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_Dk_z4qGdEeu8UM8dRGrBDQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_z46GdEeu8UM8dRGrBDQ" name="anuncioModificar" content="anuncioModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Anuncio">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_z5KGdEeu8UM8dRGrBDQ" name="anuncioModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Anuncio"/>
-            </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_Dk_z5aGdEeu8UM8dRGrBDQ" name="anuncioModificarInput.fechaSolicitud" content="anuncioModificarInput?.fechaSolicitud" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDateTime">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_Dk_z5qGdEeu8UM8dRGrBDQ" name="anuncioModificarInput" type="COMPLEX" createMode="false"/>
-            </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_Dk_z56GdEeu8UM8dRGrBDQ" type="JAVA_METHOD" expression="setFechaSolicitud">
+            <operator xmi:type="expression:Operator" xmi:id="_0PM6CKJLEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setFechaInscripcionInicio">
               <inputTypes>java.time.LocalDateTime</inputTypes>
             </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_Dk_z6KGdEeu8UM8dRGrBDQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_z6aGdEeu8UM8dRGrBDQ" name="autorizarAnuncio" content="autorizarAnuncio" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
-              <referencedElements xmi:type="process:Data" xmi:id="_Dk_z6qGdEeu8UM8dRGrBDQ" name="autorizarAnuncio" dataType="_Dk_0vqGdEeu8UM8dRGrBDQ"/>
+          <operations xmi:type="expression:Operation" xmi:id="_0PM6CaJLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_0PM6CqJLEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM6C6JLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_Dk_z66GdEeu8UM8dRGrBDQ" name="autorizado" content="autorizado" type="TYPE_CONTRACT_INPUT" returnType="java.lang.Boolean">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_Dk_z7KGdEeu8UM8dRGrBDQ" name="autorizado" type="BOOLEAN">
-                <mapping xmi:type="process:ContractInputMapping" xmi:id="_Dk_z7aGdEeu8UM8dRGrBDQ"/>
-              </referencedElements>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_0PM6DKJLEeu0vJDt_-fTdA" name="eventosModificarInput.fechaInscripcionFin" content="eventosModificarInput?.fechaInscripcionFin" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDateTime">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_0PM6DaJLEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_Dk_z7qGdEeu8UM8dRGrBDQ" type="ASSIGNMENT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_0PM6DqJLEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setFechaInscripcionFin">
+              <inputTypes>java.time.LocalDateTime</inputTypes>
+            </operator>
           </operations>
-          <operations xmi:type="expression:Operation" xmi:id="_Dk_z76GdEeu8UM8dRGrBDQ">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_Dk_z8KGdEeu8UM8dRGrBDQ" name="comentarioGestor" content="comentarioGestor" type="TYPE_VARIABLE">
-              <referencedElements xmi:type="process:Data" xmi:id="_Dk_z8aGdEeu8UM8dRGrBDQ" name="comentarioGestor" dataType="_Dk_0w6GdEeu8UM8dRGrBDQ"/>
+          <operations xmi:type="expression:Operation" xmi:id="_0PM6D6JLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_0PM6EKJLEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM6EaJLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_Dk_z8qGdEeu8UM8dRGrBDQ" name="comentarioInput" content="comentarioInput" type="TYPE_CONTRACT_INPUT">
-              <referencedElements xmi:type="process:ContractInput" xmi:id="_Dk_z86GdEeu8UM8dRGrBDQ" name="comentarioInput">
-                <mapping xmi:type="process:ContractInputMapping" xmi:id="_Dk_z9KGdEeu8UM8dRGrBDQ"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_0PM6EqJLEeu0vJDt_-fTdA" name="eventosModificarInput.fechaEventoInicio" content="eventosModificarInput?.fechaEventoInicio" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDateTime">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_0PM6E6JLEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_0PM6FKJLEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setFechaEventoInicio">
+              <inputTypes>java.time.LocalDateTime</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_0PM6FaJLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_0PM6FqJLEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM6F6JLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_0PM6GKJLEeu0vJDt_-fTdA" name="eventosModificarInput.fechaEventoFin" content="eventosModificarInput?.fechaEventoFin" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDateTime">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_0PM6GaJLEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_0PM6GqJLEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setFechaEventoFin">
+              <inputTypes>java.time.LocalDateTime</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_0PM6G6JLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_0PM6HKJLEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM6HaJLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_0PM6HqJLEeu0vJDt_-fTdA" name="eventosModificarInput.fechaSolicitud" content="eventosModificarInput?.fechaSolicitud" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDateTime">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_0PM6H6JLEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_0PM6IKJLEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setFechaSolicitud">
+              <inputTypes>java.time.LocalDateTime</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_0PM6IaJLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_0PM6IqJLEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM6I6JLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_0PM6JKJLEeu0vJDt_-fTdA" name="eventosModificarInput.cupo" content="eventosModificarInput?.cupo" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_0PM6JaJLEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_0PM6JqJLEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setCupo">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_0PM6J6JLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_0PM6KKJLEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM6KaJLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_0PM6KqJLEeu0vJDt_-fTdA" name="eventosModificarInput.ponentes" content="def ponenteEventosList = []&#xD;&#xA;//For each item collected in multiple input&#xD;&#xA;eventosModificarInput?.ponentes.each{&#xD;&#xA;&#x9;//Add PonenteEventos instance&#xD;&#xA;&#x9;ponenteEventosList.add({ currentPonenteEventosInput ->&#xD;&#xA;&#x9;&#x9;def ponenteEventosVar = eventosModificar.ponentes.find { it.persistenceId.toString() == currentPonenteEventosInput.persistenceId_string} ?: new com.mdecisc.model.PonenteEventos()&#xD;&#xA;&#x9;&#x9;ponenteEventosVar.nombre = currentPonenteEventosInput.nombre&#xD;&#xA;&#x9;&#x9;ponenteEventosVar.apellido = currentPonenteEventosInput.apellido&#xD;&#xA;&#x9;&#x9;ponenteEventosVar.correo = currentPonenteEventosInput.correo&#xD;&#xA;&#x9;&#x9;ponenteEventosVar.resumen = currentPonenteEventosInput.resumen&#xD;&#xA;&#x9;&#x9;return ponenteEventosVar&#xD;&#xA;&#x9;}(it))&#xD;&#xA;}&#xD;&#xA;return ponenteEventosList" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_0PM6K6JLEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM6LKJLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_0PM6LaJLEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setPonentes">
+              <inputTypes>java.util.List</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_0PM6LqJLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_0PM6L6JLEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM6MKJLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_0PM6MaJLEeu0vJDt_-fTdA" name="eventosModificarInput.valor" content="def valorEventosList = []&#xD;&#xA;//For each item collected in multiple input&#xD;&#xA;eventosModificarInput?.valor.each{&#xD;&#xA;&#x9;//Add ValorEventos instance&#xD;&#xA;&#x9;valorEventosList.add({ currentValorEventosInput ->&#xD;&#xA;&#x9;&#x9;def valorEventosVar = eventosModificar.valor.find { it.persistenceId.toString() == currentValorEventosInput.persistenceId_string} ?: new com.mdecisc.model.ValorEventos()&#xD;&#xA;&#x9;&#x9;valorEventosVar.rol = currentValorEventosInput.rol&#xD;&#xA;&#x9;&#x9;valorEventosVar.valor = currentValorEventosInput.valor&#xD;&#xA;&#x9;&#x9;return valorEventosVar&#xD;&#xA;&#x9;}(it))&#xD;&#xA;}&#xD;&#xA;return valorEventosList" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_0PM6MqJLEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM6M6JLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_0PM6NKJLEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setValor">
+              <inputTypes>java.util.List</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_0PM6NaJLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_0PM6NqJLEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM6N6JLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_0PM6OKJLEeu0vJDt_-fTdA" name="eventosModificarInput.actividades" content="def actividadList = []&#xD;&#xA;//For each item collected in multiple input&#xD;&#xA;eventosModificarInput?.actividades.each{&#xD;&#xA;&#x9;//Add Actividad instance&#xD;&#xA;&#x9;actividadList.add({ currentActividadInput ->&#xD;&#xA;&#x9;&#x9;def actividadVar = eventosModificar.actividades.find { it.persistenceId.toString() == currentActividadInput.persistenceId_string} ?: new com.mdecisc.model.Actividad()&#xD;&#xA;&#x9;&#x9;actividadVar.nombre = currentActividadInput.nombre&#xD;&#xA;&#x9;&#x9;actividadVar.tipoActividad = currentActividadInput.tipoActividad&#xD;&#xA;&#x9;&#x9;actividadVar.categoriaActividad = currentActividadInput.categoriaActividad&#xD;&#xA;&#x9;&#x9;actividadVar.organizador = currentActividadInput.organizador&#xD;&#xA;&#x9;&#x9;actividadVar.ponente = currentActividadInput.ponente&#xD;&#xA;&#x9;&#x9;actividadVar.lugar = currentActividadInput.lugar&#xD;&#xA;&#x9;&#x9;actividadVar.fechaActividad = currentActividadInput.fechaActividad&#xD;&#xA;&#x9;&#x9;return actividadVar&#xD;&#xA;&#x9;}(it))&#xD;&#xA;}&#xD;&#xA;return actividadList" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_0PM6OaJLEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM6OqJLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_0PM6O6JLEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setActividades">
+              <inputTypes>java.util.List</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_0PM6PKJLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_0PM6PaJLEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM6PqJLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_0PM6P6JLEeu0vJDt_-fTdA" name="eventosModificarInput.imagen" content="eventosModificarInput?.imagen" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_0PM6QKJLEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_0PM6QaJLEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setImagen">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_0PM6QqJLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_0PM6Q6JLEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM6RKJLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_0PM6RaJLEeu0vJDt_-fTdA" name="eventosModificarInput.cronograma" content="eventosModificarInput?.cronograma" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_0PM6RqJLEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_0PM6R6JLEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setCronograma">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_0PM6SKJLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_0PM6SaJLEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM6SqJLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_0PM6S6JLEeu0vJDt_-fTdA" name="eventosModificarInput.informe" content="eventosModificarInput?.informe" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_0PM6TKJLEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_0PM6TaJLEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setInforme">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_0PM6TqJLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_0PM6T6JLEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM6UKJLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_0PM6UaJLEeu0vJDt_-fTdA" name="eventosModificarInput.validado" content="eventosModificarInput?.validado" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_0PM6UqJLEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_0PM6U6JLEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setValidado">
+              <inputTypes>java.lang.Boolean</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_0PM6VKJLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_0PM6VaJLEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM6VqJLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_0PM6V6JLEeu0vJDt_-fTdA" name="eventosModificarInput.evidencias" content="eventosModificarInput?.evidencias" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_0PM6WKJLEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_0PM6WaJLEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setEvidencias">
+              <inputTypes>java.util.List</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_0PM6WqJLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_0PM6W6JLEeu0vJDt_-fTdA" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0PM6XKJLEeu0vJDt_-fTdA" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_0PM6XaJLEeu0vJDt_-fTdA" name="eventosModificarInput.motivoCancelacion" content="eventosModificarInput?.motivoCancelacion" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_0PM6XqJLEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" createMode="false"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_0PM6X6JLEeu0vJDt_-fTdA" type="JAVA_METHOD" expression="setMotivoCancelacion">
+              <inputTypes>java.lang.String</inputTypes>
+            </operator>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_2XTO0KJLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_2XTO0aJLEeu0vJDt_-fTdA" name="comentarioGestor" content="comentarioGestor" type="TYPE_VARIABLE">
+              <referencedElements xmi:type="process:Data" xmi:id="_3J8MsKJLEeu0vJDt_-fTdA" name="comentarioGestor" dataType="_Dk_0w6GdEeu8UM8dRGrBDQ"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_2XTO0qJLEeu0vJDt_-fTdA" name="comentarioInput" content="comentarioInput" type="TYPE_CONTRACT_INPUT">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_3vOrEKJLEeu0vJDt_-fTdA" name="comentarioInput">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_3vOrEaJLEeu0vJDt_-fTdA"/>
               </referencedElements>
             </rightOperand>
-            <operator xmi:type="expression:Operator" xmi:id="_Dk_z9aGdEeu8UM8dRGrBDQ" type="ASSIGNMENT"/>
+            <operator xmi:type="expression:Operator" xmi:id="_2XTO06JLEeu0vJDt_-fTdA" type="ASSIGNMENT"/>
+          </operations>
+          <operations xmi:type="expression:Operation" xmi:id="_34914KJLEeu0vJDt_-fTdA">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_34914aJLEeu0vJDt_-fTdA" name="autorizarEventos" content="autorizarEventos" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:Data" xmi:id="_4_uCkKJLEeu0vJDt_-fTdA" name="autorizarEventos" dataType="_Dk_0vqGdEeu8UM8dRGrBDQ"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_34914qJLEeu0vJDt_-fTdA" name="autorizado" content="autorizado" type="TYPE_CONTRACT_INPUT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:ContractInput" xmi:id="_5gnwMKJLEeu0vJDt_-fTdA" name="autorizado" type="BOOLEAN">
+                <mapping xmi:type="process:ContractInputMapping" xmi:id="_5gnwMaJLEeu0vJDt_-fTdA"/>
+              </referencedElements>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_349146JLEeu0vJDt_-fTdA" type="ASSIGNMENT"/>
           </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_Dk_z9qGdEeu8UM8dRGrBDQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_Dk_z96GdEeu8UM8dRGrBDQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -520,7 +941,7 @@
             <condition xmi:type="expression:Expression" xmi:id="_Dk_z_qGdEeu8UM8dRGrBDQ" name="00:01:00" content="60000L" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Long"/>
           </BoundaryIntermediateEvents>
           <formMapping xmi:type="process:FormMapping" xmi:id="_Dk_z_6GdEeu8UM8dRGrBDQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_Dk_0AKGdEeu8UM8dRGrBDQ" name="formAutorizarAnuncio" content="add8f627-2a49-44ce-9d9c-03413a2c03ae" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_8TuJ8KJLEeu0vJDt_-fTdA" name="formAutorizarEventos" content="7691ecf7-54f8-4604-82f6-b023a90d3d49" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_Dk_0AaGdEeu8UM8dRGrBDQ">
             <inputs xmi:type="process:ContractInput" xmi:id="_Dk_0AqGdEeu8UM8dRGrBDQ" name="autorizado" type="BOOLEAN">
@@ -529,21 +950,101 @@
             <inputs xmi:type="process:ContractInput" xmi:id="_Dk_0BKGdEeu8UM8dRGrBDQ" name="comentarioInput">
               <mapping xmi:type="process:ContractInputMapping" xmi:id="_Dk_0BaGdEeu8UM8dRGrBDQ"/>
             </inputs>
-            <inputs xmi:type="process:ContractInput" xmi:id="_Dk_0BqGdEeu8UM8dRGrBDQ" name="anuncioModificarInput" type="COMPLEX" dataReference="anuncioModificar" createMode="false">
-              <inputs xmi:type="process:ContractInput" xmi:id="_Dk_0B6GdEeu8UM8dRGrBDQ" name="id" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_Dk_0CKGdEeu8UM8dRGrBDQ" name="nombre" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_Dk_0CaGdEeu8UM8dRGrBDQ" name="descripcion" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_Dk_0CqGdEeu8UM8dRGrBDQ" name="imagen" createMode="false"/>
-              <inputs xmi:type="process:ContractInput" xmi:id="_Dk_0C6GdEeu8UM8dRGrBDQ" name="fechaSolicitud" type="LOCALDATETIME" createMode="false"/>
+            <inputs xmi:type="process:ContractInput" xmi:id="_0PMS0KJLEeu0vJDt_-fTdA" name="eventosModificarInput" type="COMPLEX" dataReference="eventosModificar" createMode="false">
+              <inputs xmi:type="process:ContractInput" xmi:id="_0PMS0aJLEeu0vJDt_-fTdA" name="id" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_0PMS0qJLEeu0vJDt_-fTdA" name="nombre" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_0PMS06JLEeu0vJDt_-fTdA" name="descripcion" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_0PMS1KJLEeu0vJDt_-fTdA" name="fechaInscripcionInicio" type="LOCALDATETIME" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_0PMS1aJLEeu0vJDt_-fTdA" name="fechaInscripcionFin" type="LOCALDATETIME" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_0PMS1qJLEeu0vJDt_-fTdA" name="fechaEventoInicio" type="LOCALDATETIME" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_0PMS16JLEeu0vJDt_-fTdA" name="fechaEventoFin" type="LOCALDATETIME" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_0PMS2KJLEeu0vJDt_-fTdA" name="fechaSolicitud" type="LOCALDATETIME" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_0PMS2aJLEeu0vJDt_-fTdA" name="cupo" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_0PMS2qJLEeu0vJDt_-fTdA" name="ponentes" type="COMPLEX" multiple="true" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_0PMS26JLEeu0vJDt_-fTdA" name="persistenceId_string" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_0PMS3KJLEeu0vJDt_-fTdA" name="nombre" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_0PMS3aJLEeu0vJDt_-fTdA" name="apellido" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_0PMS3qJLEeu0vJDt_-fTdA" name="correo" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_0PMS36JLEeu0vJDt_-fTdA" name="resumen" createMode="false"/>
+              </inputs>
+              <inputs xmi:type="process:ContractInput" xmi:id="_0PMS4KJLEeu0vJDt_-fTdA" name="valor" type="COMPLEX" multiple="true" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_0PMS4aJLEeu0vJDt_-fTdA" name="persistenceId_string" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_0PMS4qJLEeu0vJDt_-fTdA" name="rol" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_0PMS46JLEeu0vJDt_-fTdA" name="valor" type="DECIMAL" createMode="false"/>
+              </inputs>
+              <inputs xmi:type="process:ContractInput" xmi:id="_0PMS5KJLEeu0vJDt_-fTdA" name="actividades" type="COMPLEX" multiple="true" createMode="false">
+                <inputs xmi:type="process:ContractInput" xmi:id="_0PMS5aJLEeu0vJDt_-fTdA" name="persistenceId_string" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_0PMS5qJLEeu0vJDt_-fTdA" name="nombre" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_0PMS56JLEeu0vJDt_-fTdA" name="tipoActividad" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_0PMS6KJLEeu0vJDt_-fTdA" name="categoriaActividad" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_0PMS6aJLEeu0vJDt_-fTdA" name="organizador" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_0PMS6qJLEeu0vJDt_-fTdA" name="ponente" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_0PMS66JLEeu0vJDt_-fTdA" name="lugar" createMode="false"/>
+                <inputs xmi:type="process:ContractInput" xmi:id="_0PMS7KJLEeu0vJDt_-fTdA" name="fechaActividad" type="LOCALDATETIME" createMode="false"/>
+              </inputs>
+              <inputs xmi:type="process:ContractInput" xmi:id="_0PMS7aJLEeu0vJDt_-fTdA" name="imagen" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_0PMS7qJLEeu0vJDt_-fTdA" name="cronograma" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_0PMS76JLEeu0vJDt_-fTdA" name="informe" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_0PMS8KJLEeu0vJDt_-fTdA" name="validado" type="BOOLEAN" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_0PMS8aJLEeu0vJDt_-fTdA" name="evidencias" multiple="true" createMode="false"/>
+              <inputs xmi:type="process:ContractInput" xmi:id="_0PMS8qJLEeu0vJDt_-fTdA" name="motivoCancelacion" createMode="false"/>
             </inputs>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_Dk_0DKGdEeu8UM8dRGrBDQ" expression="!anuncioModificarInput?.id || anuncioModificarInput?.id.isLong()" errorMessage="A Long value is expected for Anuncio.id" name="type_long_anuncioModificarInput_id">
-              <inputNames>anuncioModificarInput</inputNames>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_0PMS86JLEeu0vJDt_-fTdA" expression="!eventosModificarInput?.id || eventosModificarInput?.id.isLong()" errorMessage="A Long value is expected for Eventos.id" name="type_long_eventosModificarInput_id">
+              <inputNames>eventosModificarInput</inputNames>
             </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_Dk_0DaGdEeu8UM8dRGrBDQ" expression="anuncioModificarInput?.nombre != null" errorMessage="nombre is mandatory for Anuncio" name="mandatory_anuncioModificarInput_nombre">
-              <inputNames>anuncioModificarInput</inputNames>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_0PMS9KJLEeu0vJDt_-fTdA" expression="eventosModificarInput?.nombre != null" errorMessage="nombre is mandatory for Eventos" name="mandatory_eventosModificarInput_nombre">
+              <inputNames>eventosModificarInput</inputNames>
             </constraints>
-            <constraints xmi:type="process:ContractConstraint" xmi:id="_Dk_0DqGdEeu8UM8dRGrBDQ" expression="anuncioModificarInput?.descripcion != null" errorMessage="descripcion is mandatory for Anuncio" name="mandatory_anuncioModificarInput_descripcion">
-              <inputNames>anuncioModificarInput</inputNames>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_0PM54KJLEeu0vJDt_-fTdA" expression="eventosModificarInput?.descripcion != null" errorMessage="descripcion is mandatory for Eventos" name="mandatory_eventosModificarInput_descripcion">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_0PM54aJLEeu0vJDt_-fTdA" expression="eventosModificarInput?.fechaInscripcionInicio != null" errorMessage="fechaInscripcionInicio is mandatory for Eventos" name="mandatory_eventosModificarInput_fechaInscripcionInicio">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_0PM54qJLEeu0vJDt_-fTdA" expression="eventosModificarInput?.fechaInscripcionFin != null" errorMessage="fechaInscripcionFin is mandatory for Eventos" name="mandatory_eventosModificarInput_fechaInscripcionFin">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_0PM546JLEeu0vJDt_-fTdA" expression="eventosModificarInput?.fechaEventoInicio != null" errorMessage="fechaEventoInicio is mandatory for Eventos" name="mandatory_eventosModificarInput_fechaEventoInicio">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_0PM55KJLEeu0vJDt_-fTdA" expression="eventosModificarInput?.fechaEventoFin != null" errorMessage="fechaEventoFin is mandatory for Eventos" name="mandatory_eventosModificarInput_fechaEventoFin">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_0PM55aJLEeu0vJDt_-fTdA" expression="eventosModificarInput?.cupo != null" errorMessage="cupo is mandatory for Eventos" name="mandatory_eventosModificarInput_cupo">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_0PM55qJLEeu0vJDt_-fTdA" expression="eventosModificarInput?.ponentes?.nombre.flatten().every{it!=null}" errorMessage="nombre is mandatory for PonenteEventos" name="mandatory_eventosModificarInput_ponentes_nombre">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_0PM556JLEeu0vJDt_-fTdA" expression="eventosModificarInput?.ponentes?.apellido.flatten().every{it!=null}" errorMessage="apellido is mandatory for PonenteEventos" name="mandatory_eventosModificarInput_ponentes_apellido">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_0PM56KJLEeu0vJDt_-fTdA" expression="eventosModificarInput?.ponentes?.correo.flatten().every{it!=null}" errorMessage="correo is mandatory for PonenteEventos" name="mandatory_eventosModificarInput_ponentes_correo">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_0PM56aJLEeu0vJDt_-fTdA" expression="eventosModificarInput?.ponentes?.resumen.flatten().every{it!=null}" errorMessage="resumen is mandatory for PonenteEventos" name="mandatory_eventosModificarInput_ponentes_resumen">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_0PM56qJLEeu0vJDt_-fTdA" expression="eventosModificarInput?.valor?.rol.flatten().every{it!=null}" errorMessage="rol is mandatory for ValorEventos" name="mandatory_eventosModificarInput_valor_rol">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_0PM566JLEeu0vJDt_-fTdA" expression="eventosModificarInput?.valor?.valor.flatten().every{it!=null}" errorMessage="valor is mandatory for ValorEventos" name="mandatory_eventosModificarInput_valor_valor">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_0PM57KJLEeu0vJDt_-fTdA" expression="eventosModificarInput?.actividades?.nombre.flatten().every{it!=null}" errorMessage="nombre is mandatory for Actividad" name="mandatory_eventosModificarInput_actividades_nombre">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_0PM57aJLEeu0vJDt_-fTdA" expression="eventosModificarInput?.actividades?.tipoActividad.flatten().every{it!=null}" errorMessage="tipoActividad is mandatory for Actividad" name="mandatory_eventosModificarInput_actividades_tipoActividad">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_0PM57qJLEeu0vJDt_-fTdA" expression="eventosModificarInput?.actividades?.categoriaActividad.flatten().every{it!=null}" errorMessage="categoriaActividad is mandatory for Actividad" name="mandatory_eventosModificarInput_actividades_categoriaActividad">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_0PM576JLEeu0vJDt_-fTdA" expression="eventosModificarInput?.actividades?.lugar.flatten().every{it!=null}" errorMessage="lugar is mandatory for Actividad" name="mandatory_eventosModificarInput_actividades_lugar">
+              <inputNames>eventosModificarInput</inputNames>
+            </constraints>
+            <constraints xmi:type="process:ContractConstraint" xmi:id="_0PM58KJLEeu0vJDt_-fTdA" expression="eventosModificarInput?.actividades?.fechaActividad.flatten().every{it!=null}" errorMessage="fechaActividad is mandatory for Actividad" name="mandatory_eventosModificarInput_actividades_fechaActividad">
+              <inputNames>eventosModificarInput</inputNames>
             </constraints>
           </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_Dk_0D6GdEeu8UM8dRGrBDQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -623,13 +1124,13 @@
                     </referencedElements>
                   </referencedElements>
                   <referencedElements xmi:type="expression:Expression" xmi:id="_Dk_0QaGdEeu8UM8dRGrBDQ" name="anuncioModificar.nombre" content="anuncioModificar.nombre" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-                    <referencedElements xmi:type="expression:Expression" xmi:id="_Dk_0QqGdEeu8UM8dRGrBDQ" name="anuncioModificar" content="anuncioModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Anuncio">
-                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_0Q6GdEeu8UM8dRGrBDQ" name="anuncioModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Anuncio"/>
+                    <referencedElements xmi:type="expression:Expression" xmi:id="_Dk_0QqGdEeu8UM8dRGrBDQ" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_0Q6GdEeu8UM8dRGrBDQ" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
                     </referencedElements>
                   </referencedElements>
                   <referencedElements xmi:type="expression:Expression" xmi:id="_Dk_0RKGdEeu8UM8dRGrBDQ" name="anuncioModificar.descripcion" content="anuncioModificar.descripcion" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-                    <referencedElements xmi:type="expression:Expression" xmi:id="_Dk_0RaGdEeu8UM8dRGrBDQ" name="anuncioModificar" content="anuncioModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Anuncio">
-                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_0RqGdEeu8UM8dRGrBDQ" name="anuncioModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Anuncio"/>
+                    <referencedElements xmi:type="expression:Expression" xmi:id="_Dk_0RaGdEeu8UM8dRGrBDQ" name="eventosModificar" content="eventosModificar" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_Dk_0RqGdEeu8UM8dRGrBDQ" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos"/>
                     </referencedElements>
                   </referencedElements>
                   <referencedElements xmi:type="expression:Expression" xmi:id="_Dk_0R6GdEeu8UM8dRGrBDQ" name="fechaSolicitudText" content="fechaSolicitudText" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
@@ -670,8 +1171,8 @@
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Dk_0XKGdEeu8UM8dRGrBDQ" key="attachments">
                 <expression xmi:type="expression:ListExpression" xmi:id="_Dk_0XaGdEeu8UM8dRGrBDQ">
-                  <expressions xmi:type="expression:Expression" xmi:id="_Dk_0XqGdEeu8UM8dRGrBDQ" name="imagenAnuncio" content="imagenAnuncio" type="TYPE_DOCUMENT" returnType="org.bonitasoft.engine.bpm.document.Document">
-                    <referencedElements xmi:type="process:Document" xmi:id="_Dk_0X6GdEeu8UM8dRGrBDQ" name="imagenAnuncio"/>
+                  <expressions xmi:type="expression:Expression" xmi:id="_Dk_0XqGdEeu8UM8dRGrBDQ" name="imagenEventos" content="imagenEventos" type="TYPE_DOCUMENT" returnType="org.bonitasoft.engine.bpm.document.Document">
+                    <referencedElements xmi:type="process:Document" xmi:id="_Dk_0X6GdEeu8UM8dRGrBDQ" name="imagenEventos"/>
                   </expressions>
                 </expression>
               </parameters>
@@ -684,7 +1185,7 @@
           <completionCondition xmi:type="expression:Expression" xmi:id="_Dk_0ZKGdEeu8UM8dRGrBDQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         </elements>
       </elements>
-      <data xmi:type="process:Data" xmi:id="_Dk_0ZaGdEeu8UM8dRGrBDQ" name="idAnuncio" dataType="_Dk_0waGdEeu8UM8dRGrBDQ">
+      <data xmi:type="process:Data" xmi:id="_Dk_0ZaGdEeu8UM8dRGrBDQ" name="idEventos" dataType="_Dk_0waGdEeu8UM8dRGrBDQ">
         <defaultValue xmi:type="expression:Expression" xmi:id="_Dk_0ZqGdEeu8UM8dRGrBDQ" content="" returnType="java.lang.Long"/>
       </data>
       <data xmi:type="process:Data" xmi:id="_Dk_0Z6GdEeu8UM8dRGrBDQ" name="comentarioComision" dataType="_Dk_0w6GdEeu8UM8dRGrBDQ">
@@ -693,10 +1194,10 @@
       <data xmi:type="process:Data" xmi:id="_Dk_0aaGdEeu8UM8dRGrBDQ" name="comentarioGestor" dataType="_Dk_0w6GdEeu8UM8dRGrBDQ">
         <defaultValue xmi:type="expression:Expression" xmi:id="_Dk_0aqGdEeu8UM8dRGrBDQ" content=""/>
       </data>
-      <data xmi:type="process:BusinessObjectData" xmi:id="_Dk_0a6GdEeu8UM8dRGrBDQ" name="anuncioModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Anuncio">
+      <data xmi:type="process:BusinessObjectData" xmi:id="_Dk_0a6GdEeu8UM8dRGrBDQ" name="eventosModificar" dataType="_Dk_0xqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Eventos">
         <defaultValue xmi:type="expression:Expression" xmi:id="_Dk_0bKGdEeu8UM8dRGrBDQ" name="" content="" interpreter="GROOVY"/>
       </data>
-      <data xmi:type="process:Data" xmi:id="_Dk_0baGdEeu8UM8dRGrBDQ" name="autorizarAnuncio" dataType="_Dk_0vqGdEeu8UM8dRGrBDQ">
+      <data xmi:type="process:Data" xmi:id="_Dk_0baGdEeu8UM8dRGrBDQ" name="autorizarEventos" dataType="_Dk_0vqGdEeu8UM8dRGrBDQ">
         <defaultValue xmi:type="expression:Expression" xmi:id="_Dk_0bqGdEeu8UM8dRGrBDQ" content="" returnType="java.lang.Boolean"/>
       </data>
       <data xmi:type="process:JavaObjectData" xmi:id="_Dk_0b6GdEeu8UM8dRGrBDQ" name="usuarioComision" dataType="_Dk_0xKGdEeu8UM8dRGrBDQ" className="java.util.Collection">
@@ -712,6 +1213,9 @@
       </data>
       <data xmi:type="process:Data" xmi:id="_Dk_0dqGdEeu8UM8dRGrBDQ" name="fechaSolicitudText" dataType="_Dk_0w6GdEeu8UM8dRGrBDQ">
         <defaultValue xmi:type="expression:Expression" xmi:id="_Dk_0d6GdEeu8UM8dRGrBDQ" content=""/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_s1XpwKJEEeu0vJDt_-fTdA" name="idAlfrescoCronograma" dataType="_Dk_0w6GdEeu8UM8dRGrBDQ">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_s1XpwaJEEeu0vJDt_-fTdA" content=""/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_Dk_0eKGdEeu8UM8dRGrBDQ" type="NONE">
         <targetForm xmi:type="expression:Expression" xmi:id="_Dk_0eaGdEeu8UM8dRGrBDQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -733,8 +1237,8 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_Dk_0haGdEeu8UM8dRGrBDQ" name="SÍ " target="_Dk_zM6GdEeu8UM8dRGrBDQ" source="_Dk_zwqGdEeu8UM8dRGrBDQ">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_Dk_0hqGdEeu8UM8dRGrBDQ"/>
-        <condition xmi:type="expression:Expression" xmi:id="_Dk_0h6GdEeu8UM8dRGrBDQ" name="autorizarAnuncio" content="autorizarAnuncio" type="TYPE_VARIABLE" returnType="java.lang.Boolean" returnTypeFixed="true">
-          <referencedElements xmi:type="process:Data" xmi:id="_Dk_0iKGdEeu8UM8dRGrBDQ" name="autorizarAnuncio" dataType="_Dk_0vqGdEeu8UM8dRGrBDQ"/>
+        <condition xmi:type="expression:Expression" xmi:id="_Dk_0h6GdEeu8UM8dRGrBDQ" name="autorizarEventos" content="autorizarEventos" type="TYPE_VARIABLE" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:Data" xmi:id="_Dk_0iKGdEeu8UM8dRGrBDQ" name="autorizarEventos" dataType="_Dk_0vqGdEeu8UM8dRGrBDQ"/>
         </condition>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_Dk_0iaGdEeu8UM8dRGrBDQ" target="_Dk_zL6GdEeu8UM8dRGrBDQ" source="_Dk_y3aGdEeu8UM8dRGrBDQ">
@@ -778,10 +1282,15 @@
       <parameters xmi:type="parameter:Parameter" xmi:id="_Dk_0qKGdEeu8UM8dRGrBDQ" name="usuarioServidor" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_Dk_0qaGdEeu8UM8dRGrBDQ" name="usuarioAlfresco" typeClassname="java.lang.String"/>
       <contract xmi:type="process:Contract" xmi:id="_Dk_0qqGdEeu8UM8dRGrBDQ"/>
-      <documents xmi:type="process:Document" xmi:id="_Dk_0q6GdEeu8UM8dRGrBDQ" name="imagenAnuncio">
+      <documents xmi:type="process:Document" xmi:id="_Dk_0q6GdEeu8UM8dRGrBDQ" name="imagenEventos">
         <mimeType xmi:type="expression:Expression" xmi:id="_Dk_0rKGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
         <url xmi:type="expression:Expression" xmi:id="_Dk_0raGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
         <initialMultipleContent xmi:type="expression:Expression" xmi:id="_Dk_0rqGdEeu8UM8dRGrBDQ" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
+      </documents>
+      <documents xmi:type="process:Document" xmi:id="_iQWHoKJLEeu0vJDt_-fTdA" name="cronogramaEventos">
+        <mimeType xmi:type="expression:Expression" xmi:id="_iQWHoaJLEeu0vJDt_-fTdA" name="" content="" returnTypeFixed="true"/>
+        <url xmi:type="expression:Expression" xmi:id="_iQWHoqJLEeu0vJDt_-fTdA" name="" content="" returnTypeFixed="true"/>
+        <initialMultipleContent xmi:type="expression:Expression" xmi:id="_iQWHo6JLEeu0vJDt_-fTdA" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
       </documents>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_Dk_0r6GdEeu8UM8dRGrBDQ">
         <name xmi:type="expression:Expression" xmi:id="_Dk_0sKGdEeu8UM8dRGrBDQ" content="" returnTypeFixed="true"/>
