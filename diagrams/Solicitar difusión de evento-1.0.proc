@@ -347,7 +347,7 @@
               <referencedElements xmi:type="process:Data" xmi:id="_ZIwLIJJfEeufzaXiu6CRZQ" name="fechaSolicitudText" dataType="_JzGgIY9jEeuKAII24VVDEA"/>
             </leftOperand>
             <rightOperand xmi:type="expression:Expression" xmi:id="_YkqmopJfEeufzaXiu6CRZQ" name="newScript()" content="import java.time.format.DateTimeFormatter&#xA;&#xA;DateTimeFormatter formato = DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd HH:mm:ss&quot;);&#xA;String fecha = evento.fechaSolicitud.format(formato);&#xA;&#xA;return fecha;&#xA;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_5If_sJSYEeuQb5FOcSaXqg" name="evento" dataType="_JzGgJI9jEeuKAII24VVDEA" className="com.mdecisc.model.Evento"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2w_40KNqEeuDhI-hwfbVWg" name="evento" dataType="_JzGgJI9jEeuKAII24VVDEA" className="com.mdecisc.model.Evento"/>
             </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_Ykqmo5JfEeufzaXiu6CRZQ" type="ASSIGNMENT"/>
           </operations>
@@ -1621,6 +1621,139 @@
               </parameters>
             </configuration>
           </connectors>
+          <connectors xmi:type="process:Connector" xmi:id="_BkgUIKNqEeuDhI-hwfbVWg" name="generarInformeEvento" definitionId="document-templating" event="ON_ENTER" definitionVersion="1.0.1">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_BkgUIaNqEeuDhI-hwfbVWg" definitionId="document-templating" version="1.0.1" modelVersion="7.12.0-004">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Bkg7MKNqEeuDhI-hwfbVWg" key="documentInput">
+                <expression xmi:type="expression:Expression" xmi:id="_Bkg7MaNqEeuDhI-hwfbVWg" name="informeEvento" content="informeEvento" type="DOCUMENT_REF_TYPE" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Document" xmi:id="_Bkg7MqNqEeuDhI-hwfbVWg" name="informeEvento"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Bkg7M6NqEeuDhI-hwfbVWg" key="replacements">
+                <expression xmi:type="expression:TableExpression" xmi:id="_Bkg7NKNqEeuDhI-hwfbVWg">
+                  <expressions xmi:type="expression:ListExpression" xmi:id="_Bkg7NaNqEeuDhI-hwfbVWg">
+                    <expressions xmi:type="expression:Expression" xmi:id="_Bkg7NqNqEeuDhI-hwfbVWg" name="fechaInscripcionInicio" content="fechaInscripcionInicio" returnTypeFixed="true"/>
+                    <expressions xmi:type="expression:Expression" xmi:id="_Bkg7N6NqEeuDhI-hwfbVWg" name="newScript()" content="import java.time.format.DateTimeFormatter&#xD;&#xA;&#xD;&#xA;DateTimeFormatter formato = DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd HH:mm:ss&quot;);&#xD;&#xA;String fecha = evento.fechaInscripcionInicio.format(formato);&#xD;&#xA;&#xD;&#xA;return fecha;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2qfLsKNrEeuDhI-hwfbVWg" name="evento" dataType="_JzGgJI9jEeuKAII24VVDEA" className="com.mdecisc.model.Evento"/>
+                    </expressions>
+                  </expressions>
+                  <expressions xmi:type="expression:ListExpression" xmi:id="_2qfLsaNrEeuDhI-hwfbVWg">
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfLsqNrEeuDhI-hwfbVWg" name="fechaInscripcionFin" content="fechaInscripcionFin" returnTypeFixed="true"/>
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfLs6NrEeuDhI-hwfbVWg" name="newScript()" content="import java.time.format.DateTimeFormatter&#xD;&#xA;&#xD;&#xA;DateTimeFormatter formato = DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd HH:mm:ss&quot;);&#xD;&#xA;String fecha = evento.fechaInscripcionFin.format(formato);&#xD;&#xA;&#xD;&#xA;return fecha;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2qfLtKNrEeuDhI-hwfbVWg" name="evento" dataType="_JzGgJI9jEeuKAII24VVDEA" className="com.mdecisc.model.Evento"/>
+                    </expressions>
+                  </expressions>
+                  <expressions xmi:type="expression:ListExpression" xmi:id="_2qfLtaNrEeuDhI-hwfbVWg">
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfLtqNrEeuDhI-hwfbVWg" name="fechaEventoInicio" content="fechaEventoInicio" returnTypeFixed="true"/>
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfLt6NrEeuDhI-hwfbVWg" name="newScript()" content="import java.time.format.DateTimeFormatter&#xD;&#xA;&#xD;&#xA;DateTimeFormatter formato = DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd HH:mm:ss&quot;);&#xD;&#xA;String fecha = evento.fechaEventoInicio.format(formato);&#xD;&#xA;&#xD;&#xA;return fecha;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2qfLuKNrEeuDhI-hwfbVWg" name="evento" dataType="_JzGgJI9jEeuKAII24VVDEA" className="com.mdecisc.model.Evento"/>
+                    </expressions>
+                  </expressions>
+                  <expressions xmi:type="expression:ListExpression" xmi:id="_2qfLuaNrEeuDhI-hwfbVWg">
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfLuqNrEeuDhI-hwfbVWg" name="fechaEventoFin" content="fechaEventoFin" returnTypeFixed="true"/>
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfLu6NrEeuDhI-hwfbVWg" name="newScript()" content="import java.time.format.DateTimeFormatter&#xD;&#xA;&#xD;&#xA;DateTimeFormatter formato = DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd HH:mm:ss&quot;);&#xD;&#xA;String fecha = evento.fechaEventoFin.format(formato);&#xD;&#xA;&#xD;&#xA;return fecha;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2qfLvKNrEeuDhI-hwfbVWg" name="evento" dataType="_JzGgJI9jEeuKAII24VVDEA" className="com.mdecisc.model.Evento"/>
+                    </expressions>
+                  </expressions>
+                  <expressions xmi:type="expression:ListExpression" xmi:id="_2qfLvaNrEeuDhI-hwfbVWg">
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfLvqNrEeuDhI-hwfbVWg" name="nombre" content="nombre" returnTypeFixed="true"/>
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfLv6NrEeuDhI-hwfbVWg" name="newScript()" content="evento.nombre" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2qfLwKNrEeuDhI-hwfbVWg" name="evento" dataType="_JzGgJI9jEeuKAII24VVDEA" className="com.mdecisc.model.Evento"/>
+                    </expressions>
+                  </expressions>
+                  <expressions xmi:type="expression:ListExpression" xmi:id="_2qfLwaNrEeuDhI-hwfbVWg">
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfLwqNrEeuDhI-hwfbVWg" name="descripcion" content="descripcion" returnTypeFixed="true"/>
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfLw6NrEeuDhI-hwfbVWg" name="newScript()" content="evento.descripcion" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2qfLxKNrEeuDhI-hwfbVWg" name="evento" dataType="_JzGgJI9jEeuKAII24VVDEA" className="com.mdecisc.model.Evento"/>
+                    </expressions>
+                  </expressions>
+                  <expressions xmi:type="expression:ListExpression" xmi:id="_2qfLxaNrEeuDhI-hwfbVWg">
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfLxqNrEeuDhI-hwfbVWg" name="organizadores" content="organizadores" returnTypeFixed="true"/>
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfLx6NrEeuDhI-hwfbVWg" name="evento - Evento#getOrganizadores" content="getOrganizadores" interpreter="GROOVY" type="TYPE_JAVA_METHOD_CALL" returnType="java.util.List">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_WqGtgKNtEeuDhI-hwfbVWg" name="evento" dataType="_JzGgJI9jEeuKAII24VVDEA" className="com.mdecisc.model.Evento"/>
+                    </expressions>
+                  </expressions>
+                  <expressions xmi:type="expression:ListExpression" xmi:id="_2qfLyaNrEeuDhI-hwfbVWg">
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfLyqNrEeuDhI-hwfbVWg" name="lugares" content="lugares" returnTypeFixed="true"/>
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfLy6NrEeuDhI-hwfbVWg" name="evento - Evento#getLugares" content="getLugares" interpreter="GROOVY" type="TYPE_JAVA_METHOD_CALL" returnType="java.util.List">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_WqGtgaNtEeuDhI-hwfbVWg" name="evento" dataType="_JzGgJI9jEeuKAII24VVDEA" className="com.mdecisc.model.Evento"/>
+                    </expressions>
+                  </expressions>
+                  <expressions xmi:type="expression:ListExpression" xmi:id="_2qfLzaNrEeuDhI-hwfbVWg">
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfLzqNrEeuDhI-hwfbVWg" name="tipoEvento" content="tipoEvento" returnTypeFixed="true"/>
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfLz6NrEeuDhI-hwfbVWg" name="newScript()" content="evento.tipoEvento" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2qfL0KNrEeuDhI-hwfbVWg" name="evento" dataType="_JzGgJI9jEeuKAII24VVDEA" className="com.mdecisc.model.Evento"/>
+                    </expressions>
+                  </expressions>
+                  <expressions xmi:type="expression:ListExpression" xmi:id="_2qfL0aNrEeuDhI-hwfbVWg">
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfL0qNrEeuDhI-hwfbVWg" name="categoriaEvento" content="categoriaEvento" returnTypeFixed="true"/>
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfL06NrEeuDhI-hwfbVWg" name="newScript()" content="evento.categoriaEvento" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2qfL1KNrEeuDhI-hwfbVWg" name="evento" dataType="_JzGgJI9jEeuKAII24VVDEA" className="com.mdecisc.model.Evento"/>
+                    </expressions>
+                  </expressions>
+                  <expressions xmi:type="expression:ListExpression" xmi:id="_2qfL1aNrEeuDhI-hwfbVWg">
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfL1qNrEeuDhI-hwfbVWg" name="cupo" content="cupo" returnTypeFixed="true"/>
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfL16NrEeuDhI-hwfbVWg" name="newScript()" content="evento.cupo" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2qfL2KNrEeuDhI-hwfbVWg" name="evento" dataType="_JzGgJI9jEeuKAII24VVDEA" className="com.mdecisc.model.Evento"/>
+                    </expressions>
+                  </expressions>
+                  <expressions xmi:type="expression:ListExpression" xmi:id="_2qfL2aNrEeuDhI-hwfbVWg">
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfL2qNrEeuDhI-hwfbVWg" name="valor" content="valor" returnTypeFixed="true"/>
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfL26NrEeuDhI-hwfbVWg" name="evento - Evento#getValor" content="getValor" interpreter="GROOVY" type="TYPE_JAVA_METHOD_CALL" returnType="java.util.List">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_WqNbMKNtEeuDhI-hwfbVWg" name="evento" dataType="_JzGgJI9jEeuKAII24VVDEA" className="com.mdecisc.model.Evento"/>
+                    </expressions>
+                  </expressions>
+                  <expressions xmi:type="expression:ListExpression" xmi:id="_2qfL3aNrEeuDhI-hwfbVWg">
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfL3qNrEeuDhI-hwfbVWg" name="ponentes" content="ponentes" returnTypeFixed="true"/>
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfL36NrEeuDhI-hwfbVWg" name="evento - Evento#getPonentes" content="getPonentes" interpreter="GROOVY" type="TYPE_JAVA_METHOD_CALL" returnType="java.util.List">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_WqNbMaNtEeuDhI-hwfbVWg" name="evento" dataType="_JzGgJI9jEeuKAII24VVDEA" className="com.mdecisc.model.Evento"/>
+                    </expressions>
+                  </expressions>
+                  <expressions xmi:type="expression:ListExpression" xmi:id="_2qfL4aNrEeuDhI-hwfbVWg">
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfL4qNrEeuDhI-hwfbVWg" name="fechaSolicitud" content="fechaSolicitud" returnTypeFixed="true"/>
+                    <expressions xmi:type="expression:Expression" xmi:id="_2qfL46NrEeuDhI-hwfbVWg" name="newScript()" content="import java.time.format.DateTimeFormatter&#xD;&#xA;&#xD;&#xA;DateTimeFormatter formato = DateTimeFormatter.ofPattern(&quot;yyyy-MM-dd HH:mm:ss&quot;);&#xD;&#xA;String fecha = evento.fechaSolicitud.format(formato);&#xD;&#xA;&#xD;&#xA;return fecha;" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                      <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_2qfL5KNrEeuDhI-hwfbVWg" name="evento" dataType="_JzGgJI9jEeuKAII24VVDEA" className="com.mdecisc.model.Evento"/>
+                    </expressions>
+                  </expressions>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_Bkg7OKNqEeuDhI-hwfbVWg" key="outputFileName">
+                <expression xmi:type="expression:Expression" xmi:id="_Bkg7OaNqEeuDhI-hwfbVWg" name="informe.docx" content="informe.docx" returnTypeFixed="true"/>
+              </parameters>
+            </configuration>
+            <outputs xmi:type="expression:Operation" xmi:id="_Bkg7OqNqEeuDhI-hwfbVWg">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_Bkg7O6NqEeuDhI-hwfbVWg" name="informeEvento" content="informeEvento" type="DOCUMENT_REF_TYPE">
+                <referencedElements xmi:type="process:Document" xmi:id="_Bkg7PKNqEeuDhI-hwfbVWg" name="informeEvento"/>
+              </leftOperand>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_Bkg7PaNqEeuDhI-hwfbVWg" name="document" content="document" type="CONNECTOR_OUTPUT_TYPE" returnType="org.bonitasoft.engine.bpm.document.DocumentValue">
+                <referencedElements xmi:type="definition:Output" xmi:id="_Bkg7PqNqEeuDhI-hwfbVWg" name="document" type="org.bonitasoft.engine.bpm.document.DocumentValue"/>
+              </rightOperand>
+              <operator xmi:type="expression:Operator" xmi:id="_Bkg7P6NqEeuDhI-hwfbVWg" type="DOCUMENT_CREATE_UPDATE"/>
+            </outputs>
+          </connectors>
+          <connectors xmi:type="process:Connector" xmi:id="_HQN5wKNqEeuDhI-hwfbVWg" name="convertirInformeEventoPDF" definitionId="document-converter" event="ON_ENTER" definitionVersion="1.0.2">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_HQOg0KNqEeuDhI-hwfbVWg" definitionId="document-converter" version="1.0.2" modelVersion="7.12.0-004">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_HQOg0aNqEeuDhI-hwfbVWg" key="sourceDocument">
+                <expression xmi:type="expression:Expression" xmi:id="_HQOg0qNqEeuDhI-hwfbVWg" name="informeEvento" content="informeEvento" type="DOCUMENT_REF_TYPE" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Document" xmi:id="_HQOg06NqEeuDhI-hwfbVWg" name="informeEvento"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_HQOg1KNqEeuDhI-hwfbVWg" key="encoding">
+                <expression xmi:type="expression:Expression" xmi:id="_HQOg1aNqEeuDhI-hwfbVWg" name="windows-1252" content="windows-1252" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_HQOg1qNqEeuDhI-hwfbVWg" key="outputFileName">
+                <expression xmi:type="expression:Expression" xmi:id="_HQOg16NqEeuDhI-hwfbVWg" name="informe.pdf" content="informe.pdf" returnTypeFixed="true"/>
+              </parameters>
+            </configuration>
+            <outputs xmi:type="expression:Operation" xmi:id="_HQOg2KNqEeuDhI-hwfbVWg">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_HQOg2aNqEeuDhI-hwfbVWg" name="informeEvento" content="informeEvento" type="DOCUMENT_REF_TYPE">
+                <referencedElements xmi:type="process:Document" xmi:id="_HQOg2qNqEeuDhI-hwfbVWg" name="informeEvento"/>
+              </leftOperand>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_HQOg26NqEeuDhI-hwfbVWg" name="outputDocumentValue" content="outputDocumentValue" type="CONNECTOR_OUTPUT_TYPE" returnType="org.bonitasoft.engine.bpm.document.DocumentValue">
+                <referencedElements xmi:type="definition:Output" xmi:id="_HQOg3KNqEeuDhI-hwfbVWg" name="outputDocumentValue" type="org.bonitasoft.engine.bpm.document.DocumentValue"/>
+              </rightOperand>
+              <operator xmi:type="expression:Operator" xmi:id="_HQOg3aNqEeuDhI-hwfbVWg" type="DOCUMENT_CREATE_UPDATE"/>
+            </outputs>
+          </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_zEl8QKFsEeu8UM8dRGrBDQ">
             <leftOperand xmi:type="expression:Expression" xmi:id="_zEl8QaFsEeu8UM8dRGrBDQ" name="evento" content="evento" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Evento">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_zl4EYKFsEeu8UM8dRGrBDQ" name="evento" dataType="_JzGgJI9jEeuKAII24VVDEA" className="com.mdecisc.model.Evento"/>
@@ -1830,7 +1963,7 @@
         <url xmi:type="expression:Expression" xmi:id="_3siqYpGrEeuX3ecYPaz98w" name="" content="" returnTypeFixed="true"/>
         <initialMultipleContent xmi:type="expression:Expression" xmi:id="_3siqY5GrEeuX3ecYPaz98w" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
       </documents>
-      <documents xmi:type="process:Document" xmi:id="_a2z0MJG2EeuX3ecYPaz98w" name="informeEvento" defaultValueIdOfDocumentStore="informeEvento.odt" documentType="INTERNAL">
+      <documents xmi:type="process:Document" xmi:id="_a2z0MJG2EeuX3ecYPaz98w" name="informeEvento" defaultValueIdOfDocumentStore="informeEvento(1).odt" documentType="INTERNAL">
         <mimeType xmi:type="expression:Expression" xmi:id="_a2z0MZG2EeuX3ecYPaz98w" name="" content="" returnTypeFixed="true"/>
         <url xmi:type="expression:Expression" xmi:id="_a2z0MpG2EeuX3ecYPaz98w" name="" content="" returnTypeFixed="true"/>
         <initialMultipleContent xmi:type="expression:Expression" xmi:id="_a2z0M5G2EeuX3ecYPaz98w" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>

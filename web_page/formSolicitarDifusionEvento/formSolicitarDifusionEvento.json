@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formSolicitarDifusionEvento",
   "name" : "formSolicitarDifusionEvento",
-  "lastUpdate" : 1618871812266,
+  "lastUpdate" : 1619103024489,
   "rows" : [
     [
       {
@@ -3395,8 +3395,8 @@
         "\t\t\tid: $data.evento.id !== undefined ? $data.evento.id : null,",
         "\t\t\tnombre: $data.evento.nombre !== undefined ? $data.evento.nombre : null,",
         "\t\t\tdescripcion: $data.evento.descripcion !== undefined ? $data.evento.descripcion : null,",
-        "\t\t\torganizadores: $data.evento.organizadores !== undefined ? $data.evento.organizadores : null,",
-        "\t\t\tlugares: $data.evento.lugares !== undefined ? $data.evento.lugares : null,",
+        "\t\t\torganizadores: $data.evento.organizadores !== undefined ? $data.evento.organizadores : [],",
+        "\t\t\tlugares: $data.evento.lugares !== undefined ? $data.evento.lugares : [],",
         "\t\t\ttipoEvento: $data.evento.tipoEvento !== undefined ? $data.evento.tipoEvento : null,",
         "\t\t\tcategoriaEvento: $data.evento.categoriaEvento !== undefined ? $data.evento.categoriaEvento : null,",
         "\t\t\tcupo: $data.evento.cupo !== undefined ? $data.evento.cupo : null,",
