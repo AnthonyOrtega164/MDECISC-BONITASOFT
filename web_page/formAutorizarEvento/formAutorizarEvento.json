@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formAutorizarEvento",
   "name" : "formAutorizarEvento",
-  "lastUpdate" : 1618954773304,
+  "lastUpdate" : 1619067782388,
   "rows" : [
     [
       {
@@ -54,6 +54,66 @@
         "binding" : {
           "usuarioSolicitante" : "usuarioComision"
         }
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "minLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "maxLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Comentario del Solicitante"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "comentarioComision.value"
+          }
+        },
+        "reference" : "4bb1760b-b03d-4685-a159-db672bca3b76",
+        "hasValidationError" : false,
+        "id" : "pbTextarea"
       }
     ],
     [
@@ -4221,6 +4281,13 @@
       "type" : "url",
       "value" : [
         "../API/bpm/activityVariable/{{taskId}}/usuarioComision"
+      ],
+      "exposed" : false
+    },
+    "comentarioComision" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/activityVariable/{{taskId}}/comentarioComision"
       ],
       "exposed" : false
     }

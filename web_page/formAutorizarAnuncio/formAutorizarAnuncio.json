@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formAutorizarAnuncio",
   "name" : "formAutorizarAnuncio",
-  "lastUpdate" : 1618933107106,
+  "lastUpdate" : 1619067636976,
   "rows" : [
     [
       {
@@ -54,6 +54,66 @@
         "binding" : {
           "usuarioSolicitante" : "usuarioComision"
         }
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "minLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "maxLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "Comentario del Solicitante"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "comentarioComision.value"
+          }
+        },
+        "reference" : "fa069c66-b685-49f9-8219-a9387811fb13",
+        "hasValidationError" : false,
+        "id" : "pbTextarea"
       }
     ],
     [
@@ -153,58 +213,6 @@
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
-            [
-              {
-                "type" : "component",
-                "dimension" : {
-                  "xs" : 12,
-                  "sm" : 12,
-                  "md" : 12,
-                  "lg" : 12
-                },
-                "propertyValues" : {
-                  "cssClasses" : {
-                    "type" : "constant",
-                    "value" : ""
-                  },
-                  "hidden" : {
-                    "type" : "constant",
-                    "value" : false
-                  },
-                  "labelHidden" : {
-                    "type" : "constant",
-                    "value" : true
-                  },
-                  "label" : {
-                    "type" : "interpolation",
-                    "value" : "Default label"
-                  },
-                  "labelPosition" : {
-                    "type" : "constant",
-                    "value" : "top"
-                  },
-                  "labelWidth" : {
-                    "type" : "constant",
-                    "value" : 4
-                  },
-                  "allowHTML" : {
-                    "type" : "constant",
-                    "value" : true
-                  },
-                  "text" : {
-                    "type" : "interpolation",
-                    "value" : "Comentario<br>\n{{comentarioComision.value}}"
-                  },
-                  "alignment" : {
-                    "type" : "constant",
-                    "value" : "center"
-                  }
-                },
-                "reference" : "bb7ce689-f968-44aa-a337-bc8811a24c94",
-                "hasValidationError" : false,
-                "id" : "pbText"
-              }
-            ],
             [
               {
                 "type" : "container",

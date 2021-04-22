@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formModificarAnuncio",
   "name" : "formModificarAnuncio",
-  "lastUpdate" : 1618895390744,
+  "lastUpdate" : 1619067500377,
   "rows" : [
     [
       {
@@ -27,6 +27,66 @@
         "hasValidationError" : false,
         "id" : "header",
         "binding" : { }
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "minLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "maxLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "<b>Comentario de Gestor</b>"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "comentarioGestor.value"
+          }
+        },
+        "reference" : "227dc711-9dc4-4fc9-8af5-91b2ed5a6586",
+        "hasValidationError" : false,
+        "id" : "pbTextarea"
       }
     ],
     [
@@ -137,7 +197,8 @@
                 },
                 "propertyValues" : {
                   "repeatedCollection" : {
-                    "type" : "variable"
+                    "type" : "variable",
+                    "value" : ""
                   },
                   "hidden" : {
                     "type" : "constant",
@@ -156,94 +217,6 @@
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
-                        "md" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "<b>Comentario de Gestor</b>"
-                        },
-                        "level" : {
-                          "type" : "constant",
-                          "value" : "Level 5"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "center"
-                        }
-                      },
-                      "reference" : "9fc22064-1962-48f2-9ed8-40f034d2f08a",
-                      "hasValidationError" : false,
-                      "id" : "pbTitle"
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
-                        "md" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Default label"
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "{{comentarioGestor.value}}"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "center"
-                        }
-                      },
-                      "reference" : "be5b02ae-5893-49e4-bf77-4879da56daac",
-                      "hasValidationError" : false,
-                      "id" : "pbText"
-                    }
-                  ],
                   [
                     {
                       "type" : "container",
@@ -577,46 +550,6 @@
                         ],
                         [
                           {
-                            "type" : "component",
-                            "dimension" : {
-                              "xs" : 12,
-                              "sm" : 12,
-                              "md" : 12,
-                              "lg" : 12
-                            },
-                            "propertyValues" : {
-                              "cssClasses" : {
-                                "type" : "constant",
-                                "value" : ""
-                              },
-                              "hidden" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
-                              "type" : {
-                                "type" : "constant",
-                                "value" : "URL"
-                              },
-                              "url" : {
-                                "type" : "expression",
-                                "value" : "anuncioModificar.imagen"
-                              },
-                              "document" : {
-                                "type" : "variable",
-                                "value" : ""
-                              },
-                              "showPreview" : {
-                                "type" : "constant",
-                                "value" : true
-                              }
-                            },
-                            "reference" : "a68f6edf-e095-4e53-8e53-2b5548b6c90d",
-                            "hasValidationError" : false,
-                            "id" : "pbFileViewer"
-                          }
-                        ],
-                        [
-                          {
                             "type" : "container",
                             "dimension" : {
                               "md" : 12,
@@ -646,6 +579,46 @@
                             "hasValidationError" : false,
                             "id" : "pbContainer",
                             "rows" : [
+                              [
+                                {
+                                  "type" : "component",
+                                  "dimension" : {
+                                    "xs" : 12,
+                                    "sm" : 12,
+                                    "md" : 12,
+                                    "lg" : 12
+                                  },
+                                  "propertyValues" : {
+                                    "cssClasses" : {
+                                      "type" : "constant",
+                                      "value" : ""
+                                    },
+                                    "hidden" : {
+                                      "type" : "constant",
+                                      "value" : false
+                                    },
+                                    "type" : {
+                                      "type" : "constant",
+                                      "value" : "URL"
+                                    },
+                                    "url" : {
+                                      "type" : "expression",
+                                      "value" : "anuncioModificar.imagen"
+                                    },
+                                    "document" : {
+                                      "type" : "variable",
+                                      "value" : ""
+                                    },
+                                    "showPreview" : {
+                                      "type" : "constant",
+                                      "value" : true
+                                    }
+                                  },
+                                  "reference" : "a68f6edf-e095-4e53-8e53-2b5548b6c90d",
+                                  "hasValidationError" : false,
+                                  "id" : "pbFileViewer"
+                                }
+                              ],
                               [
                                 {
                                   "type" : "component",
@@ -917,10 +890,10 @@
                     {
                       "type" : "component",
                       "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
+                        "md" : 4,
+                        "sm" : 4,
+                        "xs" : 4,
+                        "lg" : 4
                       },
                       "propertyValues" : {
                         "labelHidden" : {
@@ -960,16 +933,14 @@
                       "hasValidationError" : false,
                       "id" : "pbCheckbox",
                       "description" : ""
-                    }
-                  ],
-                  [
+                    },
                     {
-                      "type" : "container",
+                      "type" : "component",
                       "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
-                        "md" : 12,
-                        "lg" : 12
+                        "md" : 8,
+                        "sm" : 8,
+                        "xs" : 8,
+                        "lg" : 8
                       },
                       "propertyValues" : {
                         "cssClasses" : {
@@ -980,76 +951,46 @@
                           "type" : "expression",
                           "value" : "anuncioModificar.validado"
                         },
-                        "repeatedCollection" : {
-                          "type" : "variable",
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "minLength" : {
+                          "type" : "constant",
                           "value" : ""
+                        },
+                        "maxLength" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Motivo de Cancelación"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "anuncioModificar.motivoCancelacion"
                         }
                       },
-                      "reference" : "fc691f68-66c2-4594-9d35-d0cb456680a3",
+                      "reference" : "7064e7b8-ca33-4939-b90a-5edded0f9238",
                       "hasValidationError" : false,
-                      "id" : "pbContainer",
-                      "rows" : [
-                        [
-                          {
-                            "type" : "component",
-                            "dimension" : {
-                              "md" : 12,
-                              "sm" : 12,
-                              "xs" : 12,
-                              "lg" : 12
-                            },
-                            "propertyValues" : {
-                              "cssClasses" : {
-                                "type" : "constant",
-                                "value" : ""
-                              },
-                              "hidden" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
-                              "readOnly" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
-                              "required" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
-                              "minLength" : {
-                                "type" : "constant",
-                                "value" : ""
-                              },
-                              "maxLength" : {
-                                "type" : "constant",
-                                "value" : ""
-                              },
-                              "labelHidden" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
-                              "label" : {
-                                "type" : "interpolation",
-                                "value" : "Motivo de Cancelación"
-                              },
-                              "labelPosition" : {
-                                "type" : "constant",
-                                "value" : "top"
-                              },
-                              "labelWidth" : {
-                                "type" : "constant",
-                                "value" : 1
-                              },
-                              "value" : {
-                                "type" : "variable",
-                                "value" : "anuncioModificar.motivoCancelacion"
-                              }
-                            },
-                            "reference" : "7064e7b8-ca33-4939-b90a-5edded0f9238",
-                            "hasValidationError" : false,
-                            "id" : "pbTextarea"
-                          }
-                        ]
-                      ]
+                      "id" : "pbTextarea"
                     }
                   ]
                 ]

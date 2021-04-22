@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formModificarEvento",
   "name" : "formModificarEvento",
-  "lastUpdate" : 1618955109567,
+  "lastUpdate" : 1619067847128,
   "rows" : [
     [
       {
@@ -27,6 +27,66 @@
         "hasValidationError" : false,
         "id" : "header",
         "binding" : { }
+      }
+    ],
+    [
+      {
+        "type" : "component",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "readOnly" : {
+            "type" : "constant",
+            "value" : true
+          },
+          "required" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "minLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "maxLength" : {
+            "type" : "constant",
+            "value" : ""
+          },
+          "labelHidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "label" : {
+            "type" : "interpolation",
+            "value" : "<b>Comentario de Gestor</b>"
+          },
+          "labelPosition" : {
+            "type" : "constant",
+            "value" : "top"
+          },
+          "labelWidth" : {
+            "type" : "constant",
+            "value" : 4
+          },
+          "value" : {
+            "type" : "variable",
+            "value" : "comentarioGestor.value"
+          }
+        },
+        "reference" : "9fa8d1d8-6f70-4259-a38d-8e420ebea51b",
+        "hasValidationError" : false,
+        "id" : "pbTextarea"
       }
     ],
     [
@@ -4073,6 +4133,13 @@
       "type" : "urlparameter",
       "value" : [
         "id"
+      ],
+      "exposed" : false
+    },
+    "comentarioGestor" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/activityVariable/{{taskId}}/comentarioGestor"
       ],
       "exposed" : false
     }

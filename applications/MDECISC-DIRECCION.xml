@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
     <application token="mdecisc_direccion" version="1.0" profile="User" homePage="principal" state="ACTIVATED" layout="custompage_layoutBonita" theme="custompage_bootstrapdefaulttheme">
-        <displayName>MDECISC-Dirección </displayName>
+        <displayName>MDECIS/C Dirección</displayName>
         <applicationPages>
             <applicationPage customPage="custompage_pagePrincipalDireccion" token="principal"/>
         </applicationPages>

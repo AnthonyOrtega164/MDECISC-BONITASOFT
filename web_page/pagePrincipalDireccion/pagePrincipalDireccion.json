@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "pagePrincipalDireccion",
   "name" : "pagePrincipalDireccion",
-  "lastUpdate" : 1619051140876,
+  "lastUpdate" : 1619053468870,
   "rows" : [
     [
       {
@@ -64,7 +64,7 @@
           },
           "processName" : {
             "type" : "constant",
-            "value" : "crearEstudiantesDocentes"
+            "value" : "crearEstudianteDocentes"
           },
           "processVersion" : {
             "type" : "constant",
@@ -280,7 +280,8 @@
             "value" : "generarGestor"
           },
           "processVersion" : {
-            "type" : "constant"
+            "type" : "constant",
+            "value" : "1.0"
           },
           "taskId" : {
             "type" : "constant"
@@ -290,7 +291,7 @@
           },
           "target" : {
             "type" : "constant",
-            "value" : "_self"
+            "value" : "_blank"
           },
           "appToken" : {
             "type" : "constant"

@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formAutorizarEventos",
   "name" : "formAutorizarEventos",
-  "lastUpdate" : 1619024206206,
+  "lastUpdate" : 1619066607403,
   "rows" : [
     [
       {
@@ -135,7 +135,7 @@
                 },
                 "value" : {
                   "type" : "variable",
-                  "value" : "comentarioComision"
+                  "value" : "comentarioComision.value"
                 }
               },
               "reference" : "5e961ac4-aa57-4e18-8846-cc75af40110d",
@@ -278,8 +278,8 @@
                     {
                       "type" : "container",
                       "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
+                        "xs" : 6,
+                        "sm" : 6,
                         "md" : 6,
                         "lg" : 6
                       },
@@ -612,8 +612,8 @@
                     {
                       "type" : "container",
                       "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
+                        "xs" : 6,
+                        "sm" : 6,
                         "md" : 6,
                         "lg" : 6
                       },
@@ -735,8 +735,8 @@
                       "type" : "component",
                       "dimension" : {
                         "md" : 6,
-                        "sm" : 12,
-                        "xs" : 12,
+                        "sm" : 6,
+                        "xs" : 6,
                         "lg" : 6
                       },
                       "propertyValues" : {
@@ -833,8 +833,8 @@
                       "type" : "component",
                       "dimension" : {
                         "md" : 6,
-                        "sm" : 12,
-                        "xs" : 12,
+                        "sm" : 6,
+                        "xs" : 6,
                         "lg" : 6
                       },
                       "propertyValues" : {
@@ -933,8 +933,8 @@
                       "type" : "component",
                       "dimension" : {
                         "md" : 6,
-                        "sm" : 12,
-                        "xs" : 12,
+                        "sm" : 6,
+                        "xs" : 6,
                         "lg" : 6
                       },
                       "propertyValues" : {
@@ -1031,8 +1031,8 @@
                       "type" : "component",
                       "dimension" : {
                         "md" : 6,
-                        "sm" : 12,
-                        "xs" : 12,
+                        "sm" : 6,
+                        "xs" : 6,
                         "lg" : 6
                       },
                       "propertyValues" : {
@@ -1330,8 +1330,8 @@
                                   "type" : "component",
                                   "dimension" : {
                                     "md" : 6,
-                                    "sm" : 12,
-                                    "xs" : 12,
+                                    "sm" : 6,
+                                    "xs" : 6,
                                     "lg" : 6
                                   },
                                   "propertyValues" : {
@@ -1410,8 +1410,8 @@
                                   "type" : "component",
                                   "dimension" : {
                                     "md" : 6,
-                                    "sm" : 12,
-                                    "xs" : 12,
+                                    "sm" : 6,
+                                    "xs" : 6,
                                     "lg" : 6
                                   },
                                   "propertyValues" : {
@@ -1792,8 +1792,8 @@
                                   "type" : "component",
                                   "dimension" : {
                                     "md" : 4,
-                                    "sm" : 12,
-                                    "xs" : 12,
+                                    "sm" : 4,
+                                    "xs" : 4,
                                     "lg" : 4
                                   },
                                   "propertyValues" : {
@@ -1872,8 +1872,8 @@
                                   "type" : "component",
                                   "dimension" : {
                                     "md" : 4,
-                                    "sm" : 12,
-                                    "xs" : 12,
+                                    "sm" : 4,
+                                    "xs" : 4,
                                     "lg" : 4
                                   },
                                   "propertyValues" : {
@@ -1952,8 +1952,8 @@
                                   "type" : "component",
                                   "dimension" : {
                                     "md" : 4,
-                                    "sm" : 12,
-                                    "xs" : 12,
+                                    "sm" : 4,
+                                    "xs" : 4,
                                     "lg" : 4
                                   },
                                   "propertyValues" : {
@@ -2394,8 +2394,8 @@
                                   "type" : "component",
                                   "dimension" : {
                                     "md" : 4,
-                                    "sm" : 12,
-                                    "xs" : 12,
+                                    "sm" : 4,
+                                    "xs" : 4,
                                     "lg" : 4
                                   },
                                   "propertyValues" : {
@@ -2474,8 +2474,8 @@
                                   "type" : "component",
                                   "dimension" : {
                                     "md" : 4,
-                                    "sm" : 12,
-                                    "xs" : 12,
+                                    "sm" : 4,
+                                    "xs" : 4,
                                     "lg" : 4
                                   },
                                   "propertyValues" : {
@@ -2554,8 +2554,8 @@
                                   "type" : "component",
                                   "dimension" : {
                                     "md" : 4,
-                                    "sm" : 12,
-                                    "xs" : 12,
+                                    "sm" : 4,
+                                    "xs" : 4,
                                     "lg" : 4
                                   },
                                   "propertyValues" : {
@@ -2636,8 +2636,8 @@
                                   "type" : "component",
                                   "dimension" : {
                                     "md" : 4,
-                                    "sm" : 12,
-                                    "xs" : 12,
+                                    "sm" : 4,
+                                    "xs" : 4,
                                     "lg" : 4
                                   },
                                   "propertyValues" : {
@@ -2716,8 +2716,8 @@
                                   "type" : "component",
                                   "dimension" : {
                                     "md" : 4,
-                                    "sm" : 12,
-                                    "xs" : 12,
+                                    "sm" : 4,
+                                    "xs" : 4,
                                     "lg" : 4
                                   },
                                   "propertyValues" : {
@@ -2796,8 +2796,8 @@
                                   "type" : "component",
                                   "dimension" : {
                                     "md" : 4,
-                                    "sm" : 12,
-                                    "xs" : 12,
+                                    "sm" : 4,
+                                    "xs" : 4,
                                     "lg" : 4
                                   },
                                   "propertyValues" : {
