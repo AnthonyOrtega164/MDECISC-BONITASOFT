@@ -88,8 +88,8 @@
       <data xmi:type="process:BusinessObjectData" xmi:id="_TUw3sJabEeut8sL4LkPR1w" name="periodo" dataType="_CDouKJabEeut8sL4LkPR1w" className="com.mdecisc.model.FechaPeriodo">
         <defaultValue xmi:type="expression:Expression" xmi:id="_TUw3sZabEeut8sL4LkPR1w" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
       </data>
-      <formMapping xmi:type="process:FormMapping" xmi:id="_CDm5BJabEeut8sL4LkPR1w" type="NONE">
-        <targetForm xmi:type="expression:Expression" xmi:id="_CDm5BZabEeut8sL4LkPR1w" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      <formMapping xmi:type="process:FormMapping" xmi:id="_CDm5BJabEeut8sL4LkPR1w">
+        <targetForm xmi:type="expression:Expression" xmi:id="_qnW20KMEEeuSg82WTKe3kg" name="formInstanciarGenerarDocumentacion" content="0ae21a24-6953-4d2f-aeee-1043a5045134" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_CDm5BpabEeut8sL4LkPR1w" type="NONE">
         <targetForm xmi:type="expression:Expression" xmi:id="_CDm5B5abEeut8sL4LkPR1w" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>

@@ -333,8 +333,8 @@
           <referencedElements xmi:type="expression:Expression" xmi:id="_sMEDsJikEeuU3ajsMEqmHw" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
         </defaultValue>
       </data>
-      <formMapping xmi:type="process:FormMapping" xmi:id="_7AkKxI6cEeuNXfn6P7EH3g" type="NONE">
-        <targetForm xmi:type="expression:Expression" xmi:id="_7AkKxY6cEeuNXfn6P7EH3g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      <formMapping xmi:type="process:FormMapping" xmi:id="_7AkKxI6cEeuNXfn6P7EH3g">
+        <targetForm xmi:type="expression:Expression" xmi:id="_ZkdWgKMEEeuSg82WTKe3kg" name="formInstanciarCreacionUsuarios" content="1a05c46f-84d3-4a0c-a677-3b8e13464679" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_7AkKxo6cEeuNXfn6P7EH3g" type="NONE">
         <targetForm xmi:type="expression:Expression" xmi:id="_7AkKx46cEeuNXfn6P7EH3g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>

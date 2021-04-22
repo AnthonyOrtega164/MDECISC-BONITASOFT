@@ -244,8 +244,8 @@
           <referencedElements xmi:type="expression:Expression" xmi:id="_Bd9dkJixEeuU3ajsMEqmHw" name="apiAccessor" content="apiAccessor" type="TYPE_ENGINE_CONSTANT" returnType="org.bonitasoft.engine.api.APIAccessor"/>
         </defaultValue>
       </data>
-      <formMapping xmi:type="process:FormMapping" xmi:id="_Ba8JpJDAEeuBZ650qnDVPA" type="NONE">
-        <targetForm xmi:type="expression:Expression" xmi:id="_ZeD1QJDJEeur5ZF_riUGfQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      <formMapping xmi:type="process:FormMapping" xmi:id="_Ba8JpJDAEeuBZ650qnDVPA">
+        <targetForm xmi:type="expression:Expression" xmi:id="_GvdJ8KMFEeuSg82WTKe3kg" name="formInstanciarMembresiaComision" content="dd608aca-e708-4774-8fd6-c40e718c673f" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_Ba8JppDAEeuBZ650qnDVPA" type="NONE">
         <targetForm xmi:type="expression:Expression" xmi:id="_Ba8Jp5DAEeuBZ650qnDVPA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>

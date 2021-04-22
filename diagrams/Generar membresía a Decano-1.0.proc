@@ -236,8 +236,8 @@
       <data xmi:type="process:Data" xmi:id="_Dl9wUJC4EeuHKKHRv2KdlA" name="correoMDECISC" dataType="_Q8UN8JC1EeuL3PPvFQN09w">
         <defaultValue xmi:type="expression:Expression" xmi:id="_Dl9wUZC4EeuHKKHRv2KdlA" name="modulodifusioncis@gmail.com" content="modulodifusioncis@gmail.com"/>
       </data>
-      <formMapping xmi:type="process:FormMapping" xmi:id="_Q8UN05C1EeuL3PPvFQN09w" type="NONE">
-        <targetForm xmi:type="expression:Expression" xmi:id="_Q8UN1JC1EeuL3PPvFQN09w" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      <formMapping xmi:type="process:FormMapping" xmi:id="_Q8UN05C1EeuL3PPvFQN09w">
+        <targetForm xmi:type="expression:Expression" xmi:id="_-Js1EKMEEeuSg82WTKe3kg" name="formInstanciarMembresiaDecano" content="3cdd6402-5692-448f-9d2a-91a814f8ea97" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_Q8UN1ZC1EeuL3PPvFQN09w" type="NONE">
         <targetForm xmi:type="expression:Expression" xmi:id="_Q8UN1pC1EeuL3PPvFQN09w" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
