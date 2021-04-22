@@ -1497,8 +1497,8 @@
       <data xmi:type="process:JavaObjectData" xmi:id="_Zk4gIKFKEeu_F93NGUMZ1g" name="usuarioSolicitante" dataType="_rwkSD5Z8Eeut8sL4LkPR1w" className="java.util.Collection">
         <defaultValue xmi:type="expression:Expression" xmi:id="_Zk4gIaFKEeu_F93NGUMZ1g" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.Collection"/>
       </data>
-      <formMapping xmi:type="process:FormMapping" xmi:id="_rwkRrZZ8Eeut8sL4LkPR1w" type="NONE">
-        <targetForm xmi:type="expression:Expression" xmi:id="_rwkRrpZ8Eeut8sL4LkPR1w" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+      <formMapping xmi:type="process:FormMapping" xmi:id="_rwkRrZZ8Eeut8sL4LkPR1w">
+        <targetForm xmi:type="expression:Expression" xmi:id="_wDqoIKL8EeuSg82WTKe3kg" name="formInstanciarSolicitudEventos" content="050ccbff-f366-4a4a-a5c0-80457546d0b8" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_rwkRr5Z8Eeut8sL4LkPR1w" type="NONE">
         <targetForm xmi:type="expression:Expression" xmi:id="_rwkRsJZ8Eeut8sL4LkPR1w" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
