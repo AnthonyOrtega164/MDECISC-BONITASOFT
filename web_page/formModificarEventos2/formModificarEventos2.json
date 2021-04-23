@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formModificarEventos2",
   "name" : "formModificarEventos",
-  "lastUpdate" : 1619067533087,
+  "lastUpdate" : 1619189380971,
   "rows" : [
     [
       {
@@ -4346,7 +4346,7 @@
         "\t\t\tcronograma: $data.eventosModificar.cronograma !== undefined ? $data.eventosModificar.cronograma : null,",
         "\t\t\tinforme: $data.eventosModificar.informe !== undefined ? $data.eventosModificar.informe : null,",
         "\t\t\tvalidado: $data.eventosModificar.validado !== undefined ? $data.eventosModificar.validado : null,",
-        "\t\t\tevidencias: $data.eventosModificar.evidencias !== undefined ? $data.eventosModificar.evidencias : null,",
+        "\t\t\tevidencias: $data.eventosModificar.evidencias !== undefined ? $data.eventosModificar.evidencias : [],",
         "\t\t\tmotivoCancelacion: $data.eventosModificar.motivoCancelacion !== undefined ? $data.eventosModificar.motivoCancelacion : null",
         "\t\t}",
         "\t}",

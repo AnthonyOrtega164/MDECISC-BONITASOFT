@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formModificarEvento",
   "name" : "formModificarEvento",
-  "lastUpdate" : 1619067847128,
+  "lastUpdate" : 1619189408875,
   "rows" : [
     [
       {
@@ -3703,6 +3703,58 @@
                     {
                       "type" : "component",
                       "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Default label"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "Si desea que el anuncio ya no se difunda, por favor inhabilite la casilla de validado, a continuación habilite la casilla de cancelado y el motivo de la cancelación"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "center"
+                        }
+                      },
+                      "reference" : "c98b9fa2-c450-4d33-a148-0b8353968d14",
+                      "hasValidationError" : false,
+                      "id" : "pbText"
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
                         "md" : 4,
                         "sm" : 4,
                         "xs" : 4,
@@ -4074,8 +4126,8 @@
         "\t\t\tid: $data.eventoModificar.id !== undefined ? $data.eventoModificar.id : null,",
         "\t\t\tnombre: $data.eventoModificar.nombre !== undefined ? $data.eventoModificar.nombre : null,",
         "\t\t\tdescripcion: $data.eventoModificar.descripcion !== undefined ? $data.eventoModificar.descripcion : null,",
-        "\t\t\torganizadores: $data.eventoModificar.organizadores !== undefined ? $data.eventoModificar.organizadores : null,",
-        "\t\t\tlugares: $data.eventoModificar.lugares !== undefined ? $data.eventoModificar.lugares : null,",
+        "\t\t\torganizadores: $data.eventoModificar.organizadores !== undefined ? $data.eventoModificar.organizadores : [],",
+        "\t\t\tlugares: $data.eventoModificar.lugares !== undefined ? $data.eventoModificar.lugares : [],",
         "\t\t\ttipoEvento: $data.eventoModificar.tipoEvento !== undefined ? $data.eventoModificar.tipoEvento : null,",
         "\t\t\tcategoriaEvento: $data.eventoModificar.categoriaEvento !== undefined ? $data.eventoModificar.categoriaEvento : null,",
         "\t\t\tcupo: $data.eventoModificar.cupo !== undefined ? $data.eventoModificar.cupo : null,",
@@ -4100,7 +4152,7 @@
         "\t\t\tcronograma: $data.eventoModificar.cronograma !== undefined ? $data.eventoModificar.cronograma : null,",
         "\t\t\tinforme: $data.eventoModificar.informe !== undefined ? $data.eventoModificar.informe : null,",
         "\t\t\tvalidado: $data.eventoModificar.validado !== undefined ? $data.eventoModificar.validado : null,",
-        "\t\t\tevidencias: $data.eventoModificar.evidencias !== undefined ? $data.eventoModificar.evidencias : null,",
+        "\t\t\tevidencias: $data.eventoModificar.evidencias !== undefined ? $data.eventoModificar.evidencias : [],",
         "\t\t\tmotivoCancelacion: $data.eventoModificar.motivoCancelacion !== undefined ? $data.eventoModificar.motivoCancelacion : null",
         "\t\t}",
         "\t}",
