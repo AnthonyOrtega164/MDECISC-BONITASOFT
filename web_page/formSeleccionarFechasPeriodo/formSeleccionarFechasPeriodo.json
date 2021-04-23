@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formSeleccionarFechasPeriodo",
   "name" : "formSeleccionarFechasPeriodo",
-  "lastUpdate" : 1617842341269,
+  "lastUpdate" : 1619188561147,
   "rows" : [
     [
       {
@@ -259,7 +259,7 @@
                         },
                         "showToday" : {
                           "type" : "constant",
-                          "value" : true
+                          "value" : false
                         },
                         "labelPosition" : {
                           "type" : "constant",
@@ -333,7 +333,7 @@
                         },
                         "showToday" : {
                           "type" : "constant",
-                          "value" : true
+                          "value" : false
                         },
                         "labelPosition" : {
                           "type" : "constant",

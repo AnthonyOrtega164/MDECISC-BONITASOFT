@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formInstanciarGenerarDocumentacion",
   "name" : "formInstanciarGenerarDocumentacion",
-  "lastUpdate" : 1619052695278,
+  "lastUpdate" : 1619188341595,
   "rows" : [
     [
       {
@@ -70,7 +70,7 @@
                   },
                   "targetUrlOnSuccess" : {
                     "type" : "interpolation",
-                    "value" : "/bonita/apps/userApp/process-list/?_l=es"
+                    "value" : "/bonita/apps/userApp/task-list/?_l=es"
                   },
                   "action" : {
                     "type" : "constant",

@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formInstanciarMembresiaComision",
   "name" : "formInstanciarMembresiaComision",
-  "lastUpdate" : 1619052910839,
+  "lastUpdate" : 1619188456567,
   "rows" : [
     [
       {
@@ -70,7 +70,7 @@
                   },
                   "targetUrlOnSuccess" : {
                     "type" : "interpolation",
-                    "value" : "/bonita/apps/userApp/process-list/?_l=es"
+                    "value" : "/bonita/apps/userApp/task-list/?_l=es"
                   },
                   "action" : {
                     "type" : "constant",

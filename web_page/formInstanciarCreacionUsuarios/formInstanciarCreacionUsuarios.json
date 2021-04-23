@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formInstanciarCreacionUsuarios",
   "name" : "formInstanciarCreacionUsuarios",
-  "lastUpdate" : 1619052577629,
+  "lastUpdate" : 1619188423355,
   "rows" : [
     [
       {
@@ -70,7 +70,7 @@
                   },
                   "targetUrlOnSuccess" : {
                     "type" : "interpolation",
-                    "value" : "/bonita/apps/userApp/process-list/?_l=es"
+                    "value" : "/bonita/apps/userApp/tsk-list/?_l=es"
                   },
                   "action" : {
                     "type" : "constant",

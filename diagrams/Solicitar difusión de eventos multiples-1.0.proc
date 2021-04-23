@@ -1620,6 +1620,30 @@
               </parameters>
             </configuration>
           </connectors>
+          <connectors xmi:type="process:Connector" xmi:id="_AsVtQKQ_EeuNPqpD459MsA" name="convertirInformeEventosPDF" definitionId="document-converter" event="ON_ENTER" definitionVersion="1.0.2">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_AsVtQaQ_EeuNPqpD459MsA" definitionId="document-converter" version="1.0.2" modelVersion="7.12.0-004">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_AsVtQqQ_EeuNPqpD459MsA" key="sourceDocument">
+                <expression xmi:type="expression:Expression" xmi:id="_AsVtQ6Q_EeuNPqpD459MsA" name="informeEventos" content="informeEventos" type="DOCUMENT_REF_TYPE" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Document" xmi:id="_AsVtRKQ_EeuNPqpD459MsA" name="informeEventos"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_AsVtRaQ_EeuNPqpD459MsA" key="encoding">
+                <expression xmi:type="expression:Expression" xmi:id="_AsVtRqQ_EeuNPqpD459MsA" name="windows-1252" content="windows-1252" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_AsVtR6Q_EeuNPqpD459MsA" key="outputFileName">
+                <expression xmi:type="expression:Expression" xmi:id="_AsVtSKQ_EeuNPqpD459MsA" name="informe.pdf" content="informe.pdf" returnTypeFixed="true"/>
+              </parameters>
+            </configuration>
+            <outputs xmi:type="expression:Operation" xmi:id="_AsVtSaQ_EeuNPqpD459MsA">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_AsVtSqQ_EeuNPqpD459MsA" name="informeEventos" content="informeEventos" type="DOCUMENT_REF_TYPE">
+                <referencedElements xmi:type="process:Document" xmi:id="_AsVtS6Q_EeuNPqpD459MsA" name="informeEventos"/>
+              </leftOperand>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_AsVtTKQ_EeuNPqpD459MsA" name="outputDocumentValue" content="outputDocumentValue" type="CONNECTOR_OUTPUT_TYPE" returnType="org.bonitasoft.engine.bpm.document.DocumentValue">
+                <referencedElements xmi:type="definition:Output" xmi:id="_AsVtTaQ_EeuNPqpD459MsA" name="outputDocumentValue" type="org.bonitasoft.engine.bpm.document.DocumentValue"/>
+              </rightOperand>
+              <operator xmi:type="expression:Operator" xmi:id="_AsVtTqQ_EeuNPqpD459MsA" type="DOCUMENT_CREATE_UPDATE"/>
+            </outputs>
+          </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_zgwdEJ35Eeu9BdhhBRNeNA">
             <leftOperand xmi:type="expression:Expression" xmi:id="_zgwdEZ35Eeu9BdhhBRNeNA" name="eventos" content="eventos" type="TYPE_VARIABLE" returnType="com.mdecisc.model.Eventos">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_0Uu3sJ35Eeu9BdhhBRNeNA" name="eventos" dataType="_rwkSEZZ8Eeut8sL4LkPR1w" className="com.mdecisc.model.Eventos"/>
@@ -1931,7 +1955,7 @@
         <url xmi:type="expression:Expression" xmi:id="_rwkR9JZ8Eeut8sL4LkPR1w" name="" content="" returnTypeFixed="true"/>
         <initialMultipleContent xmi:type="expression:Expression" xmi:id="_rwkR9ZZ8Eeut8sL4LkPR1w" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>
       </documents>
-      <documents xmi:type="process:Document" xmi:id="_rwkR9pZ8Eeut8sL4LkPR1w" name="informeEventos" defaultValueIdOfDocumentStore="informeEvento.odt" documentType="INTERNAL">
+      <documents xmi:type="process:Document" xmi:id="_rwkR9pZ8Eeut8sL4LkPR1w" name="informeEventos" defaultValueIdOfDocumentStore="informeEventos.odt" documentType="INTERNAL">
         <mimeType xmi:type="expression:Expression" xmi:id="_rwkR95Z8Eeut8sL4LkPR1w" name="" content="" returnTypeFixed="true"/>
         <url xmi:type="expression:Expression" xmi:id="_rwkR-JZ8Eeut8sL4LkPR1w" name="" content="" returnTypeFixed="true"/>
         <initialMultipleContent xmi:type="expression:Expression" xmi:id="_rwkR-ZZ8Eeut8sL4LkPR1w" name="" content="" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List" returnTypeFixed="true"/>

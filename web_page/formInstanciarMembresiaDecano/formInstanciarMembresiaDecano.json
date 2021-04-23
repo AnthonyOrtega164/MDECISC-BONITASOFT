@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formInstanciarMembresiaDecano",
   "name" : "formInstanciarMembresiaDecano",
-  "lastUpdate" : 1619052906458,
+  "lastUpdate" : 1619188465865,
   "rows" : [
     [
       {
@@ -70,7 +70,7 @@
                   },
                   "targetUrlOnSuccess" : {
                     "type" : "interpolation",
-                    "value" : "/bonita/apps/userApp/process-list/?_l=es"
+                    "value" : "/bonita/apps/userApp/task-list/?_l=es"
                   },
                   "action" : {
                     "type" : "constant",
