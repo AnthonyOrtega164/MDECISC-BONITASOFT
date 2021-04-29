@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "anuncios",
   "name" : "anuncios",
-  "lastUpdate" : 1619039605417,
+  "lastUpdate" : 1619674227188,
   "rows" : [
     [
       {
@@ -413,8 +413,8 @@
                         {
                           "type" : "container",
                           "dimension" : {
-                            "xs" : 6,
-                            "sm" : 6,
+                            "xs" : 12,
+                            "sm" : 12,
                             "md" : 6,
                             "lg" : 6
                           },
@@ -424,15 +424,15 @@
                               "value" : ""
                             },
                             "hidden" : {
-                              "type" : "expression",
-                              "value" : "!anuncio_selected.imagen"
+                              "type" : "constant",
+                              "value" : false
                             },
                             "repeatedCollection" : {
                               "type" : "variable",
                               "value" : ""
                             }
                           },
-                          "reference" : "858140e9-0517-4e47-91f1-188abcd8f733",
+                          "reference" : "31ee82fb-b962-4bc4-8c43-17fc28ca0ae8",
                           "hasValidationError" : false,
                           "id" : "pbContainer",
                           "rows" : [
@@ -476,21 +476,21 @@
                                   },
                                   "text" : {
                                     "type" : "interpolation",
-                                    "value" : "<b>Imagen</b>"
+                                    "value" : "<b>Imagen"
                                   },
                                   "alignment" : {
                                     "type" : "constant",
                                     "value" : "center"
                                   }
                                 },
-                                "reference" : "26efd076-5f05-4c56-a8ec-d7a1a8ab04be",
+                                "reference" : "050b7b86-9687-4ade-880a-e78445b14754",
                                 "hasValidationError" : false,
                                 "id" : "pbText"
                               }
                             ],
                             [
                               {
-                                "type" : "container",
+                                "type" : "component",
                                 "dimension" : {
                                   "xs" : 12,
                                   "sm" : 12,
@@ -506,59 +506,170 @@
                                     "type" : "constant",
                                     "value" : false
                                   },
-                                  "repeatedCollection" : {
-                                    "type" : "variable",
-                                    "value" : ""
+                                  "srcType" : {
+                                    "type" : "constant",
+                                    "value" : "URL"
+                                  },
+                                  "url" : {
+                                    "type" : "expression",
+                                    "value" : "anuncio_selected.imagen"
+                                  },
+                                  "assetName" : {
+                                    "type" : "constant"
+                                  },
+                                  "alt" : {
+                                    "type" : "interpolation"
                                   }
                                 },
-                                "reference" : "51318c8d-9118-4870-b332-a101f405205e",
+                                "reference" : "d0d399c9-b05e-43d9-aa86-ff033c2aee71",
                                 "hasValidationError" : false,
-                                "id" : "pbContainer",
-                                "rows" : [
-                                  [
-                                    {
-                                      "type" : "component",
-                                      "dimension" : {
-                                        "xs" : 12,
-                                        "sm" : 12,
-                                        "md" : 12,
-                                        "lg" : 12
-                                      },
-                                      "propertyValues" : {
-                                        "cssClasses" : {
-                                          "type" : "constant",
-                                          "value" : ""
-                                        },
-                                        "hidden" : {
-                                          "type" : "constant",
-                                          "value" : false
-                                        },
-                                        "type" : {
-                                          "type" : "constant",
-                                          "value" : "URL"
-                                        },
-                                        "url" : {
-                                          "type" : "expression",
-                                          "value" : "anuncio_selected.imagen"
-                                        },
-                                        "document" : {
-                                          "type" : "variable",
-                                          "value" : ""
-                                        },
-                                        "showPreview" : {
-                                          "type" : "constant",
-                                          "value" : true
-                                        }
-                                      },
-                                      "reference" : "4ce1e638-7c7c-425c-95a5-1c159c7f2910",
-                                      "hasValidationError" : false,
-                                      "id" : "pbFileViewer"
-                                    }
-                                  ]
-                                ]
+                                "id" : "pbImage"
+                              }
+                            ],
+                            [
+                              {
+                                "type" : "component",
+                                "dimension" : {
+                                  "xs" : 12,
+                                  "sm" : 12,
+                                  "md" : 12,
+                                  "lg" : 12
+                                },
+                                "propertyValues" : {
+                                  "cssClasses" : {
+                                    "type" : "constant",
+                                    "value" : ""
+                                  },
+                                  "hidden" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "labelHidden" : {
+                                    "type" : "constant",
+                                    "value" : true
+                                  },
+                                  "label" : {
+                                    "type" : "interpolation",
+                                    "value" : "Default label"
+                                  },
+                                  "labelPosition" : {
+                                    "type" : "constant",
+                                    "value" : "top"
+                                  },
+                                  "labelWidth" : {
+                                    "type" : "constant",
+                                    "value" : 4
+                                  },
+                                  "allowHTML" : {
+                                    "type" : "constant",
+                                    "value" : true
+                                  },
+                                  "text" : {
+                                    "type" : "interpolation",
+                                    "value" : "{{anuncio_selected.imagen}}"
+                                  },
+                                  "alignment" : {
+                                    "type" : "constant",
+                                    "value" : "left"
+                                  }
+                                },
+                                "reference" : "7d1d98f1-3392-4aa8-b63e-da884ed5a172",
+                                "hasValidationError" : false,
+                                "id" : "pbText"
                               }
                             ]
                           ]
+                        }
+                      ],
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "readOnly" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "required" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "labelHidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "inlineInput" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "label" : {
+                              "type" : "interpolation",
+                              "value" : "Fecha de Solicitud"
+                            },
+                            "labelPosition" : {
+                              "type" : "constant",
+                              "value" : "top"
+                            },
+                            "labelWidth" : {
+                              "type" : "constant",
+                              "value" : 4
+                            },
+                            "withTimeZone" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "value" : {
+                              "type" : "variable",
+                              "value" : "anuncio_selected.fechaSolicitud"
+                            },
+                            "dateFormat" : {
+                              "type" : "constant",
+                              "value" : "MM/dd/yyyy"
+                            },
+                            "placeholder" : {
+                              "type" : "interpolation"
+                            },
+                            "timeFormat" : {
+                              "type" : "constant",
+                              "value" : "h:mm:ss a"
+                            },
+                            "timePlaceholder" : {
+                              "type" : "interpolation",
+                              "value" : "Enter a time (h:mm:ss a)"
+                            },
+                            "showToday" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "todayLabel" : {
+                              "type" : "interpolation",
+                              "value" : "Today"
+                            },
+                            "showNow" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "nowLabel" : {
+                              "type" : "interpolation",
+                              "value" : "Now"
+                            }
+                          },
+                          "reference" : "cef5d2fc-155e-485a-98cc-3018df264e83",
+                          "hasValidationError" : false,
+                          "id" : "pbDateTimePicker"
                         }
                       ]
                     ]
@@ -637,6 +748,13 @@
       "type" : "constant",
       "value" : [
         ""
+      ],
+      "exposed" : false
+    },
+    "imagenAnuncio" : {
+      "type" : "url",
+      "value" : [
+        "../API/bpm/archivedCaseDocument?f=caseId=9001&f=name=imagenAnuncio"
       ],
       "exposed" : false
     }

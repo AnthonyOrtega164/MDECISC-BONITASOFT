@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:parameter="http://www.bonitasoft.org/ns/studio/parameter" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:parameter="http://www.bonitasoft.org/ns/studio/parameter" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_CDm48JabEeut8sL4LkPR1w" name="Generar documentación final" author="Anthony Ortega" bonitaVersion="7.12.1" bonitaModelVersion="7.12.0-004">
     <elements xmi:type="process:Pool" xmi:id="_CDm48ZabEeut8sL4LkPR1w" name="generarDocumentacion" displayName="Generar documentación final">
       <elements xmi:type="process:Lane" xmi:id="_CDm48pabEeut8sL4LkPR1w" name="Gestor" actor="_gGtgMJabEeut8sL4LkPR1w">
@@ -63,6 +63,18 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_m7aHIpabEeut8sL4LkPR1w" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_m7aHIZabEeut8sL4LkPR1w" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_m7aHI5abEeut8sL4LkPR1w" name="" content="" returnTypeFixed="true"/>
+          <operations xmi:type="expression:Operation" xmi:id="_eP_1cKceEeu3CtlV6VOR9g">
+            <leftOperand xmi:type="expression:Expression" xmi:id="_eP_1caceEeu3CtlV6VOR9g" name="urlInforme" content="urlInforme" type="TYPE_VARIABLE">
+              <referencedElements xmi:type="process:Data" xmi:id="_eySqMKceEeu3CtlV6VOR9g" name="urlInforme" dataType="_CDouJZabEeut8sL4LkPR1w"/>
+            </leftOperand>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_eP_1cqceEeu3CtlV6VOR9g" name="newScript()" content="import groovy.json.JsonBuilder&#xD;&#xA;import java.time.format.DateTimeFormatter&#xD;&#xA;&#xD;&#xA;def builder = new JsonBuilder();&#xD;&#xA;&#xD;&#xA;DateTimeFormatter formato = DateTimeFormatter.ofPattern(&quot;HH:mm:ss-dd/MM/yyyy&quot;);&#xD;&#xA;&#xD;&#xA;def anuncioLIST = anuncioDAO.findByValidado(true ,0 , 100);&#xD;&#xA;def anuncioResult = [];&#xD;&#xA;for (var in anuncioLIST) {&#xD;&#xA;&#x9;Calendar calendarInicio = GregorianCalendar.getInstance();&#xD;&#xA;&#x9;calendarInicio.set(periodo.fechaInicio.year,periodo.fechaInicio.monthValue,periodo.fechaInicio.dayOfMonth, 0, 00, 00);&#xD;&#xA;&#x9;Calendar calendarFin = GregorianCalendar.getInstance();&#xD;&#xA;&#x9;calendarFin.set(periodo.fechaFin.year,periodo.fechaFin.monthValue,periodo.fechaFin.dayOfMonth, 0, 00, 00);&#xD;&#xA;&#x9;Calendar calendarSolicitud = GregorianCalendar.getInstance();&#xD;&#xA;&#x9;calendarSolicitud.set(var.fechaSolicitud.year,var.fechaSolicitud.monthValue,var.fechaSolicitud.dayOfMonth, 0, 00, 00);&#xD;&#xA;&#x9;if (calendarSolicitud.getTime() >= calendarInicio.getTime() &amp;&amp; calendarSolicitud.getTime() &lt;= calendarInicio.getTime()) {&#xD;&#xA;&#x9;&#x9;anuncioResult.add(id:var.id.toString(),&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  nombre:var.nombre.toString(),&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  descripcion:var.descripcion.toString(),&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  imagen:&quot;https://blog.desdelinux.net/wp-content/uploads/2016/06/alfresco_logo.jpg&quot;,&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;  fechaSolicitud:var.fechaSolicitud.format(formato).toString());&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;def eventoLIST = eventoDAO.findByValidado(true ,0 , 100);&#xD;&#xA;def eventoResult = [];&#xD;&#xA;for (var in eventoLIST) {&#xD;&#xA;&#x9;Calendar calendarInicio = GregorianCalendar.getInstance();&#xD;&#xA;&#x9;calendarInicio.set(periodo.fechaInicio.year,periodo.fechaInicio.monthValue,periodo.fechaInicio.dayOfMonth, 0, 00, 00);&#xD;&#xA;&#x9;Calendar calendarFin = GregorianCalendar.getInstance();&#xD;&#xA;&#x9;calendarFin.set(periodo.fechaFin.year,periodo.fechaFin.monthValue,periodo.fechaFin.dayOfMonth, 0, 00, 00);&#xD;&#xA;&#x9;Calendar calendarSolicitud = GregorianCalendar.getInstance();&#xD;&#xA;&#x9;calendarSolicitud.set(var.fechaSolicitud.year,var.fechaSolicitud.monthValue,var.fechaSolicitud.dayOfMonth, 0, 00, 00);&#xD;&#xA;&#x9;if (calendarSolicitud.getTime() >= calendarInicio.getTime() &amp;&amp; calendarSolicitud.getTime() &lt;= calendarInicio.getTime()) {&#xD;&#xA;&#x9;&#x9;def valorList = []&#xD;&#xA;&#x9;&#x9;for (var1 in var.valor) {&#xD;&#xA;&#x9;&#x9;&#x9;valorList.add(rol:var1.rol.toString(),valor:var1.valor.toString());&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;def ponenteList = []&#xD;&#xA;&#x9;&#x9;for (var2 in var.ponentes) {&#xD;&#xA;&#x9;&#x9;&#x9;ponenteList.add(nombre:var2.nombre.toString(),apellido:var2.apellido.toString(),correo:var2.correo.toString(),resumen:var2.resumen.toString());&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;eventoResult.add(id:var.id.toString(),&#xD;&#xA;&#x9;&#x9;&#x9;nombre:var.nombre.toString(),&#xD;&#xA;&#x9;&#x9;&#x9;descripcion:var.descripcion.toString(),&#xD;&#xA;&#x9;&#x9;&#x9;organizadores:var.organizadores,&#xD;&#xA;&#x9;&#x9;&#x9;lugares:var.lugares,&#xD;&#xA;&#x9;&#x9;&#x9;tipoEvento:var.tipoEvento.toString(),&#xD;&#xA;&#x9;&#x9;&#x9;categoriaEvento:var.categoriaEvento.toString(),&#xD;&#xA;&#x9;&#x9;&#x9;cupo:var.cupo.toString(),&#xD;&#xA;&#x9;&#x9;&#x9;valor:valorList,&#xD;&#xA;&#x9;&#x9;&#x9;ponentes:ponenteList,&#xD;&#xA;&#x9;&#x9;&#x9;fechaInscripcionInicio:var.fechaInscripcionInicio.format(formato).toString(),&#xD;&#xA;&#x9;&#x9;&#x9;fechaInscripcionFin:var.fechaInscripcionFin.format(formato).toString(),&#xD;&#xA;&#x9;&#x9;&#x9;fechaEventoInicio:var.fechaEventoInicio.format(formato).toString(),&#xD;&#xA;&#x9;&#x9;&#x9;fechaEventoFin:var.fechaEventoFin.format(formato).toString(),&#xD;&#xA;&#x9;&#x9;&#x9;imagen:&quot;https://blog.desdelinux.net/wp-content/uploads/2016/06/alfresco_logo.jpg&quot;,&#xD;&#xA;&#x9;&#x9;&#x9;cronograma:&quot;https://blog.desdelinux.net/wp-content/uploads/2016/06/alfresco_logo.jpg&quot;,&#xD;&#xA;&#x9;&#x9;&#x9;evidencias:[&quot;https://blog.desdelinux.net/wp-content/uploads/2016/06/alfresco_logo.jpg&quot;]);&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;def eventosLIST = eventosDAO.findByValidado(true ,0 , 100);&#xD;&#xA;def eventosResult = [];&#xD;&#xA;for (var in eventosLIST) {&#xD;&#xA;&#x9;Calendar calendarInicio = GregorianCalendar.getInstance();&#xD;&#xA;&#x9;calendarInicio.set(periodo.fechaInicio.year,periodo.fechaInicio.monthValue,periodo.fechaInicio.dayOfMonth, 0, 00, 00);&#xD;&#xA;&#x9;Calendar calendarFin = GregorianCalendar.getInstance();&#xD;&#xA;&#x9;calendarFin.set(periodo.fechaFin.year,periodo.fechaFin.monthValue,periodo.fechaFin.dayOfMonth, 0, 00, 00);&#xD;&#xA;&#x9;Calendar calendarSolicitud = GregorianCalendar.getInstance();&#xD;&#xA;&#x9;calendarSolicitud.set(var.fechaSolicitud.year,var.fechaSolicitud.monthValue,var.fechaSolicitud.dayOfMonth, 0, 00, 00);&#xD;&#xA;&#x9;if (calendarSolicitud.getTime() >= calendarInicio.getTime() &amp;&amp; calendarSolicitud.getTime() &lt;= calendarInicio.getTime()) {&#xD;&#xA;&#x9;&#x9;def valorList = []&#xD;&#xA;&#x9;&#x9;for (var1 in var.valor) {&#xD;&#xA;&#x9;&#x9;&#x9;valorList.add(rol:var1.rol.toString(),valor:var1.valor.toString());&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;def ponenteList = []&#xD;&#xA;&#x9;&#x9;for (var2 in var.ponentes) {&#xD;&#xA;&#x9;&#x9;&#x9;ponenteList.add(nombre:var2.nombre.toString(),apellido:var2.apellido.toString(),correo:var2.correo.toString(),resumen:var2.resumen.toString());&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;def actividadList = []&#xD;&#xA;&#x9;&#x9;for (var3 in var.actividades) {&#xD;&#xA;&#x9;&#x9;&#x9;actividadList.add(nombre:var3.nombre.toString(),tipoActividad:var3.tipoActividad.toString(),categoriaActividad:var3.categoriaActividad.toString(),organizador:var3.organizador.toString(),ponente:var3.ponente.toString(),lugar:var3.lugar.toString(),fechaActividad:var3.fechaActividad.format(formato).toString());&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;eventosResult.add(id:var.id.toString(),&#xD;&#xA;&#x9;&#x9;&#x9;nombre:var.nombre.toString(),&#xD;&#xA;&#x9;&#x9;&#x9;descripcion:var.descripcion.toString(),&#xD;&#xA;&#x9;&#x9;&#x9;fechaInscripcionInicio:var.fechaInscripcionInicio.format(formato).toString(),&#xD;&#xA;&#x9;&#x9;&#x9;fechaInscripcionFin:var.fechaInscripcionFin.format(formato).toString(),&#xD;&#xA;&#x9;&#x9;&#x9;fechaEventoInicio:var.fechaEventoInicio.format(formato).toString(),&#xD;&#xA;&#x9;&#x9;&#x9;fechaEventoFin:var.fechaEventoFin.format(formato).toString(),&#xD;&#xA;&#x9;&#x9;&#x9;cupo:var.cupo.toString(),&#xD;&#xA;&#x9;&#x9;&#x9;valor:valorList,&#xD;&#xA;&#x9;&#x9;&#x9;ponentes:ponenteList,&#xD;&#xA;&#x9;&#x9;&#x9;actividades:actividadList,&#xD;&#xA;&#x9;&#x9;&#x9;imagen:&quot;https://blog.desdelinux.net/wp-content/uploads/2016/06/alfresco_logo.jpg&quot;,&#xD;&#xA;&#x9;&#x9;&#x9;cronograma:&quot;https://blog.desdelinux.net/wp-content/uploads/2016/06/alfresco_logo.jpg&quot;,&#xD;&#xA;&#x9;&#x9;&#x9;evidencias:[&quot;https://blog.desdelinux.net/wp-content/uploads/2016/06/alfresco_logo.jpg&quot;]);&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;def root = builder.data {&#xD;&#xA;&#x9;anuncio anuncioResult&#xD;&#xA;&#x9;evento eventoResult&#xD;&#xA;&#x9;eventos eventosResult&#xD;&#xA;  }&#xD;&#xA;&#xD;&#xA;return builder.toString();" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+              <referencedElements xmi:type="expression:Expression" xmi:id="_izwCkKcgEeu3CtlV6VOR9g" name="anuncioDAO" content="anuncioDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.mdecisc.model.AnuncioDAO" returnTypeFixed="true"/>
+              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_izwCkacgEeu3CtlV6VOR9g" name="periodo" dataType="_CDouKJabEeut8sL4LkPR1w" className="com.mdecisc.model.FechaPeriodo"/>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_izwCkqcgEeu3CtlV6VOR9g" name="eventoDAO" content="eventoDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.mdecisc.model.EventoDAO" returnTypeFixed="true"/>
+              <referencedElements xmi:type="expression:Expression" xmi:id="_izwCk6cgEeu3CtlV6VOR9g" name="eventosDAO" content="eventosDAO" type="TYPE_BUSINESS_OBJECT_DAO" returnType="com.mdecisc.model.EventosDAO" returnTypeFixed="true"/>
+            </rightOperand>
+            <operator xmi:type="expression:Operator" xmi:id="_eP_1c6ceEeu3CtlV6VOR9g" type="ASSIGNMENT"/>
+          </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_m7aHJJabEeut8sL4LkPR1w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_m7aHJZabEeut8sL4LkPR1w" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_m7aHJpabEeut8sL4LkPR1w" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -73,6 +85,85 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_qjUB8pabEeut8sL4LkPR1w" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_qjUB8ZabEeut8sL4LkPR1w" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_qjUB85abEeut8sL4LkPR1w" name="" content="" returnTypeFixed="true"/>
+          <connectors xmi:type="process:Connector" xmi:id="_g1oicKWTEeu0UI0hy4qXGQ" name="enviarGESTOR" definitionId="email" event="ON_ENTER" definitionVersion="1.2.0">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_g1oicaWTEeu0UI0hy4qXGQ" definitionId="email" version="1.2.0" modelVersion="7.12.0-004">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_g1oicqWTEeu0UI0hy4qXGQ" key="smtpHost">
+                <expression xmi:type="expression:Expression" xmi:id="_g1oic6WTEeu0UI0hy4qXGQ" name="direccionServidor" content="direccionServidor" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_g1oidKWTEeu0UI0hy4qXGQ" name="direccionServidor" typeClassname="java.lang.String"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_g1oidaWTEeu0UI0hy4qXGQ" key="smtpPort">
+                <expression xmi:type="expression:Expression" xmi:id="_g1oidqWTEeu0UI0hy4qXGQ" name="puertoServidor" content="puertoServidor" type="TYPE_PARAMETER" returnType="java.lang.Integer" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_g1oid6WTEeu0UI0hy4qXGQ" name="puertoServidor" typeClassname="java.lang.Integer"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_g1oieKWTEeu0UI0hy4qXGQ" key="sslSupport">
+                <expression xmi:type="expression:Expression" xmi:id="_g1oieaWTEeu0UI0hy4qXGQ" name="sslBoolean" content="sslBoolean" type="TYPE_PARAMETER" returnType="java.lang.Boolean" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_g1oieqWTEeu0UI0hy4qXGQ" name="sslBoolean" typeClassname="java.lang.Boolean"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_g1oie6WTEeu0UI0hy4qXGQ" key="starttlsSupport">
+                <expression xmi:type="expression:Expression" xmi:id="_g1oifKWTEeu0UI0hy4qXGQ" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_g1oifaWTEeu0UI0hy4qXGQ" key="trustCertificate">
+                <expression xmi:type="expression:Expression" xmi:id="_g1oifqWTEeu0UI0hy4qXGQ" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_g1oif6WTEeu0UI0hy4qXGQ" key="userName">
+                <expression xmi:type="expression:Expression" xmi:id="_g1oigKWTEeu0UI0hy4qXGQ" name="usuarioServidor" content="usuarioServidor" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_g1oigaWTEeu0UI0hy4qXGQ" name="usuarioServidor" typeClassname="java.lang.String"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_g1oigqWTEeu0UI0hy4qXGQ" key="password">
+                <expression xmi:type="expression:Expression" xmi:id="_g1oig6WTEeu0UI0hy4qXGQ" name="claveServidor" content="claveServidor" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_g1oihKWTEeu0UI0hy4qXGQ" name="claveServidor" typeClassname="java.lang.String"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_g1oihaWTEeu0UI0hy4qXGQ" key="from">
+                <expression xmi:type="expression:Expression" xmi:id="_g1oihqWTEeu0UI0hy4qXGQ" name="remitente" content="remitente" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_g1oih6WTEeu0UI0hy4qXGQ" name="remitente" typeClassname="java.lang.String"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_g1oiiKWTEeu0UI0hy4qXGQ" key="returnPath">
+                <expression xmi:type="expression:Expression" xmi:id="_g1oiiaWTEeu0UI0hy4qXGQ" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_g1oiiqWTEeu0UI0hy4qXGQ" key="to">
+                <expression xmi:type="expression:Expression" xmi:id="_g1oii6WTEeu0UI0hy4qXGQ" name="a@gmail.com" content="a@gmail.com" interpreter="GROOVY" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_g1oijKWTEeu0UI0hy4qXGQ" key="bcc">
+                <expression xmi:type="expression:Expression" xmi:id="_g1oijaWTEeu0UI0hy4qXGQ" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_g1oijqWTEeu0UI0hy4qXGQ" key="cc">
+                <expression xmi:type="expression:Expression" xmi:id="_g1oij6WTEeu0UI0hy4qXGQ" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_g1oikKWTEeu0UI0hy4qXGQ" key="subject">
+                <expression xmi:type="expression:Expression" xmi:id="_g1oikaWTEeu0UI0hy4qXGQ" name="DOCUMENTACION FINAL" content="DOCUMENTACION FINAL" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_g1oikqWTEeu0UI0hy4qXGQ" key="html">
+                <expression xmi:type="expression:Expression" xmi:id="_g1oik6WTEeu0UI0hy4qXGQ" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_g1oilKWTEeu0UI0hy4qXGQ" key="message">
+                <expression xmi:type="expression:Expression" xmi:id="_g1oilaWTEeu0UI0hy4qXGQ" name="&lt;pattern-expression>" content="&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;1&quot; style=&quot;width:1000px&quot;>&#xA;&#x9;&lt;tbody>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;background-color:#eeeeee; border-color:#eeeeee; text-align:center&quot;>&lt;img alt=&quot;&quot; src=&quot;https://unl.edu.ec/sites/default/files/inline-images/logogris.png&quot; style=&quot;height:200px; width:500px&quot; />&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;img alt=&quot;&quot; src=&quot;https://pbs.twimg.com/profile_images/1225522326487347211/FaNm0ISf_400x400.jpg&quot; style=&quot;height:200px; width:200px&quot; />&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;background-color:#eeeeee; border-color:#eeeeee&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:justify&quot;>&amp;nbsp;&lt;/p>&#xA;&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;color:#000000; font-family:&amp;quot;Times New Roman&amp;quot;,Times,serif; font-size:18px&quot;>Revise la difusi&amp;oacute;n en el siguiente enlace: &lt;a href=&quot;http://localhost:31216/bonita/apps/mdecisc_usuarios/principal/?_l=es&quot;>AQU&amp;Iacute; &lt;/a>&lt;/span>&lt;/p>&#xA;&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:justify&quot;>${urlInforme}&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&#x9;&lt;tr>&#xA;&#x9;&#x9;&#x9;&lt;td style=&quot;background-color:#eeeeee; border-color:#eeeeee&quot;>&#xA;&#x9;&#x9;&#x9;&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;color:#000000&quot;>&lt;span style=&quot;font-size:18px&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;strong>M&amp;Oacute;DULO DE DIFUSI&amp;Oacute;N DE EVENTOS CIS/C &amp;ndash; UNL&lt;/strong>&lt;/span>&lt;/span>&lt;/span>&lt;/p>&#xA;&#x9;&#x9;&#x9;&lt;/td>&#xA;&#x9;&#x9;&lt;/tr>&#xA;&#x9;&lt;/tbody>&#xA;&lt;/table>&#xA;&#xA;&lt;p>&amp;nbsp;&lt;/p>&#xA;" type="TYPE_PATTERN" returnTypeFixed="true">
+                  <referencedElements xmi:type="expression:Expression" xmi:id="_paMkgKWTEeu0UI0hy4qXGQ" name="urlInforme" content="urlInforme" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
+                    <referencedElements xmi:type="expression:Expression" xmi:id="_paMkgaWTEeu0UI0hy4qXGQ" name="urlInforme" content="urlInforme" type="TYPE_VARIABLE">
+                      <referencedElements xmi:type="process:Data" xmi:id="_paMkgqWTEeu0UI0hy4qXGQ" name="urlInforme" dataType="_CDouJZabEeut8sL4LkPR1w"/>
+                    </referencedElements>
+                  </referencedElements>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_g1oil6WTEeu0UI0hy4qXGQ" key="headers">
+                <expression xmi:type="expression:TableExpression" xmi:id="_g1oimKWTEeu0UI0hy4qXGQ"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_g1oimaWTEeu0UI0hy4qXGQ" key="charset">
+                <expression xmi:type="expression:Expression" xmi:id="_g1oimqWTEeu0UI0hy4qXGQ" name="UTF-8" content="UTF-8" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_g1oim6WTEeu0UI0hy4qXGQ" key="replyTo">
+                <expression xmi:type="expression:Expression" xmi:id="_g1oinKWTEeu0UI0hy4qXGQ" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_g1oinaWTEeu0UI0hy4qXGQ" key="attachments">
+                <expression xmi:type="expression:ListExpression" xmi:id="_g1oinqWTEeu0UI0hy4qXGQ"/>
+              </parameters>
+            </configuration>
+          </connectors>
           <loopCondition xmi:type="expression:Expression" xmi:id="_qjUB9JabEeut8sL4LkPR1w" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <loopMaximum xmi:type="expression:Expression" xmi:id="_qjUB9ZabEeut8sL4LkPR1w" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_qjUB9pabEeut8sL4LkPR1w" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -87,6 +178,9 @@
       </elements>
       <data xmi:type="process:BusinessObjectData" xmi:id="_TUw3sJabEeut8sL4LkPR1w" name="periodo" dataType="_CDouKJabEeut8sL4LkPR1w" className="com.mdecisc.model.FechaPeriodo">
         <defaultValue xmi:type="expression:Expression" xmi:id="_TUw3sZabEeut8sL4LkPR1w" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
+      </data>
+      <data xmi:type="process:Data" xmi:id="_JV5C4KWFEeu0UI0hy4qXGQ" name="urlInforme" dataType="_CDouJZabEeut8sL4LkPR1w">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_JV5C4aWFEeu0UI0hy4qXGQ" content=""/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_CDm5BJabEeut8sL4LkPR1w">
         <targetForm xmi:type="expression:Expression" xmi:id="_qnW20KMEEeuSg82WTKe3kg" name="formInstanciarGenerarDocumentacion" content="0ae21a24-6953-4d2f-aeee-1043a5045134" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -125,6 +219,7 @@
       <parameters xmi:type="parameter:Parameter" xmi:id="_w6x-gKLJEeuSg82WTKe3kg" name="urlImagen" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_x4bSgKLJEeuSg82WTKe3kg" name="usuarioServidor" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_SxQwwKLKEeuSg82WTKe3kg" name="usuarioAlfresco" typeClassname="java.lang.String"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_ZhrXEKccEeu3CtlV6VOR9g" name="urlDocumentos" typeClassname="java.lang.String"/>
       <contract xmi:type="process:Contract" xmi:id="_CDm5DJabEeut8sL4LkPR1w"/>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_CDm5DZabEeut8sL4LkPR1w">
         <name xmi:type="expression:Expression" xmi:id="_CDm5DpabEeut8sL4LkPR1w" content="" returnTypeFixed="true"/>
