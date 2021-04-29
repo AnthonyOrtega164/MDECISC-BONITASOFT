@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:parameter="http://www.bonitasoft.org/ns/studio/parameter" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:parameter="http://www.bonitasoft.org/ns/studio/parameter" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_BQARQKGdEeu8UM8dRGrBDQ" name="Modificar - Eliminar evento" author="Anthony Ortega" bonitaVersion="7.12.1" bonitaModelVersion="7.12.0-004">
     <elements xmi:type="process:Pool" xmi:id="_BQARQaGdEeu8UM8dRGrBDQ" name="modificarEvento" displayName="Modificar - Eliminar Evento">
       <elements xmi:type="process:Lane" xmi:id="_BQARQqGdEeu8UM8dRGrBDQ" name="Comisión " actor="_BQATL6GdEeu8UM8dRGrBDQ">
@@ -199,10 +199,122 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_BQARwaGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_BQARwqGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:Task" xmi:id="_BQARw6GdEeu8UM8dRGrBDQ" name="Modificar / Eliminar evento" outgoing="_BzG6IKj3EeuwKOi7pExeFA" incoming="_BQATFaGdEeu8UM8dRGrBDQ" overrideActorsOfTheLane="false">
+        <elements xmi:type="process:Task" xmi:id="_BQARw6GdEeu8UM8dRGrBDQ" name="Modificar / Eliminar evento" outgoing="_BQATKKGdEeu8UM8dRGrBDQ" incoming="_BQATFaGdEeu8UM8dRGrBDQ" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_BQARxKGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_BQARxaGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_BQARxqGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
+          <connectors xmi:type="process:Connector" xmi:id="_BQARx6GdEeu8UM8dRGrBDQ" name="subirNuevaImagenEvento" definitionId="cmis-uploadnewversionofdocument" event="ON_FINISH" definitionVersion="2.0.1">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_BQARyKGdEeu8UM8dRGrBDQ" definitionId="cmis-uploadnewversionofdocument" version="2.0.1" modelVersion="7.12.0-004">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BQARyaGdEeu8UM8dRGrBDQ" key="username">
+                <expression xmi:type="expression:Expression" xmi:id="_BQARyqGdEeu8UM8dRGrBDQ" name="usuarioAlfresco" content="usuarioAlfresco" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_BQARy6GdEeu8UM8dRGrBDQ" name="usuarioAlfresco" typeClassname="java.lang.String"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BQARzKGdEeu8UM8dRGrBDQ" key="password">
+                <expression xmi:type="expression:Expression" xmi:id="_BQARzaGdEeu8UM8dRGrBDQ" name="claveAlfresco" content="claveAlfresco" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_BQARzqGdEeu8UM8dRGrBDQ" name="claveAlfresco" typeClassname="java.lang.String"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BQARz6GdEeu8UM8dRGrBDQ" key="url">
+                <expression xmi:type="expression:Expression" xmi:id="_BQAR0KGdEeu8UM8dRGrBDQ" name="urlAtom" content="urlAtom" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_BQAR0aGdEeu8UM8dRGrBDQ" name="urlAtom" typeClassname="java.lang.String"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BQAR0qGdEeu8UM8dRGrBDQ" key="repository">
+                <expression xmi:type="expression:Expression" xmi:id="_BQAR06GdEeu8UM8dRGrBDQ" name="Main Repository" content="Main Repository" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BQAR1KGdEeu8UM8dRGrBDQ" key="binding_type">
+                <expression xmi:type="expression:Expression" xmi:id="_BQAR1aGdEeu8UM8dRGrBDQ" name="atompub" content="atompub" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BQAR1qGdEeu8UM8dRGrBDQ" key="wsObjectServiceUrl">
+                <expression xmi:type="expression:Expression" xmi:id="_BQAR16GdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BQAR2KGdEeu8UM8dRGrBDQ" key="wsObjectServiceEndpointUrl">
+                <expression xmi:type="expression:Expression" xmi:id="_BQAR2aGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BQAR2qGdEeu8UM8dRGrBDQ" key="wsRepositoryServiceUrl">
+                <expression xmi:type="expression:Expression" xmi:id="_BQAR26GdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BQAR3KGdEeu8UM8dRGrBDQ" key="wsRepositoryServiceEndpointUrl">
+                <expression xmi:type="expression:Expression" xmi:id="_BQAR3aGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BQAR3qGdEeu8UM8dRGrBDQ" key="document">
+                <expression xmi:type="expression:Expression" xmi:id="_BQAR36GdEeu8UM8dRGrBDQ" name="imagenEvento" content="imagenEvento" type="DOCUMENT_REF_TYPE" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Document" xmi:id="_BQAR4KGdEeu8UM8dRGrBDQ" name="imagenEvento"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_BQAR4aGdEeu8UM8dRGrBDQ" key="remote_document">
+                <expression xmi:type="expression:Expression" xmi:id="_BQAR4qGdEeu8UM8dRGrBDQ" name="remote_document()" content="String[] partes = eventoModificar.imagen.split(&quot;/&quot;);&#xD;&#xA;return &quot;/MDECISC_Documentos/Eventos/imagenes/&quot;+partes[partes.size()-1].toString()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_PjX5sKIgEeuORNvBsv7JHQ" name="eventoModificar" dataType="_BQATVqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Evento"/>
+                </expression>
+              </parameters>
+            </configuration>
+            <outputs xmi:type="expression:Operation" xmi:id="_BQAR5KGdEeu8UM8dRGrBDQ">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_BQAR5aGdEeu8UM8dRGrBDQ" name="idAlfrescoImagen" content="idAlfrescoImagen" type="TYPE_VARIABLE">
+                <referencedElements xmi:type="process:Data" xmi:id="_BQAR5qGdEeu8UM8dRGrBDQ" name="idAlfrescoImagen" dataType="_BQATU6GdEeu8UM8dRGrBDQ"/>
+              </leftOperand>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_BQAR56GdEeu8UM8dRGrBDQ" name="document_id" content="document_id" type="CONNECTOR_OUTPUT_TYPE">
+                <referencedElements xmi:type="definition:Output" xmi:id="_BQAR6KGdEeu8UM8dRGrBDQ" name="document_id" type="java.lang.String"/>
+              </rightOperand>
+              <operator xmi:type="expression:Operator" xmi:id="_BQAR6aGdEeu8UM8dRGrBDQ" type="ASSIGNMENT"/>
+            </outputs>
+          </connectors>
+          <connectors xmi:type="process:Connector" xmi:id="_LO5z0KIgEeuORNvBsv7JHQ" name="subirNuevoCronogramaEvento" definitionId="cmis-uploadnewversionofdocument" event="ON_FINISH" definitionVersion="2.0.1">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_LO5z0aIgEeuORNvBsv7JHQ" definitionId="cmis-uploadnewversionofdocument" version="2.0.1" modelVersion="7.12.0-004">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_LO5z0qIgEeuORNvBsv7JHQ" key="username">
+                <expression xmi:type="expression:Expression" xmi:id="_LO5z06IgEeuORNvBsv7JHQ" name="usuarioAlfresco" content="usuarioAlfresco" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_LO5z1KIgEeuORNvBsv7JHQ" name="usuarioAlfresco" typeClassname="java.lang.String"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_LO5z1aIgEeuORNvBsv7JHQ" key="password">
+                <expression xmi:type="expression:Expression" xmi:id="_LO5z1qIgEeuORNvBsv7JHQ" name="claveAlfresco" content="claveAlfresco" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_LO5z16IgEeuORNvBsv7JHQ" name="claveAlfresco" typeClassname="java.lang.String"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_LO5z2KIgEeuORNvBsv7JHQ" key="url">
+                <expression xmi:type="expression:Expression" xmi:id="_LO5z2aIgEeuORNvBsv7JHQ" name="urlAtom" content="urlAtom" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_LO5z2qIgEeuORNvBsv7JHQ" name="urlAtom" typeClassname="java.lang.String"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_LO5z26IgEeuORNvBsv7JHQ" key="repository">
+                <expression xmi:type="expression:Expression" xmi:id="_LO5z3KIgEeuORNvBsv7JHQ" name="Main Repository" content="Main Repository" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_LO5z3aIgEeuORNvBsv7JHQ" key="binding_type">
+                <expression xmi:type="expression:Expression" xmi:id="_LO5z3qIgEeuORNvBsv7JHQ" name="atompub" content="atompub" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_LO5z36IgEeuORNvBsv7JHQ" key="wsObjectServiceUrl">
+                <expression xmi:type="expression:Expression" xmi:id="_LO5z4KIgEeuORNvBsv7JHQ" name="" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_LO5z4aIgEeuORNvBsv7JHQ" key="wsObjectServiceEndpointUrl">
+                <expression xmi:type="expression:Expression" xmi:id="_LO5z4qIgEeuORNvBsv7JHQ" name="" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_LO5z46IgEeuORNvBsv7JHQ" key="wsRepositoryServiceUrl">
+                <expression xmi:type="expression:Expression" xmi:id="_LO5z5KIgEeuORNvBsv7JHQ" name="" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_LO5z5aIgEeuORNvBsv7JHQ" key="wsRepositoryServiceEndpointUrl">
+                <expression xmi:type="expression:Expression" xmi:id="_LO5z5qIgEeuORNvBsv7JHQ" name="" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_LO5z56IgEeuORNvBsv7JHQ" key="document">
+                <expression xmi:type="expression:Expression" xmi:id="_LO5z6KIgEeuORNvBsv7JHQ" name="cronogramaEvento" content="cronogramaEvento" type="DOCUMENT_REF_TYPE" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Document" xmi:id="_LO5z6aIgEeuORNvBsv7JHQ" name="cronogramaEvento"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_LO5z6qIgEeuORNvBsv7JHQ" key="remote_document">
+                <expression xmi:type="expression:Expression" xmi:id="_LO5z66IgEeuORNvBsv7JHQ" name="remote_document()" content="String[] partes = eventoModificar.imagen.split(&quot;/&quot;);&#xD;&#xA;return &quot;/MDECISC_Documentos/Eventos/cronogramas/&quot;+partes[partes.size()-1].toString()" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_LO5z7KIgEeuORNvBsv7JHQ" name="eventoModificar" dataType="_BQATVqGdEeu8UM8dRGrBDQ" className="com.mdecisc.model.Evento"/>
+                </expression>
+              </parameters>
+            </configuration>
+            <outputs xmi:type="expression:Operation" xmi:id="_LO5z7aIgEeuORNvBsv7JHQ">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_LO5z7qIgEeuORNvBsv7JHQ" name="idAlfrescoCronograma" content="idAlfrescoCronograma" type="TYPE_VARIABLE">
+                <referencedElements xmi:type="process:Data" xmi:id="_LO5z76IgEeuORNvBsv7JHQ" name="idAlfrescoCronograma" dataType="_BQATU6GdEeu8UM8dRGrBDQ"/>
+              </leftOperand>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_LO5z8KIgEeuORNvBsv7JHQ" name="document_id" content="document_id" type="CONNECTOR_OUTPUT_TYPE">
+                <referencedElements xmi:type="definition:Output" xmi:id="_LO5z8aIgEeuORNvBsv7JHQ" name="document_id" type="java.lang.String"/>
+              </rightOperand>
+              <operator xmi:type="expression:Operator" xmi:id="_LO5z8qIgEeuORNvBsv7JHQ" type="ASSIGNMENT"/>
+            </outputs>
+          </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_7pzV8aIZEeuORNvBsv7JHQ">
             <leftOperand xmi:type="expression:Expression" xmi:id="_7pzV8qIZEeuORNvBsv7JHQ" name="imagenEvento" content="imagenEvento" type="DOCUMENT_REF_TYPE">
               <referencedElements xmi:type="process:Document" xmi:id="_7pzV86IZEeuORNvBsv7JHQ" name="imagenEvento"/>
@@ -593,6 +705,11 @@
           <cardinalityExpression xmi:type="expression:Expression" xmi:id="_BQASSqGdEeu8UM8dRGrBDQ" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_BQASS6GdEeu8UM8dRGrBDQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_BQASTKGdEeu8UM8dRGrBDQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        </elements>
+        <elements xmi:type="process:EndEvent" xmi:id="_BQASTaGdEeu8UM8dRGrBDQ" name="Fin - Evento modificado/eliminado" incoming="_BQATKKGdEeu8UM8dRGrBDQ">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_BQASTqGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_BQAST6GdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_BQASUKGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
         </elements>
       </elements>
       <elements xmi:type="process:Lane" xmi:id="_BQASUaGdEeu8UM8dRGrBDQ" name="Gestor" actor="_BQATLqGdEeu8UM8dRGrBDQ">
@@ -1097,21 +1214,6 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_BQAS86GdEeu8UM8dRGrBDQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_BQAS9KGdEeu8UM8dRGrBDQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         </elements>
-        <elements xmi:type="process:ServiceTask" xmi:id="_ByoZAKj3EeuwKOi7pExeFA" name="Step1" outgoing="_CUAnwKj3EeuwKOi7pExeFA" incoming="_BzG6IKj3EeuwKOi7pExeFA">
-          <dynamicLabel xmi:type="expression:Expression" xmi:id="_By0mQaj3EeuwKOi7pExeFA" name="" content="" returnTypeFixed="true"/>
-          <dynamicDescription xmi:type="expression:Expression" xmi:id="_By0mQKj3EeuwKOi7pExeFA" name="" content="" returnTypeFixed="true"/>
-          <stepSummary xmi:type="expression:Expression" xmi:id="_By0mQqj3EeuwKOi7pExeFA" name="" content="" returnTypeFixed="true"/>
-          <loopCondition xmi:type="expression:Expression" xmi:id="_By0mQ6j3EeuwKOi7pExeFA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-          <loopMaximum xmi:type="expression:Expression" xmi:id="_By0mRKj3EeuwKOi7pExeFA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
-          <cardinalityExpression xmi:type="expression:Expression" xmi:id="_By0mRaj3EeuwKOi7pExeFA" name="" content="" returnType="java.lang.Integer" returnTypeFixed="true"/>
-          <iteratorExpression xmi:type="expression:Expression" xmi:id="_By0mR6j3EeuwKOi7pExeFA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
-          <completionCondition xmi:type="expression:Expression" xmi:id="_By0mRqj3EeuwKOi7pExeFA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-        </elements>
-        <elements xmi:type="process:EndEvent" xmi:id="_BQASTaGdEeu8UM8dRGrBDQ" name="Fin - Evento modificado/eliminado" incoming="_CUAnwKj3EeuwKOi7pExeFA">
-          <dynamicLabel xmi:type="expression:Expression" xmi:id="_BQASTqGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
-          <dynamicDescription xmi:type="expression:Expression" xmi:id="_BQAST6GdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
-          <stepSummary xmi:type="expression:Expression" xmi:id="_BQASUKGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
-        </elements>
       </elements>
       <data xmi:type="process:Data" xmi:id="_BQAS9aGdEeu8UM8dRGrBDQ" name="idEvento" dataType="_BQATUaGdEeu8UM8dRGrBDQ">
         <defaultValue xmi:type="expression:Expression" xmi:id="_BQAS9qGdEeu8UM8dRGrBDQ" content="" returnType="java.lang.Long"/>
@@ -1189,27 +1291,26 @@
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_BQATJqGdEeu8UM8dRGrBDQ"/>
         <condition xmi:type="expression:Expression" xmi:id="_BQATJ6GdEeu8UM8dRGrBDQ" name="" content="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
+      <connections xmi:type="process:SequenceFlow" xmi:id="_BQATKKGdEeu8UM8dRGrBDQ" target="_BQASTaGdEeu8UM8dRGrBDQ" source="_BQARw6GdEeu8UM8dRGrBDQ">
+        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_BQATKaGdEeu8UM8dRGrBDQ"/>
+        <condition xmi:type="expression:Expression" xmi:id="_BQATKqGdEeu8UM8dRGrBDQ" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+      </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_BQATK6GdEeu8UM8dRGrBDQ" target="_BQARv6GdEeu8UM8dRGrBDQ" source="_BQARY6GdEeu8UM8dRGrBDQ">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_BQATLKGdEeu8UM8dRGrBDQ"/>
         <condition xmi:type="expression:Expression" xmi:id="_BQATLaGdEeu8UM8dRGrBDQ" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_BzG6IKj3EeuwKOi7pExeFA" target="_ByoZAKj3EeuwKOi7pExeFA" source="_BQARw6GdEeu8UM8dRGrBDQ">
-        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_BzG6Iaj3EeuwKOi7pExeFA"/>
-        <condition xmi:type="expression:Expression" xmi:id="_BzG6Iqj3EeuwKOi7pExeFA" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-      </connections>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_CUAnwKj3EeuwKOi7pExeFA" target="_BQASTaGdEeu8UM8dRGrBDQ" source="_ByoZAKj3EeuwKOi7pExeFA">
-        <decisionTable xmi:type="decision:DecisionTable" xmi:id="_CUAnwaj3EeuwKOi7pExeFA"/>
-        <condition xmi:type="expression:Expression" xmi:id="_CUAnwqj3EeuwKOi7pExeFA" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
-      </connections>
       <actors xmi:type="process:Actor" xmi:id="_BQATLqGdEeu8UM8dRGrBDQ" name="Gestor"/>
       <actors xmi:type="process:Actor" xmi:id="_BQATL6GdEeu8UM8dRGrBDQ" name="Comisión " initiator="true"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_BQATMKGdEeu8UM8dRGrBDQ" name="claveAlfresco" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_BQATMaGdEeu8UM8dRGrBDQ" name="claveServidor" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_BQATMqGdEeu8UM8dRGrBDQ" name="direccionServidor" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_BQATM6GdEeu8UM8dRGrBDQ" name="puertoServidor" typeClassname="java.lang.Integer"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_BQATNKGdEeu8UM8dRGrBDQ" name="remitente" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_BQATNaGdEeu8UM8dRGrBDQ" name="sslBoolean" typeClassname="java.lang.Boolean"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_BQATNqGdEeu8UM8dRGrBDQ" name="urlAtom" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_BQATN6GdEeu8UM8dRGrBDQ" name="urlImagen" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_BQATOKGdEeu8UM8dRGrBDQ" name="usuarioServidor" typeClassname="java.lang.String"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_BQATOaGdEeu8UM8dRGrBDQ" name="usuarioAlfresco" typeClassname="java.lang.String"/>
       <contract xmi:type="process:Contract" xmi:id="_BQATOqGdEeu8UM8dRGrBDQ"/>
       <documents xmi:type="process:Document" xmi:id="_BQATO6GdEeu8UM8dRGrBDQ" name="imagenEvento">
         <mimeType xmi:type="expression:Expression" xmi:id="_BQATPKGdEeu8UM8dRGrBDQ" name="" content="" returnTypeFixed="true"/>
@@ -1293,6 +1394,12 @@
               <children xmi:type="notation:DecorationNode" xmi:id="_BQATdKGdEeu8UM8dRGrBDQ" type="5017"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BQATdaGdEeu8UM8dRGrBDQ" x="435" y="93" width="144" height="72"/>
             </children>
+            <children xmi:type="notation:Shape" xmi:id="_BQATdqGdEeu8UM8dRGrBDQ" type="3003" element="_BQASTaGdEeu8UM8dRGrBDQ" fontName="Segoe UI">
+              <children xmi:type="notation:DecorationNode" xmi:id="_BQATd6GdEeu8UM8dRGrBDQ" type="5025">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_BQATeKGdEeu8UM8dRGrBDQ" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BQATeaGdEeu8UM8dRGrBDQ" x="1502" y="114"/>
+            </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_BQATeqGdEeu8UM8dRGrBDQ"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_BQATe6GdEeu8UM8dRGrBDQ" fontName="Segoe UI"/>
@@ -1328,16 +1435,6 @@
             <children xmi:type="notation:Shape" xmi:id="_BQATkaGdEeu8UM8dRGrBDQ" type="3027" element="_BQASoKGdEeu8UM8dRGrBDQ" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
               <children xmi:type="notation:DecorationNode" xmi:id="_BQATkqGdEeu8UM8dRGrBDQ" type="5017"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BQATk6GdEeu8UM8dRGrBDQ" x="110" y="128" width="175" height="85"/>
-            </children>
-            <children xmi:type="notation:Shape" xmi:id="_By0mSKj3EeuwKOi7pExeFA" type="3027" element="_ByoZAKj3EeuwKOi7pExeFA" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
-              <children xmi:type="notation:DecorationNode" xmi:id="_By0mSqj3EeuwKOi7pExeFA" type="5017"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_By0mSaj3EeuwKOi7pExeFA" x="1231" y="94"/>
-            </children>
-            <children xmi:type="notation:Shape" xmi:id="_BQATdqGdEeu8UM8dRGrBDQ" type="3003" element="_BQASTaGdEeu8UM8dRGrBDQ" fontName="Segoe UI">
-              <children xmi:type="notation:DecorationNode" xmi:id="_BQATd6GdEeu8UM8dRGrBDQ" type="5025">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_BQATeKGdEeu8UM8dRGrBDQ" y="5"/>
-              </children>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BQATeaGdEeu8UM8dRGrBDQ" x="1502" y="104"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_BQATlKGdEeu8UM8dRGrBDQ"/>
@@ -1422,6 +1519,14 @@
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BQATz6GdEeu8UM8dRGrBDQ" id="(1.0,0.3472222222222222)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BQAT0KGdEeu8UM8dRGrBDQ" id="(0.41284403669724773,0.10185185185185185)"/>
     </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_BQAT0aGdEeu8UM8dRGrBDQ" type="4001" element="_BQATKKGdEeu8UM8dRGrBDQ" source="_BQATcKGdEeu8UM8dRGrBDQ" target="_BQATdqGdEeu8UM8dRGrBDQ" roundedBendpointsRadius="10" routing="Rectilinear">
+      <children xmi:type="notation:DecorationNode" xmi:id="_BQAT0qGdEeu8UM8dRGrBDQ" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_BQAT06GdEeu8UM8dRGrBDQ" y="-10"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_BQAT1KGdEeu8UM8dRGrBDQ" fontName="Segoe UI"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BQAT1aGdEeu8UM8dRGrBDQ" points="[0, 15, -160, -2]$[145, 15, -15, -2]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BQAT1qGdEeu8UM8dRGrBDQ" id="(1.0,0.3246753246753247)"/>
+    </edges>
     <edges xmi:type="notation:Connector" xmi:id="_BQAT16GdEeu8UM8dRGrBDQ" type="4001" element="_BQATK6GdEeu8UM8dRGrBDQ" source="_BQATYKGdEeu8UM8dRGrBDQ" target="_BQATbKGdEeu8UM8dRGrBDQ" roundedBendpointsRadius="10" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_BQAT2KGdEeu8UM8dRGrBDQ" type="6001">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_BQAT2aGdEeu8UM8dRGrBDQ" y="-10"/>
@@ -1429,22 +1534,6 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_BQAT2qGdEeu8UM8dRGrBDQ" fontName="Segoe UI"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BQAT26GdEeu8UM8dRGrBDQ" points="[0, -13, -631, 36]$[40, -13, -591, 36]$[40, -133, -591, -84]$[631, -133, 0, -84]$[631, -64, 0, -15]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_BQAT3KGdEeu8UM8dRGrBDQ" id="(1.0,1.0)"/>
-    </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_BzG6I6j3EeuwKOi7pExeFA" type="4001" element="_BzG6IKj3EeuwKOi7pExeFA" source="_BQATcKGdEeu8UM8dRGrBDQ" target="_By0mSKj3EeuwKOi7pExeFA" roundedBendpointsRadius="10" routing="Rectilinear">
-      <children xmi:type="notation:DecorationNode" xmi:id="_BzG6Jqj3EeuwKOi7pExeFA" type="6001">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_BzG6J6j3EeuwKOi7pExeFA" y="-10"/>
-      </children>
-      <styles xmi:type="notation:FontStyle" xmi:id="_BzG6JKj3EeuwKOi7pExeFA" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BzG6Jaj3EeuwKOi7pExeFA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-    </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_CUAnw6j3EeuwKOi7pExeFA" type="4001" element="_CUAnwKj3EeuwKOi7pExeFA" source="_By0mSKj3EeuwKOi7pExeFA" target="_BQATdqGdEeu8UM8dRGrBDQ" roundedBendpointsRadius="10" routing="Rectilinear">
-      <children xmi:type="notation:DecorationNode" xmi:id="_CUAnxqj3EeuwKOi7pExeFA" type="6001">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_CUAnx6j3EeuwKOi7pExeFA" y="-10"/>
-      </children>
-      <styles xmi:type="notation:FontStyle" xmi:id="_CUAnxKj3EeuwKOi7pExeFA" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_CUAnxaj3EeuwKOi7pExeFA" points="[0, 0, -197, 295]$[199, -296, 2, -1]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CUGuYKj3EeuwKOi7pExeFA" id="(1.0,0.56)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CUGuYaj3EeuwKOi7pExeFA" id="(0.8666666666666667,0.36666666666666664)"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>

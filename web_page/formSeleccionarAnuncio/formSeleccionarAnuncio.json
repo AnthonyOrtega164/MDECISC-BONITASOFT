@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formSeleccionarAnuncio",
   "name" : "formSeleccionarAnuncio",
-  "lastUpdate" : 1618810078585,
+  "lastUpdate" : 1619675969509,
   "rows" : [
     [
       {
@@ -664,7 +664,7 @@
                                             "type" : "constant",
                                             "value" : false
                                           },
-                                          "type" : {
+                                          "srcType" : {
                                             "type" : "constant",
                                             "value" : "URL"
                                           },
@@ -672,18 +672,16 @@
                                             "type" : "expression",
                                             "value" : "anuncio_selected.imagen"
                                           },
-                                          "document" : {
-                                            "type" : "variable",
-                                            "value" : ""
+                                          "assetName" : {
+                                            "type" : "constant"
                                           },
-                                          "showPreview" : {
-                                            "type" : "constant",
-                                            "value" : true
+                                          "alt" : {
+                                            "type" : "interpolation"
                                           }
                                         },
-                                        "reference" : "c4353858-3652-4b22-a79d-324f5ee7a215",
+                                        "reference" : "667266f7-1e5c-44b4-8a0f-9876bf3b660d",
                                         "hasValidationError" : false,
-                                        "id" : "pbFileViewer"
+                                        "id" : "pbImage"
                                       }
                                     ]
                                   ]

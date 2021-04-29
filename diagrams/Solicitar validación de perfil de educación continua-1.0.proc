@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:parameter="http://www.bonitasoft.org/ns/studio/parameter" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://wwww.bonitasoft.org/model/connector/configuration" xmlns:decision="http://www.bonitasoft.org/ns/studio/process/decision" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1" xmlns:expression="http://www.bonitasoft.org/ns/studio/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:parameter="http://www.bonitasoft.org/ns/studio/parameter" xmlns:process="http://www.bonitasoft.org/ns/studio/process" xsi:schemaLocation="http://www.bonitasoft.org/ns/studio/process/decision http://www.bonitasoft.org/ns/studio/process#//decision">
   <process:MainProcess xmi:id="_trNacI9dEeuKAII24VVDEA" name="Solicitar validación de perfil de educación continua" author="anthonydom" bonitaVersion="7.12.1" bonitaModelVersion="7.12.0-004">
     <elements xmi:type="process:Pool" xmi:id="_trNacY9dEeuKAII24VVDEA" name="validacionPerfilEC" displayName="Solicitar validación de perfil EC">
       <elements xmi:type="process:Lane" xmi:id="_trNaco9dEeuKAII24VVDEA" name="Actor Academico" actor="_61EzsI9dEeuKAII24VVDEA">
@@ -436,6 +436,65 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_QrQc0o9eEeuKAII24VVDEA" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_QrQc0Y9eEeuKAII24VVDEA" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_QrQc049eEeuKAII24VVDEA" name="" content="" returnTypeFixed="true"/>
+          <connectors xmi:type="process:Connector" xmi:id="_oUh6kJubEeuc4s2L15r9Dg" name="subirPerfilEC" definitionId="cmis-uploadnewdocument" event="ON_FINISH" definitionVersion="2.0.1">
+            <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_oUh6kZubEeuc4s2L15r9Dg" definitionId="cmis-uploadnewdocument" version="2.0.1" modelVersion="7.12.0-004">
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_oUh6kpubEeuc4s2L15r9Dg" key="username">
+                <expression xmi:type="expression:Expression" xmi:id="_oUh6k5ubEeuc4s2L15r9Dg" name="usuarioAlfresco" content="usuarioAlfresco" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_oUh6lJubEeuc4s2L15r9Dg" name="usuarioAlfresco" typeClassname="java.lang.String"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_oUh6lZubEeuc4s2L15r9Dg" key="password">
+                <expression xmi:type="expression:Expression" xmi:id="_oUh6lpubEeuc4s2L15r9Dg" name="claveAlfresco" content="claveAlfresco" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_oUh6l5ubEeuc4s2L15r9Dg" name="claveAlfresco" typeClassname="java.lang.String"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_oUh6mJubEeuc4s2L15r9Dg" key="url">
+                <expression xmi:type="expression:Expression" xmi:id="_oUh6mZubEeuc4s2L15r9Dg" name="urlAtom" content="urlAtom" type="TYPE_PARAMETER" returnTypeFixed="true">
+                  <referencedElements xmi:type="parameter:Parameter" xmi:id="_oUh6mpubEeuc4s2L15r9Dg" name="urlAtom" typeClassname="java.lang.String"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_oUh6m5ubEeuc4s2L15r9Dg" key="repository">
+                <expression xmi:type="expression:Expression" xmi:id="_oUh6nJubEeuc4s2L15r9Dg" name="Main Repository" content="Main Repository" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_oUh6nZubEeuc4s2L15r9Dg" key="binding_type">
+                <expression xmi:type="expression:Expression" xmi:id="_oUh6npubEeuc4s2L15r9Dg" name="atompub" content="atompub" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_oUh6n5ubEeuc4s2L15r9Dg" key="wsObjectServiceUrl">
+                <expression xmi:type="expression:Expression" xmi:id="_oUh6oJubEeuc4s2L15r9Dg" name="" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_oUh6oZubEeuc4s2L15r9Dg" key="wsObjectServiceEndpointUrl">
+                <expression xmi:type="expression:Expression" xmi:id="_oUh6opubEeuc4s2L15r9Dg" name="" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_oUh6o5ubEeuc4s2L15r9Dg" key="wsRepositoryServiceUrl">
+                <expression xmi:type="expression:Expression" xmi:id="_oUh6pJubEeuc4s2L15r9Dg" name="" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_oUh6pZubEeuc4s2L15r9Dg" key="wsRepositoryServiceEndpointUrl">
+                <expression xmi:type="expression:Expression" xmi:id="_oUh6ppubEeuc4s2L15r9Dg" name="" content="" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_oUh6p5ubEeuc4s2L15r9Dg" key="document">
+                <expression xmi:type="expression:Expression" xmi:id="_oUh6qJubEeuc4s2L15r9Dg" name="perfilEC" content="perfilEC" type="DOCUMENT_REF_TYPE" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Document" xmi:id="_oUh6qZubEeuc4s2L15r9Dg" name="perfilEC"/>
+                </expression>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_oUh6qpubEeuc4s2L15r9Dg" key="folder_path">
+                <expression xmi:type="expression:Expression" xmi:id="_oUh6q5ubEeuc4s2L15r9Dg" name="/MDECISC_Documentos/Perfiles_EC" content="/MDECISC_Documentos/Perfiles_EC" interpreter="GROOVY" returnTypeFixed="true"/>
+              </parameters>
+              <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_oUh6rJubEeuc4s2L15r9Dg" key="destinationName">
+                <expression xmi:type="expression:Expression" xmi:id="_oUh6rZubEeuc4s2L15r9Dg" name="destinationName()" content="eventoEC.perfilEC" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_vsQ9IJubEeuc4s2L15r9Dg" name="eventoEC" dataType="_trNapI9dEeuKAII24VVDEA" className="com.mdecisc.model.EducacionContinua"/>
+                </expression>
+              </parameters>
+            </configuration>
+            <outputs xmi:type="expression:Operation" xmi:id="_oUh6rpubEeuc4s2L15r9Dg">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_oUh6r5ubEeuc4s2L15r9Dg" name="idAlfrescoPerfil" content="idAlfrescoPerfil" type="TYPE_VARIABLE">
+                <referencedElements xmi:type="process:Data" xmi:id="_oUh6sJubEeuc4s2L15r9Dg" name="idAlfrescoPerfil" dataType="_trNaoY9dEeuKAII24VVDEA"/>
+              </leftOperand>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_oUh6sZubEeuc4s2L15r9Dg" name="document_id" content="document_id" type="CONNECTOR_OUTPUT_TYPE">
+                <referencedElements xmi:type="definition:Output" xmi:id="_oUh6spubEeuc4s2L15r9Dg" name="document_id" type="java.lang.String"/>
+              </rightOperand>
+              <operator xmi:type="expression:Operator" xmi:id="_oUh6s5ubEeuc4s2L15r9Dg" type="ASSIGNMENT"/>
+            </outputs>
+          </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_K3HRoJDXEeur5ZF_riUGfQ">
             <leftOperand xmi:type="expression:Expression" xmi:id="_K3HRoZDXEeur5ZF_riUGfQ" name="eventoEC" content="eventoEC" type="TYPE_VARIABLE" returnType="com.mdecisc.model.EducacionContinua">
               <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_K3HRopDXEeur5ZF_riUGfQ" name="eventoEC" dataType="_trNapI9dEeuKAII24VVDEA" className="com.mdecisc.model.EducacionContinua"/>
@@ -752,13 +811,16 @@
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_61EzsI9dEeuKAII24VVDEA" name="Actor Academico" initiator="true"/>
       <actors xmi:type="process:Actor" xmi:id="_7yI44I9dEeuKAII24VVDEA" name="Gestor"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_PPiv8JuXEeuc4s2L15r9Dg" name="claveAlfresco" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_P-1e4JuXEeuc4s2L15r9Dg" name="claveServidor" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_QlRz0JuXEeuc4s2L15r9Dg" name="direccionServidor" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_UBwhwJuXEeuc4s2L15r9Dg" name="puertoServidor" typeClassname="java.lang.Integer"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_UuMxAJuXEeuc4s2L15r9Dg" name="remitente" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_VkF3MJuXEeuc4s2L15r9Dg" name="sslBoolean" typeClassname="java.lang.Boolean"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_WPAccJuXEeuc4s2L15r9Dg" name="urlAtom" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_XLFqMJuXEeuc4s2L15r9Dg" name="urlImagen" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_YF00IJuXEeuc4s2L15r9Dg" name="usuarioServidor" typeClassname="java.lang.String"/>
+      <parameters xmi:type="parameter:Parameter" xmi:id="_YwW-4JuXEeuc4s2L15r9Dg" name="usuarioAlfresco" typeClassname="java.lang.String"/>
       <contract xmi:type="process:Contract" xmi:id="_trNajI9dEeuKAII24VVDEA"/>
       <documents xmi:type="process:Document" xmi:id="_f1qsAJDTEeur5ZF_riUGfQ" name="perfilEC">
         <mimeType xmi:type="expression:Expression" xmi:id="_f1qsAZDTEeur5ZF_riUGfQ" name="" content="" returnTypeFixed="true"/>
