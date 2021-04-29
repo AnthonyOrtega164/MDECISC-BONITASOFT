@@ -925,7 +925,6 @@
         </actorMappings>
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_rtoLgZi1EeuU3ajsMEqmHw" type="CONNECTOR" definitionId="email" definitionVersion="1.2.0" implementationId="email-impl" implementationVersion="1.3.0"/>
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_rtoLgpi1EeuU3ajsMEqmHw" type="CONNECTOR" definitionId="twitter-update-status" definitionVersion="1.0.0" implementationId="twitter-update-status-impl" implementationVersion="1.2.1"/>
-        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_27DHEJoyEeueZp32UrD_bQ" type="CONNECTOR" definitionId="cmis-uploadnewdocument" definitionVersion="2.0.1" implementationId="cmis-uploadnewdocument-impl" implementationVersion="3.0.4"/>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_rtoLg5i1EeuU3ajsMEqmHw" id="ACTOR_FILTER"/>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_rtoLhJi1EeuU3ajsMEqmHw" id="CONNECTOR">
           <children xmi:type="configuration:FragmentContainer" xmi:id="_rtoLhZi1EeuU3ajsMEqmHw" id="email-impl-1.3.0">
@@ -936,29 +935,6 @@
           <children xmi:type="configuration:FragmentContainer" xmi:id="_rtoLiZi1EeuU3ajsMEqmHw" id="twitter-update-status-impl-1.2.1">
             <fragments xmi:type="configuration:Fragment" xmi:id="_rtoLipi1EeuU3ajsMEqmHw" key="twitter-update-status-impl -- 1.2.1" value="bonita-connector-twitter-1.2.1.jar" type="CONNECTOR"/>
             <fragments xmi:type="configuration:Fragment" xmi:id="_rtoLi5i1EeuU3ajsMEqmHw" key="twitter-update-status-impl -- 1.2.1" value="twitter4j-core-4.0.7.jar" type="CONNECTOR"/>
-          </children>
-          <children xmi:type="configuration:FragmentContainer" xmi:id="_27WpEJoyEeueZp32UrD_bQ" id="cmis-uploadnewdocument-impl-3.0.4">
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27fzAJoyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="bonita-connector-cmis-3.0.4.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27fzAZoyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="asm-3.3.1.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27fzApoyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="chemistry-opencmis-client-api-1.1.0.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27fzA5oyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="chemistry-opencmis-client-bindings-1.1.0.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27pkAJoyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="chemistry-opencmis-client-impl-1.1.0.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27pkAZoyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="chemistry-opencmis-commons-api-1.1.0.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27pkApoyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="chemistry-opencmis-commons-impl-1.1.0.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27pkA5oyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="cxf-core-3.0.12.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27pkBJoyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="cxf-rt-bindings-soap-3.0.12.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27pkBZoyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="cxf-rt-bindings-xml-3.0.12.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27pkBpoyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="cxf-rt-databinding-jaxb-3.0.12.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27pkB5oyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="cxf-rt-frontend-jaxws-3.0.12.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27pkCJoyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="cxf-rt-frontend-simple-3.0.12.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27pkCZoyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="cxf-rt-transports-http-3.0.12.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27pkCpoyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="cxf-rt-ws-addr-3.0.12.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27pkC5oyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="cxf-rt-ws-policy-3.0.12.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27pkDJoyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="cxf-rt-wsdl-3.0.12.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27pkDZoyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="neethi-3.0.3.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27pkDpoyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="wsdl4j-1.6.3.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27pkD5oyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="xml-resolver-1.2.jar" type="CONNECTOR"/>
-            <fragments xmi:type="configuration:Fragment" xmi:id="_27pkEJoyEeueZp32UrD_bQ" key="cmis-uploadnewdocument-impl -- 3.0.4" value="xmlschema-core-2.2.1.jar" type="CONNECTOR"/>
           </children>
         </processDependencies>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_rtoLjJi1EeuU3ajsMEqmHw" id="GROOVY_SCRIPT">
@@ -976,9 +952,6 @@
         <parameters xmi:type="parameter:Parameter" xmi:id="_29HjpJoyEeueZp32UrD_bQ" name="sslBoolean" typeClassname="java.lang.Boolean"/>
         <parameters xmi:type="parameter:Parameter" xmi:id="_29HjpZoyEeueZp32UrD_bQ" name="usuarioServidor" typeClassname="java.lang.String"/>
         <parameters xmi:type="parameter:Parameter" xmi:id="_8-duoJ3uEeu9BdhhBRNeNA" name="urlImagen" typeClassname="java.lang.String"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_8-duoZ3uEeu9BdhhBRNeNA" name="usuarioAlfresco" typeClassname="java.lang.String"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_8-duop3uEeu9BdhhBRNeNA" name="claveAlfresco" typeClassname="java.lang.String"/>
-        <parameters xmi:type="parameter:Parameter" xmi:id="_8-duo53uEeu9BdhhBRNeNA" name="urlAtom" typeClassname="java.lang.String"/>
       </configurations>
       <parameters xmi:type="parameter:Parameter" xmi:id="_iBudYJj2EeuU3ajsMEqmHw" name="claveServidor" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_izvwMJj2EeuU3ajsMEqmHw" name="direccionServidor" typeClassname="java.lang.String"/>

@@ -1998,6 +1998,7 @@
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_1ZCIgqM3EeuSg82WTKe3kg" type="CONNECTOR" definitionId="email" definitionVersion="1.2.0" implementationId="email-impl" implementationVersion="1.3.0"/>
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_1ZCIg6M3EeuSg82WTKe3kg" type="CONNECTOR" definitionId="twitter-update-status" definitionVersion="1.0.0" implementationId="twitter-update-status-impl" implementationVersion="1.2.1"/>
         <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="_1ZCIhKM3EeuSg82WTKe3kg" type="CONNECTOR" definitionId="cmis-uploadnewdocuments" definitionVersion="1.0.0" implementationId="cmis-uploadnewdocuments-impl" implementationVersion="3.0.4"/>
+        <definitionMappings xmi:type="configuration:DefinitionMapping" xmi:id="__Fh2YKjyEeuwKOi7pExeFA" type="CONNECTOR" definitionId="rest-post" definitionVersion="1.1.0" implementationId="rest-post-impl" implementationVersion="1.0.10"/>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_1ZCIhaM3EeuSg82WTKe3kg" id="ACTOR_FILTER"/>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_1ZIPIKM3EeuSg82WTKe3kg" id="CONNECTOR">
           <children xmi:type="configuration:FragmentContainer" xmi:id="_1ZIPIaM3EeuSg82WTKe3kg" id="cmis-uploadnewdocument-impl-3.0.4">
@@ -2055,6 +2056,9 @@
             <fragments xmi:type="configuration:Fragment" xmi:id="_1aQ3laM3EeuSg82WTKe3kg" key="cmis-uploadnewdocuments-impl -- 3.0.4" value="xml-resolver-1.2.jar" type="CONNECTOR"/>
             <fragments xmi:type="configuration:Fragment" xmi:id="_1aQ3lqM3EeuSg82WTKe3kg" key="cmis-uploadnewdocuments-impl -- 3.0.4" value="xmlschema-core-2.2.1.jar" type="CONNECTOR"/>
           </children>
+          <children xmi:type="configuration:FragmentContainer" xmi:id="__F6Q4KjyEeuwKOi7pExeFA" id="rest-post-impl-1.0.10">
+            <fragments xmi:type="configuration:Fragment" xmi:id="__GAXgKjyEeuwKOi7pExeFA" key="rest-post-impl -- 1.0.10" value="bonita-connector-rest-1.0.10.jar" type="CONNECTOR"/>
+          </children>
         </processDependencies>
         <processDependencies xmi:type="configuration:FragmentContainer" xmi:id="_1aQ3l6M3EeuSg82WTKe3kg" id="GROOVY_SCRIPT">
           <fragments xmi:type="configuration:Fragment" xmi:id="_1aSFwKM3EeuSg82WTKe3kg" key="Utilidades.groovy" value="Utilidades.groovy" type="GROOVY_SCRIPT"/>
@@ -2074,6 +2078,7 @@
         <parameters xmi:type="parameter:Parameter" xmi:id="_1aSsxqM3EeuSg82WTKe3kg" name="urlImagen" typeClassname="java.lang.String"/>
         <parameters xmi:type="parameter:Parameter" xmi:id="_1aSsx6M3EeuSg82WTKe3kg" name="usuarioServidor" typeClassname="java.lang.String"/>
         <parameters xmi:type="parameter:Parameter" xmi:id="_1aSsyKM3EeuSg82WTKe3kg" name="usuarioAlfresco" typeClassname="java.lang.String"/>
+        <parameters xmi:type="parameter:Parameter" xmi:id="__GGeIKjyEeuwKOi7pExeFA" name="urlDocumentos" typeClassname="java.lang.String"/>
       </configurations>
       <parameters xmi:type="parameter:Parameter" xmi:id="_kSqMIJuREeuc4s2L15r9Dg" name="claveAlfresco" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_k2nNwJuREeuc4s2L15r9Dg" name="claveServidor" typeClassname="java.lang.String"/>
