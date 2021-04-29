@@ -209,16 +209,13 @@
         <condition xmi:type="expression:Expression" xmi:id="_Jq7roqGcEeu8UM8dRGrBDQ" name="" type="TYPE_CONDITION" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_gGtgMJabEeut8sL4LkPR1w" name="Gestor" initiator="true"/>
-      <parameters xmi:type="parameter:Parameter" xmi:id="_qVvkMKLJEeuSg82WTKe3kg" name="claveAlfresco" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_rCCpgKLJEeuSg82WTKe3kg" name="claveServidor" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_r1WVwKLJEeuSg82WTKe3kg" name="direccionServidor" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_s4-V8KLJEeuSg82WTKe3kg" name="puertoServidor" typeClassname="java.lang.Integer"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_tsnZYKLJEeuSg82WTKe3kg" name="remitente" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_u7x7MKLJEeuSg82WTKe3kg" name="sslBoolean" typeClassname="java.lang.Boolean"/>
-      <parameters xmi:type="parameter:Parameter" xmi:id="_wCE04KLJEeuSg82WTKe3kg" name="urlAtom" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_w6x-gKLJEeuSg82WTKe3kg" name="urlImagen" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_x4bSgKLJEeuSg82WTKe3kg" name="usuarioServidor" typeClassname="java.lang.String"/>
-      <parameters xmi:type="parameter:Parameter" xmi:id="_SxQwwKLKEeuSg82WTKe3kg" name="usuarioAlfresco" typeClassname="java.lang.String"/>
       <parameters xmi:type="parameter:Parameter" xmi:id="_ZhrXEKccEeu3CtlV6VOR9g" name="urlDocumentos" typeClassname="java.lang.String"/>
       <contract xmi:type="process:Contract" xmi:id="_CDm5DJabEeut8sL4LkPR1w"/>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_CDm5DZabEeut8sL4LkPR1w">
