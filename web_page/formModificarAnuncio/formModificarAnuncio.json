@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formModificarAnuncio",
   "name" : "formModificarAnuncio",
-  "lastUpdate" : 1619677218542,
+  "lastUpdate" : 1619067500377,
   "rows" : [
     [
       {
@@ -623,44 +623,6 @@
                                 {
                                   "type" : "component",
                                   "dimension" : {
-                                    "xs" : 12,
-                                    "sm" : 12,
-                                    "md" : 12,
-                                    "lg" : 12
-                                  },
-                                  "propertyValues" : {
-                                    "cssClasses" : {
-                                      "type" : "constant",
-                                      "value" : ""
-                                    },
-                                    "hidden" : {
-                                      "type" : "constant",
-                                      "value" : false
-                                    },
-                                    "srcType" : {
-                                      "type" : "constant",
-                                      "value" : "URL"
-                                    },
-                                    "url" : {
-                                      "type" : "expression",
-                                      "value" : "anuncioModificar.imagen"
-                                    },
-                                    "assetName" : {
-                                      "type" : "constant"
-                                    },
-                                    "alt" : {
-                                      "type" : "interpolation"
-                                    }
-                                  },
-                                  "reference" : "4ee5e4cb-b2c4-44ab-8eae-e03ae6c8b87c",
-                                  "hasValidationError" : false,
-                                  "id" : "pbImage"
-                                }
-                              ],
-                              [
-                                {
-                                  "type" : "component",
-                                  "dimension" : {
                                     "md" : 12,
                                     "sm" : 12,
                                     "xs" : 12,
@@ -737,7 +699,7 @@
                                     },
                                     "placeholder" : {
                                       "type" : "constant",
-                                      "value" : "Cargar Imagen de Anuncio"
+                                      "value" : "Browse to update the file..."
                                     },
                                     "dimension" : {
                                       "type" : "constant",
@@ -764,58 +726,6 @@
                                   "hasValidationError" : false,
                                   "id" : "pbUpload",
                                   "description" : ""
-                                }
-                              ],
-                              [
-                                {
-                                  "type" : "component",
-                                  "dimension" : {
-                                    "xs" : 12,
-                                    "sm" : 12,
-                                    "md" : 12,
-                                    "lg" : 12
-                                  },
-                                  "propertyValues" : {
-                                    "cssClasses" : {
-                                      "type" : "constant",
-                                      "value" : "text-danger"
-                                    },
-                                    "hidden" : {
-                                      "type" : "expression",
-                                      "value" : "formatoImagen"
-                                    },
-                                    "labelHidden" : {
-                                      "type" : "constant",
-                                      "value" : true
-                                    },
-                                    "label" : {
-                                      "type" : "interpolation",
-                                      "value" : "Default label"
-                                    },
-                                    "labelPosition" : {
-                                      "type" : "constant",
-                                      "value" : "top"
-                                    },
-                                    "labelWidth" : {
-                                      "type" : "constant",
-                                      "value" : 4
-                                    },
-                                    "allowHTML" : {
-                                      "type" : "constant",
-                                      "value" : true
-                                    },
-                                    "text" : {
-                                      "type" : "interpolation",
-                                      "value" : "<div class=\"alert alert-info\" translate><i class=\"glyphicon glyphicon-info-sign\" aria-hidden=\"true\"></i> <b>Solo se aceptan archivos tipo imagen</b></div>"
-                                    },
-                                    "alignment" : {
-                                      "type" : "constant",
-                                      "value" : "center"
-                                    }
-                                  },
-                                  "reference" : "44757a40-4ecb-4a04-911f-a6316e7a8233",
-                                  "hasValidationError" : false,
-                                  "id" : "pbText"
                                 }
                               ]
                             ]
@@ -964,7 +874,7 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "<div class=\"alert alert-info\" translate><i class=\"glyphicon glyphicon-info-sign\" aria-hidden=\"true\"></i> <b>Si desea que el anuncio ya no se difunda, por favor inhabilite la casilla de validado, a continuación habilite la casilla de cancelado y el motivo de la cancelación</b></div>"
+                          "value" : "Si desea que el anuncio ya no se difunda, por favor inhabilite la casilla de validado, a continuación habilite la casilla de cancelado y el motivo de la cancelación"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -1100,8 +1010,8 @@
                     "type" : "variable"
                   },
                   "hidden" : {
-                    "type" : "expression",
-                    "value" : "!archivosCorrectos"
+                    "type" : "constant",
+                    "value" : false
                   },
                   "cssClasses" : {
                     "type" : "constant",
@@ -1370,25 +1280,6 @@
       "type" : "url",
       "value" : [
         "../API/bpm/activityVariable/{{taskId}}/comentarioGestor"
-      ],
-      "exposed" : false
-    },
-    "formatoImagen" : {
-      "type" : "expression",
-      "value" : [
-        "return angular.equals({}, $data.formOutput.imagenAnuncioDocumentInput)",
-        "    || $data.formOutput.imagenAnuncioDocumentInput.contentType == \"image/gif\" || \"image/png\" || \"image/jpeg\" || \"image/bmp\" || \"image/webp\" || \"image/jpg\";"
-      ],
-      "exposed" : false
-    },
-    "archivosCorrectos" : {
-      "type" : "expression",
-      "value" : [
-        "if($data.formatoImagen){",
-        "    return true;",
-        "}else{",
-        "    return false",
-        "}"
       ],
       "exposed" : false
     }

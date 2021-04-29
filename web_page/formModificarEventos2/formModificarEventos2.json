@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formModificarEventos2",
   "name" : "formModificarEventos",
-  "lastUpdate" : 1619625983067,
+  "lastUpdate" : 1619189380971,
   "rows" : [
     [
       {
@@ -729,7 +729,7 @@
                               },
                               "placeholder" : {
                                 "type" : "constant",
-                                "value" : "Cargar Imagen de Eventos"
+                                "value" : "Browse to update the file..."
                               },
                               "dimension" : {
                                 "type" : "constant",
@@ -746,68 +746,12 @@
                               "url" : {
                                 "type" : "constant",
                                 "value" : "../API/formFileUpload"
-                              },
-                              "errorContent" : {
-                                "type" : "variable",
-                                "value" : ""
                               }
                             },
                             "reference" : "25f6250c-8686-4c8d-af9c-df06d3bebfa2",
                             "hasValidationError" : false,
                             "id" : "pbUpload",
                             "description" : ""
-                          }
-                        ],
-                        [
-                          {
-                            "type" : "component",
-                            "dimension" : {
-                              "xs" : 12,
-                              "sm" : 12,
-                              "md" : 12,
-                              "lg" : 12
-                            },
-                            "propertyValues" : {
-                              "cssClasses" : {
-                                "type" : "constant",
-                                "value" : "text-danger"
-                              },
-                              "hidden" : {
-                                "type" : "expression",
-                                "value" : "formatoImagen"
-                              },
-                              "labelHidden" : {
-                                "type" : "constant",
-                                "value" : true
-                              },
-                              "label" : {
-                                "type" : "interpolation",
-                                "value" : "Default label"
-                              },
-                              "labelPosition" : {
-                                "type" : "constant",
-                                "value" : "top"
-                              },
-                              "labelWidth" : {
-                                "type" : "constant",
-                                "value" : 4
-                              },
-                              "allowHTML" : {
-                                "type" : "constant",
-                                "value" : true
-                              },
-                              "text" : {
-                                "type" : "interpolation",
-                                "value" : "<div class=\"alert alert-info\" translate><i class=\"glyphicon glyphicon-info-sign\" aria-hidden=\"true\"></i> <b>Solo se aceptan archivos tipo imagen</b></div>"
-                              },
-                              "alignment" : {
-                                "type" : "constant",
-                                "value" : "center"
-                              }
-                            },
-                            "reference" : "5e5d6b75-e3fc-49e4-bc11-8a6e9e9821f6",
-                            "hasValidationError" : false,
-                            "id" : "pbText"
                           }
                         ]
                       ]
@@ -3424,7 +3368,7 @@
                               },
                               "placeholder" : {
                                 "type" : "constant",
-                                "value" : "Cargar Cronograma de Eventos"
+                                "value" : "Browse to update the file..."
                               },
                               "dimension" : {
                                 "type" : "constant",
@@ -3441,68 +3385,12 @@
                               "url" : {
                                 "type" : "constant",
                                 "value" : "../API/formFileUpload"
-                              },
-                              "errorContent" : {
-                                "type" : "variable",
-                                "value" : ""
                               }
                             },
                             "reference" : "2171fc9e-bcfe-4322-bb7b-d009d32f3925",
                             "hasValidationError" : false,
                             "id" : "pbUpload",
                             "description" : ""
-                          }
-                        ],
-                        [
-                          {
-                            "type" : "component",
-                            "dimension" : {
-                              "xs" : 12,
-                              "sm" : 12,
-                              "md" : 12,
-                              "lg" : 12
-                            },
-                            "propertyValues" : {
-                              "cssClasses" : {
-                                "type" : "constant",
-                                "value" : "text-danger"
-                              },
-                              "hidden" : {
-                                "type" : "expression",
-                                "value" : "formatoCronograma"
-                              },
-                              "labelHidden" : {
-                                "type" : "constant",
-                                "value" : true
-                              },
-                              "label" : {
-                                "type" : "interpolation",
-                                "value" : "Default label"
-                              },
-                              "labelPosition" : {
-                                "type" : "constant",
-                                "value" : "top"
-                              },
-                              "labelWidth" : {
-                                "type" : "constant",
-                                "value" : 4
-                              },
-                              "allowHTML" : {
-                                "type" : "constant",
-                                "value" : true
-                              },
-                              "text" : {
-                                "type" : "interpolation",
-                                "value" : "<div class=\"alert alert-info\" translate><i class=\"glyphicon glyphicon-info-sign\" aria-hidden=\"true\"></i> <b>Solo se aceptan archivos tipo imagen</b></div>"
-                              },
-                              "alignment" : {
-                                "type" : "constant",
-                                "value" : "center"
-                              }
-                            },
-                            "reference" : "7b041952-fb78-41f5-a323-3e5d4340c1a1",
-                            "hasValidationError" : false,
-                            "id" : "pbText"
                           }
                         ]
                       ]
@@ -4038,7 +3926,7 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "<div class=\"alert alert-info\" translate><i class=\"glyphicon glyphicon-info-sign\" aria-hidden=\"true\"></i> <b>Si desea que el evento multiple ya no se difunda, por favor inhabilite la casilla de validado, a continuación habilite la casilla de cancelado y el motivo de la cancelación</b></div>"
+                          "value" : "Si desea que el anuncio ya no se difunda, por favor inhabilite la casilla de validado, a continuación habilite la casilla de cancelado y el motivo de la cancelación"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -4174,8 +4062,8 @@
                     "type" : "variable"
                   },
                   "hidden" : {
-                    "type" : "expression",
-                    "value" : "!archivosCorrectos"
+                    "type" : "constant",
+                    "value" : false
                   },
                   "cssClasses" : {
                     "type" : "constant",
@@ -4505,35 +4393,6 @@
       "type" : "url",
       "value" : [
         "../API/bpm/activityVariable/{{taskId}}/comentarioGestor"
-      ],
-      "exposed" : false
-    },
-    "formatoCronograma" : {
-      "type" : "expression",
-      "value" : [
-        "return angular.equals({}, $data.formOutput.cronogramaEventosDocumentInput)",
-        "    || $data.formOutput.cronogramaEventosDocumentInput.contentType == \"image/gif\" || \"image/png\" || \"image/jpeg\" || \"image/bmp\" || \"image/webp\" || \"image/jpg\";"
-      ],
-      "exposed" : false
-    },
-    "formatoImagen" : {
-      "type" : "expression",
-      "value" : [
-        "return angular.equals({}, $data.formOutput.imagenEventosDocumentInput)",
-        "    || $data.formOutput.imagenEventosDocumentInput.contentType == \"image/gif\" || \"image/png\" || \"image/jpeg\" || \"image/bmp\" || \"image/webp\" || \"image/jpg\";"
-      ],
-      "exposed" : false
-    },
-    "archivosCorrectos" : {
-      "type" : "expression",
-      "value" : [
-        "if($data.formatoImagen == $data.formatoCronograma){",
-        "    if($data.formatoImagen){",
-        "        return true;",
-        "    }",
-        "}else{",
-        "    return false;",
-        "}"
       ],
       "exposed" : false
     }

@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formSolicitarDifusionAnuncio",
   "name" : "formSolicitarDifusionAnuncio",
-  "lastUpdate" : 1619655228296,
+  "lastUpdate" : 1618811592721,
   "rows" : [
     [
       {
@@ -298,6 +298,58 @@
                       "hasValidationError" : false,
                       "id" : "pbTextarea"
                     }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "xs" : 12,
+                        "sm" : 12,
+                        "md" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Default label"
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "<b>NOTA: </b>Para que la difusión se realize tambien en Twitter considere este aparatado con unicamente 140 caracteres para información relevante de la difusión"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        }
+                      },
+                      "reference" : "b186a0f5-b771-4985-8975-3be9c7720b94",
+                      "hasValidationError" : false,
+                      "id" : "pbText"
+                    }
                   ]
                 ]
               },
@@ -480,58 +532,6 @@
                       "id" : "pbUpload",
                       "description" : ""
                     }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "xs" : 12,
-                        "sm" : 12,
-                        "md" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : "text-danger"
-                        },
-                        "hidden" : {
-                          "type" : "expression",
-                          "value" : "formatoImagen"
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Default label"
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 4
-                        },
-                        "allowHTML" : {
-                          "type" : "constant",
-                          "value" : true
-                        },
-                        "text" : {
-                          "type" : "interpolation",
-                          "value" : "<div class=\"alert alert-info\" translate><i class=\"glyphicon glyphicon-info-sign\" aria-hidden=\"true\"></i> <b>Solo se aceptan archivos tipo imagen</b></div>"
-                        },
-                        "alignment" : {
-                          "type" : "constant",
-                          "value" : "center"
-                        }
-                      },
-                      "reference" : "24e827a9-e185-47fe-9468-2c4ed6b908a7",
-                      "hasValidationError" : false,
-                      "id" : "pbText"
-                    }
                   ]
                 ]
               }
@@ -550,8 +550,8 @@
                     "type" : "variable"
                   },
                   "hidden" : {
-                    "type" : "expression",
-                    "value" : "!formatoImagen"
+                    "type" : "constant",
+                    "value" : false
                   },
                   "cssClasses" : {
                     "type" : "constant",
@@ -731,16 +731,16 @@
   ],
   "assets" : [
     {
-      "id" : "59565975-7be3-4c25-be21-a1709ad7081c",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "e0984732-5d9a-4a34-86df-3f5b6bb733ac",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "e0984732-5d9a-4a34-86df-3f5b6bb733ac",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "59565975-7be3-4c25-be21-a1709ad7081c",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     }
@@ -818,14 +818,6 @@
       "type" : "url",
       "value" : [
         "../API/bpm/activityVariable/{{taskId}}/usuarioSolicitante"
-      ],
-      "exposed" : false
-    },
-    "formatoImagen" : {
-      "type" : "expression",
-      "value" : [
-        "return angular.equals({}, $data.formOutput.imagenAnuncioDocumentInput)",
-        "    || $data.formOutput.imagenAnuncioDocumentInput.contentType == \"image/png\" || \"image/jpeg\" || \"image/bmp\";"
       ],
       "exposed" : false
     }

@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formAutorizarAnuncio",
   "name" : "formAutorizarAnuncio",
-  "lastUpdate" : 1619677167740,
+  "lastUpdate" : 1619067636976,
   "rows" : [
     [
       {
@@ -613,44 +613,6 @@
                             "reference" : "6634a802-6418-4099-b240-63229359bd4d",
                             "hasValidationError" : false,
                             "id" : "pbFileViewer"
-                          }
-                        ],
-                        [
-                          {
-                            "type" : "component",
-                            "dimension" : {
-                              "xs" : 12,
-                              "sm" : 12,
-                              "md" : 12,
-                              "lg" : 12
-                            },
-                            "propertyValues" : {
-                              "cssClasses" : {
-                                "type" : "constant",
-                                "value" : ""
-                              },
-                              "hidden" : {
-                                "type" : "constant",
-                                "value" : false
-                              },
-                              "srcType" : {
-                                "type" : "constant",
-                                "value" : "URL"
-                              },
-                              "url" : {
-                                "type" : "expression",
-                                "value" : "anuncioModificar.imagen"
-                              },
-                              "assetName" : {
-                                "type" : "constant"
-                              },
-                              "alt" : {
-                                "type" : "interpolation"
-                              }
-                            },
-                            "reference" : "7b58d2c4-3d73-4315-b294-1583c90f8346",
-                            "hasValidationError" : false,
-                            "id" : "pbImage"
                           }
                         ]
                       ]

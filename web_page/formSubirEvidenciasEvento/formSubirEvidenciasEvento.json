@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "formSubirEvidenciasEvento",
   "name" : "formSubirEvidenciasEvento",
-  "lastUpdate" : 1619324843204,
+  "lastUpdate" : 1618893666251,
   "rows" : [
     [
       {
@@ -2585,7 +2585,7 @@
         "\treturn {",
         "\t\tevidenciasEventoDocumentInput: $data.context.evidenciasEvento_ref.map( doc => ({",
         "\t\t\tid : doc.id ? doc.id.toString() : null,",
-        "\t\t\tfilename: $data.taskId.toString()+'-'+doc.newValue.filename,",
+        "\t\t\tfilename: $data.taskId.toString()+' - '+doc.newValue.filename,",
         "\t\t\ttempPath : doc.newValue && doc.newValue.tempPath ? doc.newValue.tempPath : null,",
         "\t\t\tcontentType : doc.newValue && doc.newValue.contentType ? doc.newValue.contentType : null",
         "\t\t})),",
